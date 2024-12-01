@@ -9,4 +9,5 @@ config/secrets2.yml
 node_modules/
 package-lock.json
 package.json
-.prettierrc.yml
+.prettierrc.ymlspec/fixtures/cassettes/nthusa_api.yml
+spec/fixtures/cassettes/youtube_api.yml
