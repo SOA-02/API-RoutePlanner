@@ -6,14 +6,18 @@ ruby File.read('.ruby-version').strip
 # Configuration and Utilities
 gem 'figaro', '~> 1.2'
 gem 'pry'
+gem 'rack-test' # for testing and can also be used to diagnose in production
 gem 'rake'
+
+# PRESENTATION LAYER
+gem 'multi_json', '~> 1.15'
+gem 'roar', '~> 1.1'
 
 # Web Application
 gem 'logger', '~> 1.6'
 gem 'puma', '~> 6.4'
 gem 'rack-session', '~> 0.3'
 gem 'roda', '~> 3.85'
-gem 'slim', '~> 5.2'
 
 # Controllers and services
 gem 'dry-monads', '~> 1.4'

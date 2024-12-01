@@ -11,6 +11,7 @@ GEM
     crack (1.0.0)
       bigdecimal
       rexml
+    declarative (0.0.20)
     docile (1.4.1)
     domain_name (0.6.20240107)
     dry-configurable (1.2.0)
@@ -120,6 +121,7 @@ GEM
     minitest (5.25.1)
     minitest-rg (5.3.0)
       minitest (~> 5.0)
+    multi_json (1.15.0)
     multipart-post (2.4.1)
     net-http (0.5.0)
       uri
@@ -142,6 +144,8 @@ GEM
     rack (3.1.8)
     rack-session (0.3.0)
       rack (>= 3.0.0.beta1)
+    rack-test (2.1.0)
+      rack (>= 1.3)
     rainbow (3.1.1)
     rake (13.2.1)
     rb-fsevent (0.11.2)
@@ -155,9 +159,15 @@ GEM
       rainbow (>= 2.0, < 4.0)
       rexml (~> 3.1)
     regexp_parser (2.9.2)
+    representable (3.2.0)
+      declarative (< 0.1.0)
+      trailblazer-option (>= 0.1.1, < 0.2.0)
+      uber (< 0.2.0)
     rerun (0.14.0)
       listen (~> 3.0)
     rexml (3.3.9)
+    roar (1.2.0)
+      representable (~> 3.1)
     roda (3.85.0)
       rack
     rubocop (1.68.0)
@@ -196,9 +206,6 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.13.1)
     simplecov_json_formatter (0.1.4)
-    slim (5.2.1)
-      temple (~> 0.10.0)
-      tilt (>= 2.1.0)
     sqlite3 (1.7.3-aarch64-linux)
     sqlite3 (1.7.3-arm-linux)
     sqlite3 (1.7.3-arm64-darwin)
@@ -206,9 +213,9 @@ GEM
     sqlite3 (1.7.3-x86_64-darwin)
     sqlite3 (1.7.3-x86_64-linux)
     stringio (3.1.1)
-    temple (0.10.3)
     thor (1.3.2)
-    tilt (2.4.0)
+    trailblazer-option (0.1.2)
+    uber (0.1.0)
     unicode-display_width (2.6.0)
     uri (1.0.2)
     vcr (6.3.1)
@@ -248,14 +255,17 @@ DEPENDENCIES
   logger (~> 1.6)
   minitest (~> 5.20)
   minitest-rg (~> 5.2)
+  multi_json (~> 1.15)
   pg
   pry
   puma (~> 6.4)
   rack-session (~> 0.3)
+  rack-test
   rake
   rdoc
   reek
   rerun
+  roar (~> 1.1)
   roda (~> 3.85)
   rubocop
   rubocop-minitest
@@ -264,7 +274,6 @@ DEPENDENCIES
   ruby-openai
   sequel (~> 5.60)
   simplecov (~> 0)
-  slim (~> 5.2)
   sqlite3 (~> 1.4)
   vcr (~> 6)
   webmock (~> 3)

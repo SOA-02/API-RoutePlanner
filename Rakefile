@@ -6,9 +6,6 @@ task :default do
   puts `rake -T`
 end
 
-desc 'Run the unit and integration tests'
-task spec: ['spec:default']
-
 namespace :spec do
   desc 'Run unit and integration tests'
   Rake::TestTask.new(:default) do |t|
@@ -99,6 +96,37 @@ namespace :db do
 
     FileUtils.rm(RoutePlanner::App.config.DB_FILENAME)
     puts "Deleted #{RoutePlanner::App.config.DB_FILENAME}"
+  end
+end
+
+namespace :repos do
+  task :config do # rubocop:disable Rake/Desc
+    require_relative 'config/environment' # load config info
+    def app = CodePraise::App # rubocop:disable Rake/MethodDefinitionInTask
+    @repo_dirs = Dir.glob("#{app.config.REPOSTORE_PATH}/*/")
+  end
+
+  desc 'Create directory for repo store'
+  task :create => :config do
+    puts `mkdir #{app.config.REPOSTORE_PATH}`
+  end
+
+  desc 'Delete cloned repos in repo store'
+  task :wipe => :config do
+    puts 'No git repositories found in repostore' if @repo_dirs.empty?
+
+    sh "rm -rf #{app.config.REPOSTORE_PATH}/*/" do |ok, _|
+      puts(ok ? "#{@repo_dirs.count} repos deleted" : 'Could not delete repos')
+    end
+  end
+
+  desc 'List cloned repos in repo store'
+  task :list => :config do
+    if @repo_dirs.empty?
+      puts 'No git repositories found in repostore'
+    else
+      puts @repo_dirs.join("\n")
+    end
   end
 end
 
