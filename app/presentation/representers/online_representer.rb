@@ -16,6 +16,7 @@ module RoutePlanner
       property :topic
       property :url
       property :platform
+      property :for_skill
     end
   end
 end
