@@ -1,10 +1,10 @@
-_*
-config/secrets.yml
 _snippets/
-coverage/*
-config/secrets2.yml
-*.db
 .bundle/
+config/secrets.yml
+coverage/*
+*.db
+repostore/**/
+_cache/
 
 node_modules/
 package-lock.json
