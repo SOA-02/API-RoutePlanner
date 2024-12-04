@@ -6,6 +6,13 @@ module RoutePlanner
     class EvaluateStudyStress
       attr_reader :min_time
 
+      def self.compute_minimum_time(resources)
+        total_physical_time = Entity::Physical.compute_minimum_time(resources)
+        total_online_time =   Entity::Online.compute_minimum_time(resources)
+
+        total_online_time + total_physical_time
+      end
+
       def self.evaluate_stress_level(desired_resource, time)
         total_diff = gap_ability(desired_resource)
         time_factor = calculate_time_factor(time)
