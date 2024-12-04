@@ -12,7 +12,6 @@ module RoutePlanner
       attribute :id, Integer.optional
       attribute :skill_name, Strict::String
       attribute :challenge_score, Strict::Integer
-      # attribute? :loot_resources, Strict::Array.of(Strict::Hash).optional.default([])
 
       def to_attr_hash
         to_hash.except(:id)
