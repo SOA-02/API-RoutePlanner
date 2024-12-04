@@ -6,6 +6,7 @@ Sequel.migration do
   change do
     create_table(:skills) do
       primary_key :id
+      foreign_key :map_id, :maps
 
       String :skill_name
       Integer :challenge_score

@@ -5,11 +5,12 @@ require 'dry-struct'
 
 module RoutePlanner
   module Entity
-    # Domain entity for team members
+    # Domain entity for skill
     class Skill < Dry::Struct
       include Dry.Types()
 
       attribute :id, Integer.optional
+      attribute :map_id, Integer.optional
       attribute :skill_name, Strict::String
       attribute :challenge_score, Strict::Integer
 

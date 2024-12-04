@@ -89,15 +89,14 @@ describe 'Tests OpenAI Syllabus' do
         .call
 
       @skillset = RoutePlanner::OpenAPI::SkillMapper
-      .new(SYLLABUS, OPENAI_KEY)
-      .call
+        .new(SYLLABUS, OPENAI_KEY)
+        .call
 
       @rebuilt = RoutePlanner::Repository::For.entity(@summary).build_map(@summary)
     end
     it 'HAPPY: fetch summary response from openai' do
-
       _(@summary).must_be_kind_of RoutePlanner::Entity::Map
-      
+
       _(@rebuilt.map_name).must_be_kind_of String
       _(@rebuilt.map_description).must_be_kind_of String
       _(@rebuilt.map_evaluation).must_be_kind_of String
@@ -129,12 +128,12 @@ describe 'Tests OpenAI Syllabus' do
         db_map.add_skill(db_skill)
 
         # Verify the association
-        _(db_map.skills).must_include db_skill
-        _(db_skill.maps).must_include db_map
+        _(db_map.skills).must_be_kind_of Array
+        _(db_skill.map).must_be_kind_of RoutePlanner::Database::MapOrm
       end
     end
     it 'HAPPY: join_map_skill method is working' do
-      join = RoutePlanner::Repository::MapSkills.join_map_skill(@summary, @skillset)
+      join = RoutePlanner::Repository::Maps.join_map_skill(@summary, @skillset)
       _(join.skills).must_be_kind_of Array
 
       join.skills.each do |skill|

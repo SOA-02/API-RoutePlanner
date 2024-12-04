@@ -4,7 +4,7 @@ require_relative 'onlines'
 require_relative 'physicals'
 require_relative 'skills'
 require_relative 'maps'
-require_relative 'map_skills'
+# require_relative 'map_skills'
 
 module RoutePlanner
   module Repository
@@ -14,8 +14,7 @@ module RoutePlanner
         Entity::Online   => Onlines,
         Entity::Physical => Physicals,
         Entity::Skill    => Skills,
-        Entity::Map      => Maps,
-        Entity::MapSkill => MapSkills
+        Entity::Map      => Maps
       }.freeze
 
       def self.klass(entity_klass)
