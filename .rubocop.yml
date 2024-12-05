@@ -11,6 +11,7 @@ AllCops:
     - '_snippets/**/*'  # Demo files for instruction
     - 'repostore/**/*'  # CodePraise cloned code repos
     - 'node_modules/**/*'
+    - 'app/application/controllers/*'  # Roda's nested controllers require large blocks
 
 require:
   - rubocop-minitest

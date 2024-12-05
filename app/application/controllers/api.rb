@@ -39,12 +39,11 @@ module RoutePlanner
 
                 form_request = RoutePlanner::Request::SkillsForm.new(parsed_params)
                 routing.halt 400, { error: form_request.errors.join(', ') }.to_json unless form_request.valid?
-                # 直接使用原始的 @params
-                session[:skills] = form_request.params
+                user_ability_value = form_request.params
                 map = form_request.params.keys.first.split('_skills').first
                 results = []
                 errors = []
-                session[:skills].each_key do |skill|
+                user_ability_value.each_key do |skill|
                   result = Service::AddResources.new.call(online_skill: skill, physical_skill: skill)
                   if result.success?
                     results << result.value!
@@ -54,7 +53,7 @@ module RoutePlanner
                 end
 
                 if results.any?
-                  desired_resource = RoutePlanner::Mixins::Recommendations.desired_resource(session[:skills])
+                  desired_resource = RoutePlanner::Mixins::Recommendations.desired_resource(user_ability_value)
                   results.clear
 
                   desired_resource.each_value do |skills|
@@ -75,25 +74,34 @@ module RoutePlanner
                 end
 
                 binding.irb
+
+                
                 if results.any?
+                  # 計算學習壓力相關值
                   time = Value::EvaluateStudyStress.compute_minimum_time(results)
                   stress_index = Value::EvaluateStudyStress.evaluate_stress_level(desired_resource, time)
-
-                  {
+                
+                  # 準備輸出資料
+                  output_data = OpenStruct.new(
+                    map: map,
+                    user_ability_value: user_ability_value,
+                    time: time,
+                    stress_index: stress_index,
                     online_resources: results.map { |res| res[:online_resources] }.flatten,
-                    physical_resources: results.map { |res| res[:physical_resources] }.flatten,
-                    time:,
-                    stress_index:
-                  }.to_json
+                    physical_resources: results.map { |res| res[:physical_resources] }.flatten
+                  )
+                
+                  # 使用 Representer 將資料轉為 JSON 格式
+                  response.status = 200
+                  Representer::StudyStressOutput.new(output_data).to_json
                 elsif errors.any?
-                  routing.halt 500, { error: errors }.to_json
-                  routing.halt 500, { error: errors }.to_json
+                  response.status = 500
+                  { error: errors }.to_json
                 elsif results.empty?
-                  routing.halt 404, { message: 'No resources found' }.to_json
-               
+                  response.status = 404
+                  { message: 'No resources found' }.to_json
                 end
-                # binding.irb
-                # { message: 'Skills processed successfully', redirect_to: "/api/v1/RoutePlanner/#{map}" }.to_json
+
               rescue JSON::ParserError => e
                 routing.halt 400, { error: "Invalid JSON: #{e.message}" }.to_json
               end
@@ -109,7 +117,7 @@ module RoutePlanner
           #     # Fetch resources for each skill
 
           #     if results.any?
-          #       desired_resource = RoutePlanner::Mixins::Recommendations.desired_resource(session[:skills])
+          #       desired_resource = RoutePlanner::Mixins::Recommendations.desired_resource(user_ability_value)
           #       results.clear
 
           #       desired_resource.each_key do |skill|
