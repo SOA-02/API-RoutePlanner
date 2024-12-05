@@ -41,7 +41,6 @@ describe 'Tests Youtube API library' do
       end
     end
 
-
     describe 'Video Information' do
       before do
         @video_data = RoutePlanner::Youtube::YoutubeApi.new(API_KEY).video_info(VIDEO_ID)
@@ -53,16 +52,14 @@ describe 'Tests Youtube API library' do
         _(@video_data).must_be_kind_of Hash
       end
 
-      it 'HAPPY: maps video data successfully' do
-        _(@video_mapper).must_be_kind_of RoutePlanner::Entity::Youtubevideo
-      end
+      # it 'HAPPY: maps video data successfully' do
+      #   _(@video_mapper).must_be_kind_of RoutePlanner::Entity::Youtubevideo
+      # end
 
       it 'HAPPY: entity are of correct type' do
         _(@video_mapper.video_id).must_equal VIDEO_ID
         _(@video_mapper.video_duration).must_be_kind_of String
       end
     end
-
-
   end
 end

@@ -11,6 +11,7 @@ Sequel.migration do
       String :topic
       String :url, unique: true
       String :platform
+      String :video_duration
       String :for_skill
 
       DateTime :created_at

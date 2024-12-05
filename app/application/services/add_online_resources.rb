@@ -12,6 +12,7 @@ module RoutePlanner
       MSG_ONLINE_RESOURCE_SAVE_SUCCESS = 'Online resource saved successfully.'
       MSG_SERVER_ERROR = 'An unexpected error occurred on the server. Please try again later.'
       MSG_ONLINE_RESOURCE_SAVE_FAIL = 'Online resource could not be saved.'
+      MSG_VIDEO_DURATION_SAVE_FAIL = 'Video duration could not be saved.'
 
       step :find_oneline_resources
       step :store_oneline_resources

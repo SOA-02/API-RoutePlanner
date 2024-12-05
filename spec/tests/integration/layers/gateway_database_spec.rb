@@ -89,15 +89,14 @@ describe 'Tests OpenAI Syllabus' do
         .call
 
       @skillset = RoutePlanner::OpenAPI::SkillMapper
-      .new(SYLLABUS, OPENAI_KEY)
-      .call
+        .new(SYLLABUS, OPENAI_KEY)
+        .call
 
       @rebuilt = RoutePlanner::Repository::For.entity(@summary).build_map(@summary)
     end
     it 'HAPPY: fetch summary response from openai' do
-
       _(@summary).must_be_kind_of RoutePlanner::Entity::Map
-      
+
       _(@rebuilt.map_name).must_be_kind_of String
       _(@rebuilt.map_description).must_be_kind_of String
       _(@rebuilt.map_evaluation).must_be_kind_of String
