@@ -42,9 +42,20 @@ module RoutePlanner
           .new(input[:syllabus_text], App.config.OPENAI_KEY)
           .call
 
-        Success(input.merge(map: map, skills: skillset))
+        Success(Response::APIResponse.new(
+                  status: :created,
+                  message: input.merge(map: map, skills: skillset)
+                ))
+      # rescue OpenAPI::MapperError => e
+      #   Failure(Response::ApiResult.new(
+      #             status: :cannot_process,
+      #             message: 'Failed processing syllabus'
+      #           ))
       rescue StandardError => e
-        Failure("Error creating entities: #{e.message}")
+        Failure(Response::APIResponse.new(
+                  status: :internal_error,
+                  message: e.message
+                ))
       end
 
       def store_entities(input)
@@ -56,11 +67,17 @@ module RoutePlanner
           Repository::For.entity(skill).build_skill(skill)
         end
 
-        db_map = Repository::MapSkills.join_map_skill(input[:map], input[:skills])
+        db_map = Repository::Map.join_map_skill(input[:map], input[:skills])
 
-        Success(map: db_map, skills: db_map.skills)
+        Success(Response::APIResponse.new(
+                  status: :created,
+                  message: { map: db_map, skills: db_map.skills }
+                ))
       rescue StandardError => e
-        Failure("Error storing entities: #{e.message}")
+        Failure(Response::APIResponse.new(
+                  status: :internal_error,
+                  message: 'Cannot store planner'
+                ))
       end
     end
   end

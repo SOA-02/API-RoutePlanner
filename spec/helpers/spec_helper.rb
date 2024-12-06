@@ -22,5 +22,6 @@ KEY_WORD = 'Ruby'
 SKILL = 'Analytic'
 API_KEY = RoutePlanner::App.config.API_KEY
 OPENAI_KEY = RoutePlanner::App.config.OPENAI_KEY
+TITLE = 'Business Analytics using Machine Learning'
 SYLLABUS = File.read(File.expand_path('../fixtures/syllabus_example.txt', __dir__))
 CORRECT = YAML.safe_load_file('spec/fixtures/youtube_channel_info.yml')

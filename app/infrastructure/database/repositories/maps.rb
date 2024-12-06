@@ -29,6 +29,16 @@ module RoutePlanner
         db_resource.skills.map { |db_skill| Skills.rebuild_entity(db_skill) }
       end
 
+      def self.join_map_skill(map_entity, skillset_entity)
+        db_map = Database::MapOrm.db_find_or_create(map_entity.to_attr_hash)
+
+        skillset_entity.each do |skill|
+          db_skill = Database::SkillOrm.db_find_or_create(skill.to_attr_hash)
+          db_map.add_skill(db_skill)
+        end
+        db_map
+      end
+
       def self.build_map(entity)
         db_resource = Database::MapOrm.create(entity.to_attr_hash)
         rebuild_entity(db_resource)
