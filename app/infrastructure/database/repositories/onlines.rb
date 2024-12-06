@@ -12,6 +12,11 @@ module RoutePlanner
         find_original_id(entity.original_id)
       end
 
+      def self.update_video_duration(original_id, video_duration)
+        db_resource = Database::OnlineOrm.first(original_id:)
+        db_resource.update(video_duration: video_duration)
+      end
+
       def self.find_all_resource(urls)
         urls.map do |url|
           find_skill(url)
@@ -47,14 +52,8 @@ module RoutePlanner
           topic: online_entity.topic,
           url: online_entity.url,
           platform: online_entity.platform,
+          video_duration: online_entity.video_duration,
           for_skill: online_entity.for_skill
-        )
-
-        # 創建對應的 Routeplanner
-        Database::RouteplannerOrm.create(
-          neverland_id: routeplanner_entity.neverland_id,
-          resource_id: online.id,
-          resource_type: 'Online'
         )
       end
 
@@ -67,7 +66,8 @@ module RoutePlanner
           topic: db_resource.topic,
           url: db_resource.url,
           platform: db_resource.platform,
-          for_skill: db_resource.for_skill
+          for_skill: db_resource.for_skill,
+          video_duration: db_resource.video_duration
         )
       end
 

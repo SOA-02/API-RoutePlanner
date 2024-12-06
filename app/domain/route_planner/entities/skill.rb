@@ -3,6 +3,8 @@
 require 'dry-types'
 require 'dry-struct'
 
+require_relative 'physical'
+require_relative 'online'
 module RoutePlanner
   module Entity
     # Domain entity for skill

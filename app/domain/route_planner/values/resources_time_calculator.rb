@@ -19,7 +19,7 @@ module RoutePlanner
       end
 
       def self.compute_physical_time(physical_credits)
-        physical_credits.map { |credit| credit * 16 }.sum
+        physical_credits.map { |credit| Entity::Physical.minimum_time_required(credit) }.sum
       end
 
       def self.compute_total_physical_time(resources)

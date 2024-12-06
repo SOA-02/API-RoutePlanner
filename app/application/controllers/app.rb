@@ -26,9 +26,9 @@ module RoutePlanner
       end
 
       routing.on 'api/v1' do
-        routing.on 'RoutePlanners' do
+        routing.on 'map' do
           routing.post do
-            map_param = routing.params['map']
+            # map_param = routing.params['map']
 
             result = Service::AddMap.new.call(
               syllabus_title: map_param,
