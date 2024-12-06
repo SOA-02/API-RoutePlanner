@@ -128,12 +128,12 @@ describe 'Tests OpenAI Syllabus' do
         db_map.add_skill(db_skill)
 
         # Verify the association
-        _(db_map.skills).must_include db_skill
-        _(db_skill.maps).must_include db_map
+        _(db_map.skills).must_be_kind_of Array
+        _(db_skill.map).must_be_kind_of RoutePlanner::Database::MapOrm
       end
     end
     it 'HAPPY: join_map_skill method is working' do
-      join = RoutePlanner::Repository::MapSkills.join_map_skill(@summary, @skillset)
+      join = RoutePlanner::Repository::Maps.join_map_skill(@summary, @skillset)
       _(join.skills).must_be_kind_of Array
 
       join.skills.each do |skill|

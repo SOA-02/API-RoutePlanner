@@ -6,14 +6,9 @@ module RoutePlanner
   module Database
     # Object Relational Mapper for Maps
     class MapOrm < Sequel::Model(:maps)
-      one_to_many :map_skills,
-                  class: :'RoutePlanner::Database::MapSkillOrm',
+      one_to_many :skills,
+                  class: :'RoutePlanner::Database::SkillOrm',
                   key: :map_id
-
-      many_to_many :skills,
-                   class: :'RoutePlanner::Database::SkillOrm',
-                   join_table: :map_skills,
-                   left_key: :map_id, right_key: :skill_id
 
       plugin :timestamps, update_on_create: true
 

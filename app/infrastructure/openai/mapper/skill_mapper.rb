@@ -50,9 +50,9 @@ module RoutePlanner
           @parsed_response['prerequisite_subjects'].map do |subject|
             RoutePlanner::Entity::Skill.new(
               id: nil,
+              map_id: nil,
               skill_name: subject['SubjectName'],
               challenge_score: subject['DifficultyLevel']
-              # loot_resources: nil
             )
           end
         end
