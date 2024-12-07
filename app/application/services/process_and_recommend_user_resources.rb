@@ -24,9 +24,8 @@ module RoutePlanner
       def validate_input(params)
         return Failure(MSG_NO_SKILLS_PROVIDED) if params.empty?
 
-        user_ability_value = params
         map = params.keys.first.split('_skills').first
-
+        user_ability_value = params.values.first
         Success(map: map, user_ability_value: user_ability_value)
       rescue StandardError
         Failure("step1#{MSG_NO_RECOMMENDED_RESOURCES}")
@@ -39,14 +38,12 @@ module RoutePlanner
         results = []
         errors = []
 
-        user_ability_value.each_value do |skills|
-          skills.each_key do |skill|
-            result = Service::AddResources.new.call(online_skill: skill, physical_skill: skill)
-            if result.success?
-              results << result.success
-            else
-              errors << result.failure
-            end
+        user_ability_value.each_key do |skill|
+          result = Service::AddResources.new.call(online_skill: skill, physical_skill: skill)
+          if result.success?
+            results << result.success
+          else
+            errors << result.failure
           end
         end
 
@@ -77,11 +74,9 @@ module RoutePlanner
       def recommend_resources(input) # rubocop:disable Metrics/MethodLength
         desired_resource = RoutePlanner::Mixins::Recommendations.desired_resource(input[:user_ability_value])
         recommended_resources = []
-        desired_resource.each_value do |skills|
-          skills.each_key do |skill|
-            viewable_resource = Service::FetchViewedResources.new.call(skill)
-            recommended_resources << viewable_resource.value! if viewable_resource.success?
-          end
+        desired_resource.each_key do |skill|
+          viewable_resource = Service::FetchViewedResources.new.call(skill)
+          recommended_resources << viewable_resource.value! if viewable_resource.success?
         end
         if recommended_resources.empty?
           Failure("step4#{MSG_NO_RECOMMENDED_RESOURCES}")
@@ -89,7 +84,7 @@ module RoutePlanner
           Success(input.merge(recommended_resources:))
         end
       rescue StandardError
-        Failure(MSG_PROCESSING_ERROR)
+        Failure("step4#{MSG_PROCESSING_ERRORRCES}")
       end
 
       # Step 5: Calculate study metrics
@@ -98,7 +93,9 @@ module RoutePlanner
         desired_resource = input[:user_ability_value]
 
         time = Value::EvaluateStudyStress.compute_minimum_time(recommended_resources)
-        stress_index = Value::EvaluateStudyStress.evaluate_stress_level(desired_resource, time)
+        binding.irb
+        stress_index = Entity::Map.evaluate_stress_level(desired_resource, time)
+        binding.irb
         output_data = OpenStruct.new(
           map: input[:map],
           map_skills: input[:map_skills],
