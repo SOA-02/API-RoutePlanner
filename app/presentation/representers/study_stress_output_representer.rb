@@ -16,7 +16,7 @@ module RoutePlanner
 
       property :map
       property :user_ability_value
-      collection :map_skills, extend: Skill, class: OpenStruct
+      property :require_ability_value
       property :time
       property :stress_index
       collection :online_resources, extend: Representer::Online, class: OpenStruct

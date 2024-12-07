@@ -30,6 +30,7 @@ module RoutePlanner
       # Step 2: Fetch skills associated with the map
       def fetch_skills(map_id)
         skills = Repository::For.klass(Entity::Skill).find_all_skills(map_id)
+        binding.irb
         return Failure(MSG_NO_SKILLS_FOUND) if skills.nil?
 
         return Failure(MSG_NO_SKILLS_FOUND) if skills.empty?

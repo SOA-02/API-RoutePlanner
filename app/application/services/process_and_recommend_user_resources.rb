@@ -93,12 +93,10 @@ module RoutePlanner
         desired_resource = input[:user_ability_value]
 
         time = Value::EvaluateStudyStress.compute_minimum_time(recommended_resources)
-        binding.irb
         stress_index = Entity::Map.evaluate_stress_level(desired_resource, time)
-        binding.irb
         output_data = OpenStruct.new(
           map: input[:map],
-          map_skills: input[:map_skills],
+          require_ability_value: input[:map_skills],
           user_ability_value: input[:user_ability_value],
           time: time,
           stress_index: stress_index,
