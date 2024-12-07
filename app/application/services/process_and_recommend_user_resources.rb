@@ -12,9 +12,9 @@ module RoutePlanner
       MSG_NO_RECOMMENDED_RESOURCES = 'No recommended resources found'
       MSG_PROCESSING_ERROR = 'An unexpected error occurred during processing'
 
-      # 定義交易步驟
       step :validate_input
       step :process_user_skills
+      step :fetch_map_skills
       step :recommend_resources
       step :calculate_study_metrics
 
@@ -39,12 +39,14 @@ module RoutePlanner
         results = []
         errors = []
 
-        user_ability_value.each_key do |skill|
-          result = Service::AddResources.new.call(online_skill: skill, physical_skill: skill)
-          if result.success?
-            results << result.success
-          else
-            errors << result.failure
+        user_ability_value.each_value do |skills|
+          skills.each_key do |skill|
+            result = Service::AddResources.new.call(online_skill: skill, physical_skill: skill)
+            if result.success?
+              results << result.success
+            else
+              errors << result.failure
+            end
           end
         end
 
@@ -57,7 +59,21 @@ module RoutePlanner
         Failure("step2#{MSG_NO_RECOMMENDED_RESOURCES}")
       end
 
-      # Step 3: Recommend resources based on user skills
+      # Step 3: Fetch map skills by map name
+      def fetch_map_skills(input)
+        map_name = input[:map]
+
+        result = Service::FetchMapSkillRequire.new.call(map_name)
+
+        return Failure("step3#{MSG_NO_RECOMMENDED_RESOURCES}") unless result.success?
+
+        # Merge the fetched map skills into the input
+        Success(input.merge(map_skills: result.success))
+      rescue StandardError
+        Failure("step3#{MSG_PROCESSING_ERROR}")
+      end
+
+      # Step 4: Recommend resources based on user skills
       def recommend_resources(input) # rubocop:disable Metrics/MethodLength
         desired_resource = RoutePlanner::Mixins::Recommendations.desired_resource(input[:user_ability_value])
         recommended_resources = []
@@ -68,7 +84,7 @@ module RoutePlanner
           end
         end
         if recommended_resources.empty?
-          Failure("step3#{MSG_NO_RECOMMENDED_RESOURCES}")
+          Failure("step4#{MSG_NO_RECOMMENDED_RESOURCES}")
         else
           Success(input.merge(recommended_resources:))
         end
@@ -76,16 +92,16 @@ module RoutePlanner
         Failure(MSG_PROCESSING_ERROR)
       end
 
-      # Step 4: Calculate study metrics
+      # Step 5: Calculate study metrics
       def calculate_study_metrics(input) # rubocop:disable Metrics/MethodLength
         recommended_resources = input[:recommended_resources]
         desired_resource = input[:user_ability_value]
 
         time = Value::EvaluateStudyStress.compute_minimum_time(recommended_resources)
         stress_index = Value::EvaluateStudyStress.evaluate_stress_level(desired_resource, time)
-
         output_data = OpenStruct.new(
           map: input[:map],
+          map_skills: input[:map_skills],
           user_ability_value: input[:user_ability_value],
           time: time,
           stress_index: stress_index,
@@ -95,7 +111,7 @@ module RoutePlanner
 
         Success(output_data)
       rescue StandardError
-        Failure("step4#{MSG_NO_RECOMMENDED_RESOURCES}")
+        Failure("step5#{MSG_NO_RECOMMENDED_RESOURCES}")
       end
     end
   end

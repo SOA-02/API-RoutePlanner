@@ -13,6 +13,11 @@ module RoutePlanner
         results.map { |result| result.values.slice(:skill_name, :challenge_score) }
       end
 
+      def self.find_all_skills(map_id)
+        db_resources = Database::SkillOrm.where(map_id: map_id).all
+        db_resources.map { |resource| rebuild_entity(resource) }
+      end
+
       def self.find_skillid(id)
         db_resource = Database::SkillOrm.first(id:)
         rebuild_entity(db_resource)

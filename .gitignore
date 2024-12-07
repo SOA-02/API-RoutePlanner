@@ -9,5 +9,7 @@ _cache/
 node_modules/
 package-lock.json
 package.json
-.prettierrc.ymlspec/fixtures/cassettes/nthusa_api.yml
+.prettierrc.yml
+spec/fixtures/cassettes/nthusa_api.yml
 spec/fixtures/cassettes/youtube_api.yml
+

@@ -23,6 +23,4 @@ module RoutePlanner
   end
 end
 
-# skill = RoutePlanner::Entity::Skill.new(skill_name: 'Ruby', challenge_level: 30)
-# puts skill.skill_name
-# puts skill.challenge_level
+

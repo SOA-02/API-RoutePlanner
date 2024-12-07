@@ -11,7 +11,6 @@ module RoutePlanner
 
       def call(skill)
         resources = fetch_resources(skill)
-
         return Success(resources) unless resources_empty?(resources)
 
         Failure('No resources found')

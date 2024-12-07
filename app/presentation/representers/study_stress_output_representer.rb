@@ -4,6 +4,7 @@ require 'roar/decorator'
 require 'roar/json'
 require 'ostruct'
 
+require_relative 'skill_representer'
 require_relative 'online_representer'
 require_relative 'physical_representer'
 
@@ -15,6 +16,7 @@ module RoutePlanner
 
       property :map
       property :user_ability_value
+      collection :map_skills, extend: Skill, class: OpenStruct
       property :time
       property :stress_index
       collection :online_resources, extend: Representer::Online, class: OpenStruct

@@ -4,6 +4,7 @@ require 'dry/monads'
 
 module RoutePlanner
   module Service
+    # Service to create skillset
     class SkillService
       include Dry::Monads::Result::Mixin
       MSG_NO_SKILL = 'Unable to skillsets for you.'

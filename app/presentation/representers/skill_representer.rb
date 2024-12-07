@@ -3,7 +3,7 @@ require 'roar/json'
 
 module RoutePlanner
   module Representer
-    # Represents Map information
+    # Represents Skill information
     class Skill < Roar::Decorator
       include Roar::JSON
 

@@ -33,30 +33,41 @@ module RoutePlanner
               raw_body = routing.body.read
               puts "Raw Body: #{raw_body}"
 
-              begin
-                parsed_params = JSON.parse(raw_body)
-                puts "Parsed Params: #{parsed_params}"
 
-                form_request = RoutePlanner::Request::SkillsForm.new(parsed_params)
+              parsed_params = JSON.parse(raw_body)
+              puts "Parsed Params: #{parsed_params}"
 
-                data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(form_request.params)
+              form_request = RoutePlanner::Request::SkillsForm.new(parsed_params)
+
+              data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(form_request.params)
       
+              binding.irb
+              if data.failure?
                 api_result = RoutePlanner::APIResponse::ApiResult.new(
+                  status: :bad_request,
+                  message: data.value!
+                 )               
+
+                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+                 response.status = http_response.http_status_code
+              end
+
+
+              api_result = RoutePlanner::APIResponse::ApiResult.new(
                     status: :created,
                     message: data.value!
-                )
+              )               
+
+              http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+              response.status = http_response.http_status_code
                   
 
-                http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
-                response.status = http_response.http_status_code
-                  
-
-                RoutePlanner::Representer::StudyStressOutput.new(api_result.message).to_json
+              RoutePlanner::Representer::StudyStressOutput.new(api_result.message).to_json
 
               rescue JSON::ParserError => e
                 routing.halt 400, { error: "Invalid JSON: #{e.message}" }.to_json
               end
-            end
+
           end
 
         end

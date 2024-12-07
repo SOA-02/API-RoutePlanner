@@ -1,43 +1,42 @@
 # frozen_string_literal: true
 
-require 'dry/monads'
+require 'dry/transaction'
 
 module RoutePlanner
   module Service
-    # logic of fetching viewed resources
+    # Fetch map skills and their challenge scores
     class FetchMapSkillRequire
-      include Dry::Monads::Result::Mixin
+      include Dry::Transaction
+
+      MSG_MAP_NOT_FOUND = 'Map not found for the given name.'
+      MSG_NO_SKILLS_FOUND = 'No skills found for the specified map.'
       MSG_SERVER_ERROR = 'An unexpected error occurred on the server. Please try again later.'
 
-      def call(skill)
-        resources = fetch_resources(skill)
+      step :find_map
+      step :fetch_skills
 
-        return Success(resources) unless resources_empty?(resources)
+      private
 
-        Failure('No resources found')
+      # Step 1: Find the map by its name
+      def find_map(map_name)
+        map = Repository::For.klass(Entity::Map).find_mapid(map_name)
+        return Failure(MSG_MAP_NOT_FOUND) unless map
+
+        Success(map)
       rescue StandardError
         Failure(MSG_SERVER_ERROR)
       end
 
-      private
+      # Step 2: Fetch skills associated with the map
+      def fetch_skills(map_id)
+        skills = Repository::For.klass(Entity::Skill).find_all_skills(map_id)
+        return Failure(MSG_NO_SKILLS_FOUND) if skills.nil?
 
-      def fetch_resources(skill)
-        {
-          physical_resources: fetch_physical_resources(skill),
-          online_resources: fetch_online_resources(skill)
-        }
-      end
+        return Failure(MSG_NO_SKILLS_FOUND) if skills.empty?
 
-      def fetch_physical_resources(skill)
-        Repository::For.klass(Entity::Physical).find_all_resource_of_skills(skill) || []
-      end
-
-      def fetch_online_resources(skill)
-        Repository::For.klass(Entity::Online).find_all_resource_of_skills(skill) || []
-      end
-
-      def resources_empty?(resources)
-        resources[:physical_resources].empty? && resources[:online_resources].empty?
+        Success(skills)
+      rescue StandardError
+        Failure(MSG_SERVER_ERROR)
       end
     end
   end
