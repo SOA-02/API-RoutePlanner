@@ -27,7 +27,7 @@ describe 'RoutePlanner Service Integration Test' do
 
       # ..and provide a course entity with the right details
       rebuilt_message = resources_made.value!
-      _(rebuilt_message).must_equal 'Physical resource saved successfully.'
+      _(rebuilt_message).must_equal RoutePlanner::Service::AddPhysicalResource::MSG_PHYSICAL_RESOURCE_SAVE_SUCCESS
     end
   end
 end

@@ -27,7 +27,7 @@ describe 'RoutePlanner Service Integration Test' do
 
       # ..and provide a confirmation message
       rebuilt_message = resources_made.value!
-      _(rebuilt_message).must_equal 'Online resource saved successfully.'
+      _(rebuilt_message).must_equal RoutePlanner::Service::AddOnlineResource::MSG_ONLINE_RESOURCE_SAVE_SUCCESS
     end
   end
 end
