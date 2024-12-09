@@ -23,18 +23,23 @@ describe 'RoutePlanner Service Integration Test' do
     end
     # TITLE constant moved outside the block
 
-    TITLE = 'Business Analytics using Machine Learning'
-
     it 'HAPPY: should return success when map and skills are found' do
       result = RoutePlanner::Service::FetchMapSkillRequire.new.call(TITLE)
       # Assert
-      _(result.value!).must_be_instance_of Hash
-      _(result.value!).wont_be_empty
+
+      if result.failure?
+        puts "Failure reason: #{result.failure}" # 調試輸出
+      end
+      _(result.success?).must_equal true, "Expected success but got failure: #{result.failure}"
+      
+      data = result.value!
+      _(data).must_be_instance_of Hash
+      _(data).wont_be_empty
+
       expected_keys = ['Data Mining', 'Machine Learning', 'Statistics', 'Python Programming', 'Business Analytics']
-      missing_keys = expected_keys - result.value!.keys
+      missing_keys = expected_keys - data.keys
       _(missing_keys.empty?).must_equal true, "Missing keys: #{missing_keys}"
-      # 確認 values 不為空
-      _(result.value!.values).wont_be_empty
+      _(data.values).wont_be_empty
     end
 
     it 'SAD: should return failure when map name does not exist' do
