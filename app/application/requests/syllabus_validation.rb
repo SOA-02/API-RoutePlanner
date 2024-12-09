@@ -1,12 +1,16 @@
+# frozen_string_literal: true
+
 require 'dry/monads'
 require 'json'
 
 module RoutePlanner
   module Request
+    # Request value for the syllabus form input
     class NewMap
+      include Dry::Monads::Result::Mixin
       INPUTS_REGEX = /\A(?!.*<script>|.*javascript:)[\p{L}\p{N}\p{P}\s]*\p{L}[\p{L}\p{N}\p{P}\s]*\z/
-      MSG_INVALID_TITLE = 'Course Title must be filled.'
-      MSG_INVALID_TEXT = 'Course Syllabus must be filled.'
+      MSG_INVALID_TITLE = 'Course Title must be filled!'
+      MSG_INVALID_TEXT = 'Course Syllabus must be filled!'
 
       def initialize(params)
         @params = params
@@ -16,7 +20,7 @@ module RoutePlanner
         validate_inputs
       rescue StandardError => e
         Failure(
-          Response::ApiResult.new(
+          APIResponse::ApiResult.new(
             status: :bad_request,
             message: e.message
           )
@@ -45,7 +49,7 @@ module RoutePlanner
 
       def title_error
         Failure(
-          Response::ApiResult.new(
+          APIResponse::ApiResult.new(
             status: :bad_request,
             message: MSG_INVALID_TITLE
           )
@@ -54,7 +58,7 @@ module RoutePlanner
 
       def text_error
         Failure(
-          Response::ApiResult.new(
+          APIResponse::ApiResult.new(
             status: :bad_request,
             message: MSG_INVALID_TEXT
           )

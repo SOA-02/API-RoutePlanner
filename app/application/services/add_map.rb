@@ -46,11 +46,7 @@ module RoutePlanner
                   status: :created,
                   message: input.merge(map: map, skills: skillset)
                 ))
-      # rescue OpenAPI::MapperError => e
-      #   Failure(Response::ApiResult.new(
-      #             status: :cannot_process,
-      #             message: 'Failed processing syllabus'
-      #           ))
+      
       rescue StandardError => e
         Failure(Response::APIResponse.new(
                   status: :internal_error,
@@ -73,7 +69,7 @@ module RoutePlanner
                   status: :created,
                   message: { map: db_map, skills: db_map.skills }
                 ))
-      rescue StandardError => e
+      rescue StandardError
         Failure(Response::APIResponse.new(
                   status: :internal_error,
                   message: 'Cannot store planner'

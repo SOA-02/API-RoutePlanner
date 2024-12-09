@@ -10,6 +10,8 @@ module RoutePlanner
     plugin :flash
     plugin :all_verbs # allows HTTP verbs beyond GET/POST (e.g., DELETE)
     plugin :common_logger, $stderr
+    plugin :json
+    plugin :json_parser
 
     route do |routing|
       response['Content-Type'] = 'application/json'
@@ -26,23 +28,42 @@ module RoutePlanner
       end
 
       routing.on 'api/v1' do
-        routing.on 'map' do
+        routing.on 'maps' do
           routing.post do
-            # map_param = routing.params['map']
-
-            result = Service::AddMap.new.call(
-              syllabus_title: map_param,
-              syllabus_text: request.body.read
-            )
-
+            params = if request.content_type =~ /json/i
+                       JSON.parse(request.body.read)
+                     else
+                       routing.params
+                     end
+  
+            form_request = RoutePlanner::Request::NewMap.new(params)
+            result = form_request.call
+  
             if result.failure?
               failed = Representer::HttpResponse.new(result.failure)
-              routing.halt failed.http_status_code, failed.to_json
+              routing.halt failed.status, failed.to_json
+            else
+              validated_params = result.value!
+              add_map_service = RoutePlanner::Service::AddMap.new
+              service_result = add_map_service.call(validated_params)
+  
+              if service_result.failure?
+                failed = RoutePlanner::Representer::HttpResponse.new(service_result.failure)
+                routing.halt failed.status, failed.to_json
+              else
+                map_entity = service_result.value![:map]
+                skills_entities = service_result.value![:skills]
+  
+                map = RoutePlanner::Representer::Map.new(map_entity).to_json
+                skills = skills_entities.map { |skill| RoutePlanner::Representer::Skill.new(skill).to_json }
+  
+                response.status = 201
+                { message: 'Syllabus processed successfully', map: map, skills: skills }.to_json
+              end
             end
-
-            http_response = Representer::HttpResponse.new(result.value!)
-            response.status = http_response.http_status_code
-            # Representer::Map.new(result.value!).to_json
+          rescue JSON::ParserError
+            response.status = 400
+            { error: 'Invalid JSON' }.to_json
           end
         end
       end
