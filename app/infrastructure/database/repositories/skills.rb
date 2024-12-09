@@ -15,7 +15,7 @@ module RoutePlanner
 
       def self.find_all_skills(map_id)
         db_resources = Database::SkillOrm.where(map_id: map_id).all
-        db_resources.map.to_h { |result| [result[:skill_name], result[:challenge_score].to_s] }
+        db_resources.map(&:skill_name)
       end
 
       def self.find_skillid(id)
@@ -23,8 +23,9 @@ module RoutePlanner
         rebuild_entity(db_resource)
       end
 
-      def self.build_skill(entity)
-        db_resource = Database::SkillOrm.create(entity.to_attr_hash)
+      def self.build_skill(entity, map_id)
+        entity_with_map = entity.to_attr_hash.merge(map_id:)
+        db_resource = Database::SkillOrm.create(entity_with_map)
         rebuild_entity(db_resource)
       end
 

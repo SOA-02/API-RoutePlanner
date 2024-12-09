@@ -24,6 +24,101 @@ module RoutePlanner
         result_response.to_json
       end
 
+      routing.on 'api/v1' do
+        routing.on 'maps' do
+          routing.is do
+            # POST /api/v1/maps
+            routing.post do
+              raw_body = routing.body.read
+              raw_body.force_encoding("ASCII-8BIT")
+              
+              
+              raw_body = raw_body.encode("UTF-8", invalid: :replace, undef: :replace, replace: "?")
+              
+              puts "Raw Body: #{raw_body}"
+              parsed_params = JSON.parse(raw_body)
+             
+               
+              result = RoutePlanner::Request::NewMap.new(parsed_params).call
+              if result.failure?
+                  failed = Representer::HttpResponse.new(result.failure)
+                  routing.halt failed.status, failed.to_json
+              end
+
+  
+
+              validated_params = result.value!
+              binding.irb
+              service_result = RoutePlanner::Service::AddMapandSkill.new.call(validated_params)
+              binding.irb
+
+
+            #   if service_result.failure?
+            #     failed = RoutePlanner::Representer::HttpResponse.new(service_result.failure)
+            #     routing.halt failed.status, failed.to_json
+            #   else
+            #     map_entity = service_result.value![:map]
+            #     skills_entities = service_result.value![:skills]
+  
+            #     map = RoutePlanner::Representer::Map.new(map_entity).to_json
+            #     skills = skills_entities.map { |skill| RoutePlanner::Representer::Skill.new(skill).to_json }
+  
+            #     response.status = 201
+            #     { message: 'Syllabus processed successfully', map: map, skills: skills }.to_json
+            end
+          end
+          rescue JSON::ParserError
+            response.status = 400
+            { error: 'Invalid JSON' }.to_json
+        end
+
+        routing.on 'RoutePlanner' do
+          routing.is do
+            # POST /api/v1/RoutePlanner
+            routing.post do
+              raw_body = routing.body.read
+              puts "Raw Body: #{raw_body}"
+
+
+              parsed_params = JSON.parse(raw_body)
+              puts "Parsed Params: #{parsed_params}"
+
+              form_request = RoutePlanner::Request::SkillsForm.new(parsed_params)
+
+              data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(form_request.params)
+      
+              binding.irb
+              if data.failure?
+                api_result = RoutePlanner::APIResponse::ApiResult.new(
+                  status: :bad_request,
+                  message: data.value!
+                 )               
+
+                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+                 response.status = http_response.http_status_code
+              end
+
+
+              api_result = RoutePlanner::APIResponse::ApiResult.new(
+                    status: :created,
+                    message: data.value!
+              )               
+
+              http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+              response.status = http_response.http_status_code
+                  
+
+              RoutePlanner::Representer::StudyStressOutput.new(api_result.message).to_json
+
+              rescue JSON::ParserError => e
+                routing.halt 400, { error: "Invalid JSON: #{e.message}" }.to_json
+              end
+
+           end
+
+        end
+      end
+
       # API Namespace
       routing.on 'api/v1' do
         routing.on 'RoutePlanner' do
@@ -68,7 +163,7 @@ module RoutePlanner
                 routing.halt 400, { error: "Invalid JSON: #{e.message}" }.to_json
               end
 
-          end
+           end
 
         end
       end
