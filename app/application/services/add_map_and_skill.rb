@@ -34,7 +34,7 @@ module RoutePlanner
           id = result[:map_id]
           process_and_store_skills(input[:syllabus_text], id, input)
         end
-        Success({ map: input[:map], skills: input[:skills] })
+        Success(OpenStruct.new({ map: input[:map], skills: input[:skills] }))
       end
 
       def map_in_database(map_name)

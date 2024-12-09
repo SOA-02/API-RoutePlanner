@@ -103,7 +103,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 29 Nov 2024 01:57:54 GMT
+      - Mon, 09 Dec 2024 14:35:11 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -115,7 +115,7 @@ http_interactions:
       Openai-Organization:
       - user-puxbhrdszzsz9p2xhyhw7spz
       Openai-Processing-Ms:
-      - '897'
+      - '1164'
       Openai-Version:
       - '2020-10-01'
       X-Ratelimit-Limit-Requests:
@@ -131,39 +131,39 @@ http_interactions:
       X-Ratelimit-Reset-Tokens:
       - 467ms
       X-Request-Id:
-      - req_de51b2443e9df8aeaabaf9a85754d352
+      - req_2c44e63f104d2d8ff26c0e6faece37ad
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=.IT0YiBQ35ACsouQ1MjW6F3k58T8_uz8TIK4_ETu_5U-1732845474-1.0.1.1-k5tAhrCuwH9tYFghUhFdDilTL8DajU4gA9heycmSCNWZmWThYtUbBYaTIXLXu2vTjf0vnTOqerA9LRwShtCFKQ;
-        path=/; expires=Fri, 29-Nov-24 02:27:54 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=pNjgbwA6MwiUD4e8wk9zJrTN2z3nDVZigwjxrNit8YI-1733754911-1.0.1.1-lLUJBVauDMQftyaPRgB_InzdTDtX87MVT9RNfES7scdfHSkDUoj.xAP3AW94x4eLdxuFz0LxCtxKBS1zGKah2Q;
+        path=/; expires=Mon, 09-Dec-24 15:05:11 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=G5rJS6hXwWrODCQLwU6v9HIGDuYEXrTH0qrdV3dFA1E-1732845474474-0.0.1.1-604800000;
+      - _cfuvid=EAxDtHyn7LQRSYludt3zQ7sgru33jicV4qyhX0Ypuhc-1733754911932-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8e9efd4f4faf8451-TPE
+      - 8ef5b85f1a2c4a8a-TPE
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-AYkYTdgRIoHP9LgLuJsfgIgkuVPrk",
+          "id": "chatcmpl-AcZ8oVKeHwaubvG2tMDg0sljWh1vn",
           "object": "chat.completion",
-          "created": 1732845473,
+          "created": 1733754910,
           "model": "gpt-3.5-turbo-0125",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "{\n\t\"prerequisite_subjects\": [\n\t\t{\"SubjectName\": \"Data Mining\", \"DifficultyLevel\": 70},\n\t\t{\"SubjectName\": \"Statistics\", \"DifficultyLevel\": 60},\n\t\t{\"SubjectName\": \"Machine Learning\", \"DifficultyLevel\": 50},\n\t\t{\"SubjectName\": \"Business Analytics\", \"DifficultyLevel\": 40},\n\t\t{\"SubjectName\": \"Python Programming\", \"DifficultyLevel\": 30}\n\t]\n}",
+                "content": "{\n\t\"prerequisite_subjects\": [\n\t\t{\"SubjectName\": \"Machine Learning\", \"DifficultyLevel\": 80},\n\t\t{\"SubjectName\": \"Data Mining\", \"DifficultyLevel\": 75},\n\t\t{\"SubjectName\": \"Statistics\", \"DifficultyLevel\": 70},\n\t\t{\"SubjectName\": \"Python Programming\", \"DifficultyLevel\": 65},\n\t\t{\"SubjectName\": \"Business Analytics\", \"DifficultyLevel\": 60}\n\t]\n}",
                 "refusal": null
               },
               "logprobs": null,
@@ -187,5 +187,5 @@ http_interactions:
           },
           "system_fingerprint": null
         }
-  recorded_at: Fri, 29 Nov 2024 01:57:54 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:11 GMT
 recorded_with: VCR 6.3.1

@@ -27,7 +27,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Fri, 29 Nov 2024 01:57:52 GMT
+      - Mon, 09 Dec 2024 14:35:09 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -46,757 +46,86 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#searchListResponse",
-          "etag": "rJizA9zi-IF_CIqdg7nXLKQjPAI",
-          "nextPageToken": "CAUQAA",
-          "regionCode": "TW",
-          "pageInfo": {
-            "totalResults": 1000000,
-            "resultsPerPage": 5
-          },
-          "items": [
-            {
-              "kind": "youtube#searchResult",
-              "etag": "J0z6mg_PHQOP0ageA44_wB4vv2U",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "8wZ2ZD--VTk"
-              },
-              "snippet": {
-                "publishedAt": "2017-12-05T20:13:32Z",
-                "channelId": "UCvmINlrza7JHB1zkIOuXEbw",
-                "title": "Ruby Programming | In One Video",
-                "description": "Overview - 1:32 Setup - 3:16 Printing - 3:43 Variables & Data Types - 4:18 Casting - 5:58 Strings - 7:13 Numbers - 8:56 User Input ...",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "Giraffe Academy",
-                "liveBroadcastContent": "none",
-                "publishTime": "2017-12-05T20:13:32Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "AZrLELWvDg42-neoGkkNo388PVw",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "xyDoP5a_dvo"
-              },
-              "snippet": {
-                "publishedAt": "2021-01-26T14:30:10Z",
-                "channelId": "UCTt7pyY-o0eltq14glaG5dg",
-                "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
-                "description": "All my FREE courses - https://automationstepbystep.com/ 00:00 Introduction 02:20 Hello World 03:50 How to copy my ruby project ...",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "Automation Step by Step",
-                "liveBroadcastContent": "none",
-                "publishTime": "2021-01-26T14:30:10Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "I_XkVBXhjvq6BW3pZcLIpxC39Ww",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "fmyvWz5TUWg"
-              },
-              "snippet": {
-                "publishedAt": "2020-11-09T14:50:57Z",
-                "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
-                "title": "Learn Ruby on Rails - Full Course",
-                "description": "Learn Ruby on Rails in this full course for beginners. Ruby on Rails is a is a server-side web application framework used for ...",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "freeCodeCamp.org",
-                "liveBroadcastContent": "none",
-                "publishTime": "2020-11-09T14:50:57Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "KVLI6T9IpsJ6GDtiOg-phnRh7DE",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "oG-H6Qo-EnI"
-              },
-              "snippet": {
-                "publishedAt": "2024-08-18T16:45:24Z",
-                "channelId": "UCIIhqydramkUXfwCldOXWSQ",
-                "title": "Oi oi oi Baka",
-                "description": "",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "finnerson405",
-                "liveBroadcastContent": "none",
-                "publishTime": "2024-08-18T16:45:24Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "h-ZJkr1lwSYTA5H7b2M3OJXad9w",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "FKTUzPT7244"
-              },
-              "snippet": {
-                "publishedAt": "2021-12-29T21:00:13Z",
-                "channelId": "UCQf9BYcqr8pzKrY14ZyMsbg",
-                "title": "Crash Course: The Crash Course on Ruby Programming",
-                "description": "Learn the Ruby programming language basics crash course in this course / tutorial under one hour. The course is designed for ...",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/FKTUzPT7244/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/FKTUzPT7244/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/FKTUzPT7244/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "Code With Prince",
-                "liveBroadcastContent": "none",
-                "publishTime": "2021-12-29T21:00:13Z"
-              }
-            }
-          ]
-        }
-  recorded_at: Fri, 29 Nov 2024 01:57:52 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby%20one%20hour%20lectures%20tutorials&type=video
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - www.googleapis.com
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Fri, 29 Nov 2024 01:57:52 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#searchListResponse",
-          "etag": "Stq4ZPKDOHSqDAmJM68u-iBztFA",
-          "nextPageToken": "CAUQAA",
-          "regionCode": "TW",
-          "pageInfo": {
-            "totalResults": 1000000,
-            "resultsPerPage": 5
-          },
-          "items": [
-            {
-              "kind": "youtube#searchResult",
-              "etag": "J0z6mg_PHQOP0ageA44_wB4vv2U",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "8wZ2ZD--VTk"
-              },
-              "snippet": {
-                "publishedAt": "2017-12-05T20:13:32Z",
-                "channelId": "UCvmINlrza7JHB1zkIOuXEbw",
-                "title": "Ruby Programming | In One Video",
-                "description": "Overview - 1:32 Setup - 3:16 Printing - 3:43 Variables & Data Types - 4:18 Casting - 5:58 Strings - 7:13 Numbers - 8:56 User Input ...",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "Giraffe Academy",
-                "liveBroadcastContent": "none",
-                "publishTime": "2017-12-05T20:13:32Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "I_XkVBXhjvq6BW3pZcLIpxC39Ww",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "fmyvWz5TUWg"
-              },
-              "snippet": {
-                "publishedAt": "2020-11-09T14:50:57Z",
-                "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
-                "title": "Learn Ruby on Rails - Full Course",
-                "description": "Learn Ruby on Rails in this full course for beginners. Ruby on Rails is a is a server-side web application framework used for ...",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "freeCodeCamp.org",
-                "liveBroadcastContent": "none",
-                "publishTime": "2020-11-09T14:50:57Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "AZrLELWvDg42-neoGkkNo388PVw",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "xyDoP5a_dvo"
-              },
-              "snippet": {
-                "publishedAt": "2021-01-26T14:30:10Z",
-                "channelId": "UCTt7pyY-o0eltq14glaG5dg",
-                "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
-                "description": "All my FREE courses - https://automationstepbystep.com/ 00:00 Introduction 02:20 Hello World 03:50 How to copy my ruby project ...",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "Automation Step by Step",
-                "liveBroadcastContent": "none",
-                "publishTime": "2021-01-26T14:30:10Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "KVLI6T9IpsJ6GDtiOg-phnRh7DE",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "oG-H6Qo-EnI"
-              },
-              "snippet": {
-                "publishedAt": "2024-08-18T16:45:24Z",
-                "channelId": "UCIIhqydramkUXfwCldOXWSQ",
-                "title": "Oi oi oi Baka",
-                "description": "",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/oG-H6Qo-EnI/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "finnerson405",
-                "liveBroadcastContent": "none",
-                "publishTime": "2024-08-18T16:45:24Z"
-              }
-            },
-            {
-              "kind": "youtube#searchResult",
-              "etag": "xu02JA1NeDc-ux2HU40uy1JwlCs",
-              "id": {
-                "kind": "youtube#video",
-                "videoId": "LADHwoN2LMM"
-              },
-              "snippet": {
-                "publishedAt": "2008-03-12T01:24:57Z",
-                "channelId": "UCFkid-1EIBbauJLbMFDp2Cg",
-                "title": "Ruby on Rails - Part 1: Hello World",
-                "description": "Ruby on Rails Intensive 1-Day Course Part 1 - Hello World Web Apps anatomy 101, Model-View-Controller 101, Rails 101, ...",
-                "thumbnails": {
-                  "default": {
-                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/default.jpg",
-                    "width": 120,
-                    "height": 90
-                  },
-                  "medium": {
-                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/mqdefault.jpg",
-                    "width": 320,
-                    "height": 180
-                  },
-                  "high": {
-                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/hqdefault.jpg",
-                    "width": 480,
-                    "height": 360
-                  }
-                },
-                "channelTitle": "UC Berkeley Events",
-                "liveBroadcastContent": "none",
-                "publishTime": "2008-03-12T01:24:57Z"
-              }
-            }
-          ]
-        }
-  recorded_at: Fri, 29 Nov 2024 01:57:52 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=xiWUL3M9D8c&key=<API_KEY>&part=contentDetails
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - www.googleapis.com
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Fri, 29 Nov 2024 01:57:56 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#videoListResponse",
-          "etag": "_PJJ6ulm8p9YOWR3gHIo-CsQo0w",
-          "items": [
-            {
-              "kind": "youtube#video",
-              "etag": "kcbOp_jOJeNe2Xw2rCd60PZgpHY",
-              "id": "xiWUL3M9D8c",
-              "contentDetails": {
-                "duration": "PT3H13M",
-                "dimension": "2d",
-                "definition": "hd",
-                "caption": "true",
-                "licensedContent": false,
-                "contentRating": {},
-                "projection": "rectangular"
-              }
-            }
-          ],
-          "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 1
-          }
-        }
-  recorded_at: Fri, 29 Nov 2024 01:57:56 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=xiWUL3M9D8c&key=<API_KEY>&part=contentDetails
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - www.googleapis.com
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Fri, 29 Nov 2024 01:57:56 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#videoListResponse",
-          "etag": "_PJJ6ulm8p9YOWR3gHIo-CsQo0w",
-          "items": [
-            {
-              "kind": "youtube#video",
-              "etag": "kcbOp_jOJeNe2Xw2rCd60PZgpHY",
-              "id": "xiWUL3M9D8c",
-              "contentDetails": {
-                "duration": "PT3H13M",
-                "dimension": "2d",
-                "definition": "hd",
-                "caption": "true",
-                "licensedContent": false,
-                "contentRating": {},
-                "projection": "rectangular"
-              }
-            }
-          ],
-          "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 1
-          }
-        }
-  recorded_at: Fri, 29 Nov 2024 01:57:56 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Analytic%20one%20hour%20lectures%20tutorials&type=video
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - www.googleapis.com
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Sat, 30 Nov 2024 14:58:25 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: "{\n  \"kind\": \"youtube#searchListResponse\",\n  \"etag\": \"BbmvJAT48Da5_p9263MVTHnBF0o\",\n
+      string: "{\n  \"kind\": \"youtube#searchListResponse\",\n  \"etag\": \"PW9NamjrO0L8IdhdNlEiWC7Sw5M\",\n
         \ \"nextPageToken\": \"CAUQAA\",\n  \"regionCode\": \"TW\",\n  \"pageInfo\":
         {\n    \"totalResults\": 1000000,\n    \"resultsPerPage\": 5\n  },\n  \"items\":
-        [\n    {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"2655wEQk3lRyeSwAueDILseBdm4\",\n
+        [\n    {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"J0z6mg_PHQOP0ageA44_wB4vv2U\",\n
         \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
-        \"Veb22xD0Ao0\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
-        \"2021-01-07T16:00:06Z\",\n        \"channelId\": \"UCZovC61jTNT1aQ_JDFoeZwQ\",\n
-        \       \"title\": \"ALL OF GRADE 10 MATH IN ONLY 1 HOUR!!! | jensenmath.ca\",\n
-        \       \"description\": \"Learn or Review for your EXAM everything you need
-        for the grade 10 MATH course with concise and exact explanations that ...\",\n
-        \       \"thumbnails\": {\n          \"default\": {\n            \"url\":
-        \"https://i.ytimg.com/vi/Veb22xD0Ao0/default.jpg\",\n            \"width\":
-        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
-        \           \"url\": \"https://i.ytimg.com/vi/Veb22xD0Ao0/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Veb22xD0Ao0/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
-        \       \"channelTitle\": \"JensenMath\",\n        \"liveBroadcastContent\":
-        \"none\",\n        \"publishTime\": \"2021-01-07T16:00:06Z\"\n      }\n    },\n
-        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"PU_0B1-d_rpFBYxVcn4TC8bloI0\",\n
-        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
-        \"eR-XRSKsuR4\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
-        \"2022-04-27T13:00:32Z\",\n        \"channelId\": \"UCfJyQ3P2k_SuqfxVdqIEQNw\",\n
-        \       \"title\": \"R programming in one hour - a crash course for beginners\",\n
-        \       \"description\": \"R programming is easy. In this video, I'll walk
-        you though how to clean your data; how to manipulate (or wrangle) your data;
-        how ...\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\":
-        \"https://i.ytimg.com/vi/eR-XRSKsuR4/default.jpg\",\n            \"width\":
-        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
-        \           \"url\": \"https://i.ytimg.com/vi/eR-XRSKsuR4/mqdefault.jpg\",\n
-        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/eR-XRSKsuR4/hqdefault.jpg\",\n
-        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
-        \       \"channelTitle\": \"R Programming 101\",\n        \"liveBroadcastContent\":
-        \"none\",\n        \"publishTime\": \"2022-04-27T13:00:32Z\"\n      }\n    },\n
-        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"iIy3Ty7GZA7dcMC7OWtSiVpWrnQ\",\n
-        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
-        \"54zZ-8rs-CI\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
-        \"2023-02-04T20:00:02Z\",\n        \"channelId\": \"UCglNXzBo6bmKc9otKf-OuGQ\",\n
-        \       \"title\": \"Understand Calculus in 1 minute\",\n        \"description\":
-        \"What is Calculus? This short video explains why Calculus is so powerful.
-        For more in-depth math help check out my catalog of ...\",\n        \"thumbnails\":
-        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/54zZ-8rs-CI/default.jpg\",\n
+        \"8wZ2ZD--VTk\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2017-12-05T20:13:32Z\",\n        \"channelId\": \"UCvmINlrza7JHB1zkIOuXEbw\",\n
+        \       \"title\": \"Ruby Programming | In One Video\",\n        \"description\":
+        \"Overview - 1:32 Setup - 3:16 Printing - 3:43 Variables & Data Types - 4:18
+        Casting - 5:58 Strings - 7:13 Numbers - 8:56 User Input ...\",\n        \"thumbnails\":
+        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/8wZ2ZD--VTk/default.jpg\",\n
         \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/54zZ-8rs-CI/mqdefault.jpg\",\n
+        {\n            \"url\": \"https://i.ytimg.com/vi/8wZ2ZD--VTk/mqdefault.jpg\",\n
         \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/54zZ-8rs-CI/hqdefault.jpg\",\n
+        {\n            \"url\": \"https://i.ytimg.com/vi/8wZ2ZD--VTk/hqdefault.jpg\",\n
         \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
-        \       \"channelTitle\": \"TabletClass Math\",\n        \"liveBroadcastContent\":
-        \"none\",\n        \"publishTime\": \"2023-02-04T20:00:02Z\"\n      }\n    },\n
-        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"GqZsCAHpb77ck5OTFYDXclH4i2U\",\n
+        \       \"channelTitle\": \"Giraffe Academy\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2017-12-05T20:13:32Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"I_XkVBXhjvq6BW3pZcLIpxC39Ww\",\n
         \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
-        \"f9DzS6NdgwU\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
-        \"2020-12-23T06:30:01Z\",\n        \"channelId\": \"UCsvqVGtbbyHaMoevxPAq9Fg\",\n
-        \       \"title\": \"Business Analyst Full Course In 2 Hours | Business Analyst
-        Training For Beginners | Simplilearn\",\n        \"description\": \"Business
-        Analyst Masters Program (Discount Code - YTBE15) ...\",\n        \"thumbnails\":
-        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/f9DzS6NdgwU/default.jpg\",\n
+        \"fmyvWz5TUWg\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2020-11-09T14:50:57Z\",\n        \"channelId\": \"UC8butISFwT-Wl7EV0hUK0BQ\",\n
+        \       \"title\": \"Learn Ruby on Rails - Full Course\",\n        \"description\":
+        \"Learn Ruby on Rails in this full course for beginners. Ruby on Rails is
+        a is a server-side web application framework used for ...\",\n        \"thumbnails\":
+        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/fmyvWz5TUWg/default.jpg\",\n
         \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/f9DzS6NdgwU/mqdefault.jpg\",\n
+        {\n            \"url\": \"https://i.ytimg.com/vi/fmyvWz5TUWg/mqdefault.jpg\",\n
         \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/f9DzS6NdgwU/hqdefault.jpg\",\n
+        {\n            \"url\": \"https://i.ytimg.com/vi/fmyvWz5TUWg/hqdefault.jpg\",\n
         \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
-        \       \"channelTitle\": \"Simplilearn\",\n        \"liveBroadcastContent\":
-        \"none\",\n        \"publishTime\": \"2020-12-23T06:30:01Z\"\n      }\n    },\n
-        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"wHZkes9LmDR_Ux0zSWXcC6zaR10\",\n
+        \       \"channelTitle\": \"freeCodeCamp.org\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2020-11-09T14:50:57Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"5iwvstxX2WmSVTUTInH97tmWgmQ\",\n
         \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
-        \"Lm9SZf2XFCc\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
-        \"2022-07-01T21:00:11Z\",\n        \"channelId\": \"UCvU7RlKUbYYYNKx1bF0DmcQ\",\n
-        \       \"title\": \"Fundamentals of Quantum Physics. Basics of Quantum Mechanics
-        \U0001F31A Lecture for Sleep &amp; Study\",\n        \"description\": \"In
-        this lecture, you will learn about the prerequisites for the emergence of
-        such a science as quantum physics, its foundations, and ...\",\n        \"thumbnails\":
-        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/Lm9SZf2XFCc/default.jpg\",\n
+        \"xyDoP5a_dvo\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2021-01-26T14:30:10Z\",\n        \"channelId\": \"UCTt7pyY-o0eltq14glaG5dg\",\n
+        \       \"title\": \"Masterclass | Ruby Programming in 1 video | Beginners
+        Ruby HandsOn Crash Course  Interview FAQs |\",\n        \"description\": \"All
+        my FREE courses - https://automationstepbystep.com/ 00:00 Introduction 02:20
+        Hello World 03:50 How to copy my ruby project ...\",\n        \"thumbnails\":
+        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg\",\n
         \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Lm9SZf2XFCc/mqdefault.jpg\",\n
+        {\n            \"url\": \"https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg\",\n
         \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
-        {\n            \"url\": \"https://i.ytimg.com/vi/Lm9SZf2XFCc/hqdefault.jpg\",\n
+        {\n            \"url\": \"https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg\",\n
         \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
-        \       \"channelTitle\": \"LECTURES FOR SLEEP & STUDY\",\n        \"liveBroadcastContent\":
-        \"none\",\n        \"publishTime\": \"2022-07-01T21:00:11Z\"\n      }\n    }\n
+        \       \"channelTitle\": \"Automation Step by Step\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2021-01-26T14:30:10Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"KVLI6T9IpsJ6GDtiOg-phnRh7DE\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"oG-H6Qo-EnI\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2024-08-18T16:45:24Z\",\n        \"channelId\": \"UCIIhqydramkUXfwCldOXWSQ\",\n
+        \       \"title\": \"Oi oi oi Baka\",\n        \"description\": \"\",\n        \"thumbnails\":
+        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/oG-H6Qo-EnI/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/oG-H6Qo-EnI/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/oG-H6Qo-EnI/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"finnerson405\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2024-08-18T16:45:24Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"N1S9gp_1Nq4mApIXpr8L6KxA9Ds\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"PHFsUugqm9w\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2024-08-02T15:07:03Z\",\n        \"channelId\": \"UCnDEY7D55qxYs1dUwjAT8VA\",\n
+        \       \"title\": \"Ladypool Edit \U0001F60D | Deadpool and Wolverine 2024
+        | Bye Bye Bye - *NSYNC #deadpool\",\n        \"description\": \"Movie: Deadpool
+        and Wolverine Song: Bye Bye Bye by *NSYNC Software I used: Adobe After Effects
+        2020 . . Copyright ...\",\n        \"thumbnails\": {\n          \"default\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/PHFsUugqm9w/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/PHFsUugqm9w/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/PHFsUugqm9w/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"aguywhoedits\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2024-08-02T15:07:03Z\"\n      }\n    }\n
         \ ]\n}\n"
-  recorded_at: Sat, 30 Nov 2024 14:58:25 GMT
-- request:
-    method: get
-    uri: https://api.nthusa.tw/courses/searches?field=english_title&limits=5&value=Analytic
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - api.nthusa.tw
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 30 Nov 2024 15:32:48 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '3178'
-      Connection:
-      - close
-      X-Process-Time:
-      - '0.005631923675537109'
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ooSWvr5JPU7Egl4PmMJ8FU9DnAWtrxFbGHOFNs9H0CyrFHcs5TfQuYEGASVvoFH9z0Nm4I0ZZalwHsB0nw1CMssZ%2BBzJ3ZvEpgL9AGd0yUJDdcDOHWO7Hj%2Fo1jZpSfqe"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 8eabe46aaf6aa9af-TPE
-      Alt-Svc:
-      - h3=":443"; ma=86400
-      Server-Timing:
-      - cfL4;desc="?proto=TCP&rtt=20499&min_rtt=4939&rtt_var=11561&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2296&recv_bytes=784&delivery_rate=586353&cwnd=213&unsent_bytes=0&cid=a515ea845ae5c80b&ts=150&x=0"
-    body:
-      encoding: UTF-8
-      string: '[{"id":"11210AES 520100","chinese_title":"環境分析化學","english_title":"Environmental
-        Analytical Chemistry","credit":"3","size_limit":"","freshman_reservation":"0","object":"
-        ","ge_type":"","language":"中","note":"本課程為16週課程","suspend":"","class_room_and_time":"BMES醫環501\tR5R6R7\n","teacher":"黃郁棻\tHUANG,
-        YU-FEN\n","prerequisite":"","limit_note":"","expertise":"環境科技學程(第二專長)","program":"","no_extra_selection":"","required_optional_note":"分環所112M  必修\t原科院學士班109B  選修\t"},{"id":"11210BME
-        500700","chinese_title":"生醫材料特性分析","english_title":"Analytical and Sensing
-        Technologies in Biomedical Sciences","credit":"3","size_limit":"","freshman_reservation":"0","object":"
-        ","ge_type":"","language":"英","note":"本課程為16週課程","suspend":"","class_room_and_time":"NTHU
-        Lab清實826\tT7T8T9\n","teacher":"萬德輝\tWAN, DE-HUI\n","prerequisite":"","limit_note":"限醫工所","expertise":"","program":"","no_extra_selection":"","required_optional_note":"醫工所112D  選修\t醫工所112M  選修\t"},{"id":"11210CHEM311000","chinese_title":"分析化學一","english_title":"Analytical
-        Chemistry (I)","credit":"3","size_limit":"100","freshman_reservation":"0","object":"
-        ","ge_type":"","language":"英","note":"本課程上150分鐘，其餘時間由教授彈性運用","suspend":"","class_room_and_time":"CHEM化   B07\tT3T4R3R4\n","teacher":"陳貴通\tTAN,
-        KUI THONG\n","prerequisite":"<div>\n  擋修對象 : 全校 <br>\n  先修科目 : <BR><BR>曾修普通化學二<BR><br>上述條件一定要有，則不擋修。</div>","limit_note":"限理學院","expertise":"化學(第二專長)\t化學(第一專長)","program":"","no_extra_selection":"","required_optional_note":"化學系110B  必修\t理學院學士班110B  必修\t"},{"id":"11210CHEM313001","chinese_title":"分析化學實驗一","english_title":"Analytical
-        Chemistry Laboratory (I)","credit":"2","size_limit":"33","freshman_reservation":"0","object":"
-        ","ge_type":"","language":"中","note":"加簽事宜請洽化207廖英孝；召集人陳貴通教授","suspend":"","class_room_and_time":"CHEM化   229\tF1F2F3F4\n","teacher":"廖英孝\tLIAO,
-        YING-HSIAO\n","prerequisite":"","limit_note":"化學系大學部3年級4年級,理學院學士班大學部3年級4年級優先，第3次選課起開放全校修習","expertise":"化學(第二專長)\t化學(第一專長)","program":"","no_extra_selection":"","required_optional_note":"化學系110B  必修\t"},{"id":"11210CHEM313002","chinese_title":"分析化學實驗一","english_title":"Analytical
-        Chemistry Laboratory (I)","credit":"2","size_limit":"33","freshman_reservation":"0","object":"
-        ","ge_type":"","language":"中","note":"加簽事宜請洽化207廖英孝；召集人陳貴通教授","suspend":"","class_room_and_time":"CHEM化   229\tW5W6W7W8\n","teacher":"廖英孝\tLIAO,
-        YING-HSIAO\n","prerequisite":"","limit_note":"限化學系大學部3年級4年級,理學院學士班大學部3年級4年級","expertise":"化學(第二專長)\t化學(第一專長)","program":"","no_extra_selection":"","required_optional_note":"化學系110B  必修\t"}]'
-  recorded_at: Sat, 30 Nov 2024 15:32:48 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:09 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videos?id=8wZ2ZD--VTk&key=<API_KEY>&part=contentDetails
@@ -824,11 +153,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-<<<<<<< HEAD
-      - Sun, 08 Dec 2024 08:08:45 GMT
-=======
-      - Sat, 07 Dec 2024 13:23:21 GMT
->>>>>>> main
+      - Mon, 09 Dec 2024 14:35:09 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -872,79 +197,7 @@ http_interactions:
             "resultsPerPage": 1
           }
         }
-  recorded_at: Sat, 07 Dec 2024 13:23:21 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=xyDoP5a_dvo&key=<API_KEY>&part=contentDetails
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - www.googleapis.com
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Sat, 07 Dec 2024 13:23:21 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#videoListResponse",
-          "etag": "jgu1xGe23rQ1t5cKqoA-mc5qRAk",
-          "items": [
-            {
-              "kind": "youtube#video",
-              "etag": "TBpsYjbW_jliX6NaroXfpxZCqRg",
-              "id": "xyDoP5a_dvo",
-              "contentDetails": {
-                "duration": "PT49M35S",
-                "dimension": "2d",
-                "definition": "hd",
-                "caption": "true",
-                "licensedContent": true,
-                "contentRating": {},
-                "projection": "rectangular"
-              }
-            }
-          ],
-          "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 1
-          }
-        }
-  recorded_at: Sat, 07 Dec 2024 13:23:21 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:09 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videos?id=fmyvWz5TUWg&key=<API_KEY>&part=contentDetails
@@ -972,7 +225,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 07 Dec 2024 13:23:21 GMT
+      - Mon, 09 Dec 2024 14:35:09 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -1016,7 +269,79 @@ http_interactions:
             "resultsPerPage": 1
           }
         }
-  recorded_at: Sat, 07 Dec 2024 13:23:21 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:09 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=xyDoP5a_dvo&key=<API_KEY>&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Mon, 09 Dec 2024 14:35:09 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "jgu1xGe23rQ1t5cKqoA-mc5qRAk",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "TBpsYjbW_jliX6NaroXfpxZCqRg",
+              "id": "xyDoP5a_dvo",
+              "contentDetails": {
+                "duration": "PT49M35S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Mon, 09 Dec 2024 14:35:09 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videos?id=oG-H6Qo-EnI&key=<API_KEY>&part=contentDetails
@@ -1044,7 +369,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 07 Dec 2024 13:23:21 GMT
+      - Mon, 09 Dec 2024 14:35:10 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -1088,10 +413,10 @@ http_interactions:
             "resultsPerPage": 1
           }
         }
-  recorded_at: Sat, 07 Dec 2024 13:23:21 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:09 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=FKTUzPT7244&key=<API_KEY>&part=contentDetails
+    uri: https://www.googleapis.com/youtube/v3/videos?id=PHFsUugqm9w&key=<API_KEY>&part=contentDetails
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -1116,7 +441,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 07 Dec 2024 13:23:21 GMT
+      - Mon, 09 Dec 2024 14:35:10 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -1138,18 +463,18 @@ http_interactions:
       string: |
         {
           "kind": "youtube#videoListResponse",
-          "etag": "jNJA_4sQT8ebJ0f7Yy1k6Eu0qw4",
+          "etag": "ShLxaS7MmHCyYjP43r4PdfpSpn4",
           "items": [
             {
               "kind": "youtube#video",
-              "etag": "j2DRrkImY2duhX9zVJ7upHgsP7M",
-              "id": "FKTUzPT7244",
+              "etag": "4QGdeZLBw4hmmup83sAQZVgCPOM",
+              "id": "PHFsUugqm9w",
               "contentDetails": {
-                "duration": "PT1H27S",
+                "duration": "PT19S",
                 "dimension": "2d",
                 "definition": "hd",
                 "caption": "false",
-                "licensedContent": true,
+                "licensedContent": false,
                 "contentRating": {},
                 "projection": "rectangular"
               }
@@ -1160,10 +485,10 @@ http_interactions:
             "resultsPerPage": 1
           }
         }
-  recorded_at: Sat, 07 Dec 2024 13:23:21 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:09 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=Veb22xD0Ao0&key=<API_KEY>&part=contentDetails
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Ruby%20one%20hour%20lectures%20tutorials&type=video
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -1188,7 +513,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 07 Dec 2024 13:23:22 GMT
+      - Mon, 09 Dec 2024 14:35:10 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -1209,30 +534,418 @@ http_interactions:
       encoding: UTF-8
       string: |
         {
-          "kind": "youtube#videoListResponse",
-          "etag": "FdcJPI5xKUnfduVrMLkV7T6d35w",
+          "kind": "youtube#searchListResponse",
+          "etag": "Wl0gyUkVsvT0P5WTMTui9XUWUN8",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
           "items": [
             {
-              "kind": "youtube#video",
-              "etag": "6b_oE9DHCevLQnDpeL-dUmafm5k",
-              "id": "Veb22xD0Ao0",
-              "contentDetails": {
-                "duration": "PT1H10M54S",
-                "dimension": "2d",
-                "definition": "hd",
-                "caption": "false",
-                "licensedContent": true,
-                "contentRating": {},
-                "projection": "rectangular"
+              "kind": "youtube#searchResult",
+              "etag": "J0z6mg_PHQOP0ageA44_wB4vv2U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "8wZ2ZD--VTk"
+              },
+              "snippet": {
+                "publishedAt": "2017-12-05T20:13:32Z",
+                "channelId": "UCvmINlrza7JHB1zkIOuXEbw",
+                "title": "Ruby Programming | In One Video",
+                "description": "Overview - 1:32 Setup - 3:16 Printing - 3:43 Variables & Data Types - 4:18 Casting - 5:58 Strings - 7:13 Numbers - 8:56 User Input ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/8wZ2ZD--VTk/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Giraffe Academy",
+                "liveBroadcastContent": "none",
+                "publishTime": "2017-12-05T20:13:32Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "I_XkVBXhjvq6BW3pZcLIpxC39Ww",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "fmyvWz5TUWg"
+              },
+              "snippet": {
+                "publishedAt": "2020-11-09T14:50:57Z",
+                "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
+                "title": "Learn Ruby on Rails - Full Course",
+                "description": "Learn Ruby on Rails in this full course for beginners. Ruby on Rails is a is a server-side web application framework used for ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/fmyvWz5TUWg/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "freeCodeCamp.org",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-11-09T14:50:57Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "xu02JA1NeDc-ux2HU40uy1JwlCs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "LADHwoN2LMM"
+              },
+              "snippet": {
+                "publishedAt": "2008-03-12T01:24:57Z",
+                "channelId": "UCFkid-1EIBbauJLbMFDp2Cg",
+                "title": "Ruby on Rails - Part 1: Hello World",
+                "description": "Ruby on Rails Intensive 1-Day Course Part 1 - Hello World Web Apps anatomy 101, Model-View-Controller 101, Rails 101, ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/LADHwoN2LMM/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "UC Berkeley Events",
+                "liveBroadcastContent": "none",
+                "publishTime": "2008-03-12T01:24:57Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "Xo59o-PD-dSmq3b7AM1C3Lwk-MI",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "8F1cotRqCpU"
+              },
+              "snippet": {
+                "publishedAt": "2018-09-09T19:48:58Z",
+                "channelId": "UCTi-WYGi8UHheU2MfVSvqLg",
+                "title": "Let&#39;s Master Ruby: An Introduction to Ruby",
+                "description": "At the end of this one-hour course, you will - Create a MadLib game - Understand how Iterators Work - Create a Method to Find ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/8F1cotRqCpU/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/8F1cotRqCpU/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/8F1cotRqCpU/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "HackHour",
+                "liveBroadcastContent": "none",
+                "publishTime": "2018-09-09T19:48:58Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "5iwvstxX2WmSVTUTInH97tmWgmQ",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "xyDoP5a_dvo"
+              },
+              "snippet": {
+                "publishedAt": "2021-01-26T14:30:10Z",
+                "channelId": "UCTt7pyY-o0eltq14glaG5dg",
+                "title": "Masterclass | Ruby Programming in 1 video | Beginners Ruby HandsOn Crash Course  Interview FAQs |",
+                "description": "All my FREE courses - https://automationstepbystep.com/ 00:00 Introduction 02:20 Hello World 03:50 How to copy my ruby project ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/xyDoP5a_dvo/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Automation Step by Step",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-01-26T14:30:10Z"
               }
             }
-          ],
-          "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 1
-          }
+          ]
         }
-  recorded_at: Sat, 07 Dec 2024 13:23:22 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:10 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=<API_KEY>&maxResults=5&part=snippet&q=Analytic%20one%20hour%20lectures%20tutorials&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Mon, 09 Dec 2024 14:35:34 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "-M-GPXNSPXOpZvzDy0iglp4zkfc",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "PU_0B1-d_rpFBYxVcn4TC8bloI0",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "eR-XRSKsuR4"
+              },
+              "snippet": {
+                "publishedAt": "2022-04-27T13:00:32Z",
+                "channelId": "UCfJyQ3P2k_SuqfxVdqIEQNw",
+                "title": "R programming in one hour - a crash course for beginners",
+                "description": "R programming is easy. In this video, I'll walk you though how to clean your data; how to manipulate (or wrangle) your data; how ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/eR-XRSKsuR4/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/eR-XRSKsuR4/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/eR-XRSKsuR4/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "R Programming 101",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-27T13:00:32Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "GqZsCAHpb77ck5OTFYDXclH4i2U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "f9DzS6NdgwU"
+              },
+              "snippet": {
+                "publishedAt": "2020-12-23T06:30:01Z",
+                "channelId": "UCsvqVGtbbyHaMoevxPAq9Fg",
+                "title": "Business Analyst Full Course In 2 Hours | Business Analyst Training For Beginners | Simplilearn",
+                "description": "Business Analyst Masters Program (Discount Code - YTBE15) ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/f9DzS6NdgwU/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/f9DzS6NdgwU/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/f9DzS6NdgwU/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Simplilearn",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-12-23T06:30:01Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "XGR5SBuryWlRotCDJZDi6UeTWeU",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "WsQQvHm4lSw"
+              },
+              "snippet": {
+                "publishedAt": "2018-09-10T15:50:55Z",
+                "channelId": "UCEWpbFLzoYGPfuWUMFPSaoA",
+                "title": "Understand Calculus in 35 Minutes",
+                "description": "This video makes an attempt to teach the fundamentals of calculus 1 such as limits, derivatives, and integration. It explains how to ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/WsQQvHm4lSw/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/WsQQvHm4lSw/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/WsQQvHm4lSw/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "The Organic Chemistry Tutor",
+                "liveBroadcastContent": "none",
+                "publishTime": "2018-09-10T15:50:55Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "fZus8SotRiMrMdKpl5bvClD7oTU",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "_V8eKsto3Ug"
+              },
+              "snippet": {
+                "publishedAt": "2019-06-06T14:12:38Z",
+                "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
+                "title": "R Programming Tutorial - Learn the Basics of Statistical Computing",
+                "description": "Learn the R programming language in this tutorial course. This is a hands-on overview of the statistical programming language R, ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/_V8eKsto3Ug/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/_V8eKsto3Ug/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/_V8eKsto3Ug/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "freeCodeCamp.org",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-06-06T14:12:38Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "2655wEQk3lRyeSwAueDILseBdm4",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "Veb22xD0Ao0"
+              },
+              "snippet": {
+                "publishedAt": "2021-01-07T16:00:06Z",
+                "channelId": "UCZovC61jTNT1aQ_JDFoeZwQ",
+                "title": "ALL OF GRADE 10 MATH IN ONLY 1 HOUR!!! | jensenmath.ca",
+                "description": "Learn or Review for your EXAM everything you need for the grade 10 MATH course with concise and exact explanations that ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/Veb22xD0Ao0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/Veb22xD0Ao0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/Veb22xD0Ao0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "JensenMath",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-01-07T16:00:06Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Mon, 09 Dec 2024 14:35:34 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videos?id=eR-XRSKsuR4&key=<API_KEY>&part=contentDetails
@@ -1260,7 +973,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 07 Dec 2024 13:23:22 GMT
+      - Mon, 09 Dec 2024 14:35:34 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -1304,79 +1017,7 @@ http_interactions:
             "resultsPerPage": 1
           }
         }
-  recorded_at: Sat, 07 Dec 2024 13:23:22 GMT
-- request:
-    method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=54zZ-8rs-CI&key=<API_KEY>&part=contentDetails
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-    headers:
-      Accept:
-      - application/json
-      Connection:
-      - close
-      Host:
-      - www.googleapis.com
-      User-Agent:
-      - http.rb/5.2.0
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Content-Type:
-      - application/json; charset=UTF-8
-      Vary:
-      - Origin,Accept-Encoding
-      - Referer
-      - X-Origin
-      Date:
-      - Sat, 07 Dec 2024 13:23:22 GMT
-      Server:
-      - scaffolding on HTTPServer2
-      X-Xss-Protection:
-      - '0'
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Content-Type-Options:
-      - nosniff
-      Accept-Ranges:
-      - none
-      Transfer-Encoding:
-      - chunked
-      Alt-Svc:
-      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: |
-        {
-          "kind": "youtube#videoListResponse",
-          "etag": "g5ZM4iL_d3-jb2anS3dTdrptf_A",
-          "items": [
-            {
-              "kind": "youtube#video",
-              "etag": "U5blyMm4pTIsV-QhJA0cN42gHpU",
-              "id": "54zZ-8rs-CI",
-              "contentDetails": {
-                "duration": "PT57S",
-                "dimension": "2d",
-                "definition": "hd",
-                "caption": "false",
-                "licensedContent": true,
-                "contentRating": {},
-                "projection": "rectangular"
-              }
-            }
-          ],
-          "pageInfo": {
-            "totalResults": 1,
-            "resultsPerPage": 1
-          }
-        }
-  recorded_at: Sat, 07 Dec 2024 13:23:22 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:34 GMT
 - request:
     method: get
     uri: https://www.googleapis.com/youtube/v3/videos?id=f9DzS6NdgwU&key=<API_KEY>&part=contentDetails
@@ -1404,7 +1045,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 07 Dec 2024 13:23:22 GMT
+      - Mon, 09 Dec 2024 14:35:34 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -1448,10 +1089,10 @@ http_interactions:
             "resultsPerPage": 1
           }
         }
-  recorded_at: Sat, 07 Dec 2024 13:23:22 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:34 GMT
 - request:
     method: get
-    uri: https://www.googleapis.com/youtube/v3/videos?id=Lm9SZf2XFCc&key=<API_KEY>&part=contentDetails
+    uri: https://www.googleapis.com/youtube/v3/videos?id=WsQQvHm4lSw&key=<API_KEY>&part=contentDetails
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -1476,7 +1117,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Sat, 07 Dec 2024 13:23:22 GMT
+      - Mon, 09 Dec 2024 14:35:34 GMT
       Server:
       - scaffolding on HTTPServer2
       X-Xss-Protection:
@@ -1498,14 +1139,14 @@ http_interactions:
       string: |
         {
           "kind": "youtube#videoListResponse",
-          "etag": "Sa364ZxYGxOTqSotLS14-5HZ_k4",
+          "etag": "Kz8GZWBZ392qmPyTLq5wgOIyLAc",
           "items": [
             {
               "kind": "youtube#video",
-              "etag": "Yx3eaqyqthOTLw2I9BjXqI8app4",
-              "id": "Lm9SZf2XFCc",
+              "etag": "SZq9LTtqGeqyAkfI8TIZiflo2b0",
+              "id": "WsQQvHm4lSw",
               "contentDetails": {
-                "duration": "PT3H32M45S",
+                "duration": "PT36M22S",
                 "dimension": "2d",
                 "definition": "hd",
                 "caption": "false",
@@ -1520,5 +1161,357 @@ http_interactions:
             "resultsPerPage": 1
           }
         }
-  recorded_at: Sat, 07 Dec 2024 13:23:22 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:34 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=_V8eKsto3Ug&key=<API_KEY>&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Mon, 09 Dec 2024 14:35:35 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "rI4LYOEGMZOKJCahfxyfkeJWmEo",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "f-FEy5mR_jd0LT4KYv0voxIrOIA",
+              "id": "_V8eKsto3Ug",
+              "contentDetails": {
+                "duration": "PT2H10M39S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Mon, 09 Dec 2024 14:35:34 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=Veb22xD0Ao0&key=<API_KEY>&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Mon, 09 Dec 2024 14:35:35 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "FdcJPI5xKUnfduVrMLkV7T6d35w",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "6b_oE9DHCevLQnDpeL-dUmafm5k",
+              "id": "Veb22xD0Ao0",
+              "contentDetails": {
+                "duration": "PT1H10M54S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Mon, 09 Dec 2024 14:35:35 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/courses/searches?field=english_title&limits=5&value=Analytic
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 09 Dec 2024 14:35:35 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3178'
+      Connection:
+      - close
+      X-Process-Time:
+      - '0.0051059722900390625'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=GAoIu8p6lFCjycApooWoPyQCuCK9%2B65Qy%2FT7%2FUsM3M%2BGFtA644%2Buh3jtnd4bVhvvJb2xhYpqVQ%2BlXeu%2B%2BCFSJCI8KcM64KgmpEHMiHnam6uPcTLcXP8pv%2B4THyQtKWPx"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8ef5b8fa0ad68412-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=21130&min_rtt=5181&rtt_var=11908&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2297&recv_bytes=784&delivery_rate=558965&cwnd=219&unsent_bytes=0&cid=d97b6f687ca37f27&ts=105&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"11210AES 520100","chinese_title":"環境分析化學","english_title":"Environmental
+        Analytical Chemistry","credit":"3","size_limit":"","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"中","note":"本課程為16週課程","suspend":"","class_room_and_time":"BMES醫環501\tR5R6R7\n","teacher":"黃郁棻\tHUANG,
+        YU-FEN\n","prerequisite":"","limit_note":"","expertise":"環境科技學程(第二專長)","program":"","no_extra_selection":"","required_optional_note":"分環所112M  必修\t原科院學士班109B  選修\t"},{"id":"11210BME
+        500700","chinese_title":"生醫材料特性分析","english_title":"Analytical and Sensing
+        Technologies in Biomedical Sciences","credit":"3","size_limit":"","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"英","note":"本課程為16週課程","suspend":"","class_room_and_time":"NTHU
+        Lab清實826\tT7T8T9\n","teacher":"萬德輝\tWAN, DE-HUI\n","prerequisite":"","limit_note":"限醫工所","expertise":"","program":"","no_extra_selection":"","required_optional_note":"醫工所112D  選修\t醫工所112M  選修\t"},{"id":"11210CHEM311000","chinese_title":"分析化學一","english_title":"Analytical
+        Chemistry (I)","credit":"3","size_limit":"100","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"英","note":"本課程上150分鐘，其餘時間由教授彈性運用","suspend":"","class_room_and_time":"CHEM化   B07\tT3T4R3R4\n","teacher":"陳貴通\tTAN,
+        KUI THONG\n","prerequisite":"<div>\n  擋修對象 : 全校 <br>\n  先修科目 : <BR><BR>曾修普通化學二<BR><br>上述條件一定要有，則不擋修。</div>","limit_note":"限理學院","expertise":"化學(第二專長)\t化學(第一專長)","program":"","no_extra_selection":"","required_optional_note":"化學系110B  必修\t理學院學士班110B  必修\t"},{"id":"11210CHEM313001","chinese_title":"分析化學實驗一","english_title":"Analytical
+        Chemistry Laboratory (I)","credit":"2","size_limit":"33","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"中","note":"加簽事宜請洽化207廖英孝；召集人陳貴通教授","suspend":"","class_room_and_time":"CHEM化   229\tF1F2F3F4\n","teacher":"廖英孝\tLIAO,
+        YING-HSIAO\n","prerequisite":"","limit_note":"化學系大學部3年級4年級,理學院學士班大學部3年級4年級優先，第3次選課起開放全校修習","expertise":"化學(第二專長)\t化學(第一專長)","program":"","no_extra_selection":"","required_optional_note":"化學系110B  必修\t"},{"id":"11210CHEM313002","chinese_title":"分析化學實驗一","english_title":"Analytical
+        Chemistry Laboratory (I)","credit":"2","size_limit":"33","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"中","note":"加簽事宜請洽化207廖英孝；召集人陳貴通教授","suspend":"","class_room_and_time":"CHEM化   229\tW5W6W7W8\n","teacher":"廖英孝\tLIAO,
+        YING-HSIAO\n","prerequisite":"","limit_note":"限化學系大學部3年級4年級,理學院學士班大學部3年級4年級","expertise":"化學(第二專長)\t化學(第一專長)","program":"","no_extra_selection":"","required_optional_note":"化學系110B  必修\t"}]'
+  recorded_at: Mon, 09 Dec 2024 14:35:35 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=xiWUL3M9D8c&key=<API_KEY>&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Mon, 09 Dec 2024 14:35:37 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "_PJJ6ulm8p9YOWR3gHIo-CsQo0w",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "kcbOp_jOJeNe2Xw2rCd60PZgpHY",
+              "id": "xiWUL3M9D8c",
+              "contentDetails": {
+                "duration": "PT3H13M",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": false,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Mon, 09 Dec 2024 14:35:37 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=xiWUL3M9D8c&key=<API_KEY>&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Mon, 09 Dec 2024 14:35:37 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "_PJJ6ulm8p9YOWR3gHIo-CsQo0w",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "kcbOp_jOJeNe2Xw2rCd60PZgpHY",
+              "id": "xiWUL3M9D8c",
+              "contentDetails": {
+                "duration": "PT3H13M",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": false,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Mon, 09 Dec 2024 14:35:37 GMT
 recorded_with: VCR 6.3.1

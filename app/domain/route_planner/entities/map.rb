@@ -25,6 +25,7 @@ module RoutePlanner
         diff_factor = calculate_diff_factor(total_diff)
         pressure_index = calculate_pressure_index(time_factor, diff_factor)
         stress_level = RoutePlanner::Value::EvaluateStudyStress.determine_stress_level(pressure_index)
+
         {
           pressure_index: pressure_index,
           stress_level: stress_level

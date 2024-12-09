@@ -48,23 +48,30 @@ module RoutePlanner
   
 
               validated_params = result.value!
-              binding.irb
               service_result = RoutePlanner::Service::AddMapandSkill.new.call(validated_params)
               binding.irb
+              if service_result.failure?
+                api_result = RoutePlanner::APIResponse::ApiResult.new(
+                  status: :bad_request,
+                  message: service_result.value!
+                 )               
+
+                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+                 response.status = http_response.http_status_code
+              end
 
 
-            #   if service_result.failure?
-            #     failed = RoutePlanner::Representer::HttpResponse.new(service_result.failure)
-            #     routing.halt failed.status, failed.to_json
-            #   else
-            #     map_entity = service_result.value![:map]
-            #     skills_entities = service_result.value![:skills]
-  
-            #     map = RoutePlanner::Representer::Map.new(map_entity).to_json
-            #     skills = skills_entities.map { |skill| RoutePlanner::Representer::Skill.new(skill).to_json }
-  
-            #     response.status = 201
-            #     { message: 'Syllabus processed successfully', map: map, skills: skills }.to_json
+              api_result = RoutePlanner::APIResponse::ApiResult.new(
+                    status: :created,
+                    message: service_result.value!
+              )               
+
+              http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+              response.status = http_response.http_status_code
+                  
+
+              RoutePlanner::Representer::AddMapandSkill.new(api_result.message).to_json
+
             end
           end
           rescue JSON::ParserError

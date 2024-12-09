@@ -12,6 +12,11 @@ module RoutePlanner
         results = Database::SkillOrm.select(:skill_name, :challenge_score).where(skill_name:).all
         results.map { |result| result.values.slice(:skill_name, :challenge_score) }
       end
+      
+      def self.find_all_skills_score(map_id)
+        db_resources = Database::SkillOrm.where(map_id: map_id).all
+        db_resources.map.to_h { |result| [result[:skill_name], result[:challenge_score].to_s] }
+      end
 
       def self.find_all_skills(map_id)
         db_resources = Database::SkillOrm.where(map_id: map_id).all

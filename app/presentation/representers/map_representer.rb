@@ -4,7 +4,7 @@ require 'ostruct'
 require 'roar/decorator'
 require 'roar/json'
 
-require_relative 'skill_representer'
+
 
 module RoutePlanner
   # Represents Map information for API output
@@ -17,8 +17,6 @@ module RoutePlanner
       property :map_description
       property :map_evaluation
       property :map_ai
-
-      # collection :skills, extend: Representer::Skill, class: OpenStruct
     end
   end
 end
