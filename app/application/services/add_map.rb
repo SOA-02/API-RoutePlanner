@@ -42,17 +42,13 @@ module RoutePlanner
           .new(input[:syllabus_text], App.config.OPENAI_KEY)
           .call
 
-        Success(Response::APIResponse.new(
+        Success(RoutePlanner::APIResponse::ApiResult.new(
                   status: :created,
                   message: input.merge(map: map, skills: skillset)
                 ))
-      # rescue OpenAPI::MapperError => e
-      #   Failure(Response::ApiResult.new(
-      #             status: :cannot_process,
-      #             message: 'Failed processing syllabus'
-      #           ))
+      
       rescue StandardError => e
-        Failure(Response::APIResponse.new(
+        Failure(RoutePlanner::APIResponse::ApiResult.new(
                   status: :internal_error,
                   message: e.message
                 ))
@@ -69,12 +65,12 @@ module RoutePlanner
 
         db_map = Repository::Map.join_map_skill(input[:map], input[:skills])
 
-        Success(Response::APIResponse.new(
+        Success(RoutePlanner::APIResponse::ApiResult.new(
                   status: :created,
                   message: { map: db_map, skills: db_map.skills }
                 ))
-      rescue StandardError => e
-        Failure(Response::APIResponse.new(
+      rescue StandardError
+        Failure(RoutePlanner::APIResponse::ApiResult.new(
                   status: :internal_error,
                   message: 'Cannot store planner'
                 ))

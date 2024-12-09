@@ -24,6 +24,47 @@ module RoutePlanner
         result_response.to_json
       end
 
+      routing.on 'api/v1' do
+        routing.on 'maps' do
+          routing.post do
+            params = if request.content_type =~ /json/i
+                       JSON.parse(request.body.read)
+                     else
+                       routing.params
+                     end
+  
+            form_request = RoutePlanner::Request::NewMap.new(params)
+            result = form_request.call
+  
+            if result.failure?
+              failed = Representer::HttpResponse.new(result.failure)
+              routing.halt failed.status, failed.to_json
+            else
+              validated_params = result.value!
+              add_map_service = RoutePlanner::Service::AddMap.new
+              service_result = add_map_service.call(validated_params)
+  
+              if service_result.failure?
+                failed = RoutePlanner::Representer::HttpResponse.new(service_result.failure)
+                routing.halt failed.status, failed.to_json
+              else
+                map_entity = service_result.value![:map]
+                skills_entities = service_result.value![:skills]
+  
+                map = RoutePlanner::Representer::Map.new(map_entity).to_json
+                skills = skills_entities.map { |skill| RoutePlanner::Representer::Skill.new(skill).to_json }
+  
+                response.status = 201
+                { message: 'Syllabus processed successfully', map: map, skills: skills }.to_json
+              end
+            end
+          rescue JSON::ParserError
+            response.status = 400
+            { error: 'Invalid JSON' }.to_json
+          end
+        end
+      end
+
       # API Namespace
       routing.on 'api/v1' do
         routing.on 'RoutePlanner' do
