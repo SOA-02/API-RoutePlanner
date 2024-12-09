@@ -103,7 +103,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 29 Nov 2024 01:57:56 GMT
+      - Mon, 09 Dec 2024 14:35:37 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -115,7 +115,7 @@ http_interactions:
       Openai-Organization:
       - user-puxbhrdszzsz9p2xhyhw7spz
       Openai-Processing-Ms:
-      - '1254'
+      - '1591'
       Openai-Version:
       - '2020-10-01'
       X-Ratelimit-Limit-Requests:
@@ -123,47 +123,47 @@ http_interactions:
       X-Ratelimit-Limit-Tokens:
       - '200000'
       X-Ratelimit-Remaining-Requests:
-      - '9998'
+      - '9999'
       X-Ratelimit-Remaining-Tokens:
-      - '198453'
+      - '198452'
       X-Ratelimit-Reset-Requests:
-      - 16.067s
+      - 8.64s
       X-Ratelimit-Reset-Tokens:
       - 464ms
       X-Request-Id:
-      - req_7af99fc0a9f85bb6c0fd6021de6b091b
+      - req_7f4cd2fb1c200df981d500eefd215b48
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=1CqRMRFWq4oleU34UJA_s_fZm_2vjFgd8rWiFy4ix1s-1732845476-1.0.1.1-BlqgW6i8q.814QGcblSiuMfj65_VKW6L2VxgjOsYOCPyox05emhP2tP.qRuwV2OhoQ2skmuM_YayuH.2.Lex5A;
-        path=/; expires=Fri, 29-Nov-24 02:27:56 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=EX4zLJbnCysSfUzRfCaUedevJu6RouF2g.mlvKzXAn0-1733754937-1.0.1.1-X4Ko6Pu9R2nh06Gt47DuQBMccjyRdeXy4lgjx_wWIt7wqIj.P.MB7lodOkeb5YT30k8dyP8raN7iCiHUHJPnTw;
+        path=/; expires=Mon, 09-Dec-24 15:05:37 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=eA9gfX8m_BG8s2lRZoOIXFyXTkxD0qB1Z8piyJoYSYs-1732845476044-0.0.1.1-604800000;
+      - _cfuvid=pwols2PAuC4saZq8rr0g1qjfqPWHmh7VgyLbiE9JQa4-1733754937588-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8e9efd5839f2841c-TPE
+      - 8ef5b8fcb902843f-TPE
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-AYkYUMpyOPaFPrGNJDBhLO3XrhVV3",
+          "id": "chatcmpl-AcZ9E82zimJSPb16FobYvkQVvveqJ",
           "object": "chat.completion",
-          "created": 1732845474,
+          "created": 1733754936,
           "model": "gpt-3.5-turbo-0125",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "{\n\t\"CourseName\": \"Business Analytics using Machine Learning\",\n\t\"CourseDescription\": \"Business analytics is the use of data-driven decision making. The course focuses on humane and socially-responsible business analytics. It covers real business problems and real data, examining various types of questions that machine learning can answer and the appropriate machine learning tools for different situations. The course emphasizes practical application over theoretical mastery.\",\n\t\"CourseEvaluationMethods\": \"Individual assignments, Team proposal, Machine learning contest submission, Final team project report, Final team presentation, Pre-class posts on online forum, 30-second online quizzes\",\n\t\"AIUsePolicy\": \"The course does not specify any policy regarding the use of AI or machine learning tools like ChatGPT or Copilot.\"\n}",
+                "content": "{\n\"CourseName\": \"Business Analytics using Machine Learning\",\n\"CourseDescription\": \"Business analytics is the use of data-driven decision making. The course focuses on using machine learning and predictive analytics for detecting actionable patterns in data and generating predictions in different industries. Emphasis is on humane and socially-responsible business analytics.\",\n\"CourseEvaluationMethods\": \"Individual assignments, Team proposal, Machine learning contest submission, Final team project report, Final team presentation, Pre-class posts on online forum, 30-second online quizzes\",\n\"AIUsePolicy\": \"AI tools like ChatGPT, Copilot, etc. are not mentioned as allowed for use in the course\"\n}",
                 "refusal": null
               },
               "logprobs": null,
@@ -172,8 +172,8 @@ http_interactions:
           ],
           "usage": {
             "prompt_tokens": 1202,
-            "completion_tokens": 152,
-            "total_tokens": 1354,
+            "completion_tokens": 132,
+            "total_tokens": 1334,
             "prompt_tokens_details": {
               "cached_tokens": 0,
               "audio_tokens": 0
@@ -187,7 +187,7 @@ http_interactions:
           },
           "system_fingerprint": null
         }
-  recorded_at: Fri, 29 Nov 2024 01:57:56 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:37 GMT
 - request:
     method: post
     uri: https://api.openai.com/v1/chat/completions
@@ -291,7 +291,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 30 Nov 2024 10:30:22 GMT
+      - Mon, 09 Dec 2024 14:35:43 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -303,7 +303,7 @@ http_interactions:
       Openai-Organization:
       - user-puxbhrdszzsz9p2xhyhw7spz
       Openai-Processing-Ms:
-      - '1311'
+      - '980'
       Openai-Version:
       - '2020-10-01'
       X-Ratelimit-Limit-Requests:
@@ -311,47 +311,47 @@ http_interactions:
       X-Ratelimit-Limit-Tokens:
       - '200000'
       X-Ratelimit-Remaining-Requests:
-      - '9999'
+      - '9998'
       X-Ratelimit-Remaining-Tokens:
       - '198442'
       X-Ratelimit-Reset-Requests:
-      - 8.64s
+      - 11.196s
       X-Ratelimit-Reset-Tokens:
       - 467ms
       X-Request-Id:
-      - req_e608b3552221e61cc944aa3c1a91c57a
+      - req_a539e2a9442ab99e1f5fd3692d174724
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Cf-Cache-Status:
       - DYNAMIC
       Set-Cookie:
-      - __cf_bm=mGEW0aW16UTUbPTwsHrytgkz4vwGejbBTcuqLSj1C8k-1732962622-1.0.1.1-80Akr3v5bCDpuChe_asLz0lPT4egcNbHhM3Kk9_F5QMSJdsGDFS2xzSrFjqtTSGGK.kn.Z1HzGQVGMTYPGGitQ;
-        path=/; expires=Sat, 30-Nov-24 11:00:22 GMT; domain=.api.openai.com; HttpOnly;
+      - __cf_bm=BIPFEF84O2wESYbyJPRGw77Uzg_P91hIrQgSNACkPqA-1733754943-1.0.1.1-Sgyk4J.82rlZiQU4y82vrAnXw__gGwmucoVD7ibhB_jLFYMr0n.TrucdQSvrtirdGEE9QURxR0F3vWeY5DNjEg;
+        path=/; expires=Mon, 09-Dec-24 15:05:43 GMT; domain=.api.openai.com; HttpOnly;
         Secure; SameSite=None
-      - _cfuvid=9CfhBpzTIfoMu64_QQjvk.gKwxHaj6msuoARGYizWlE-1732962622497-0.0.1.1-604800000;
+      - _cfuvid=VcyO13smog_wh_sGSV7TeXlPxqMHM3I2NNCjpnegeig-1733754943068-0.0.1.1-604800000;
         path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       X-Content-Type-Options:
       - nosniff
       Server:
       - cloudflare
       Cf-Ray:
-      - 8eaa29595e8c4a55-TPE
+      - 8ef5b922c985a331-TPE
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-AZF1xJDQYXfLiWQajXz1iepfCfv20",
+          "id": "chatcmpl-AcZ9KCbqxCt0saOC1Or7g6ASjsQqh",
           "object": "chat.completion",
-          "created": 1732962621,
+          "created": 1733754942,
           "model": "gpt-3.5-turbo-0125",
           "choices": [
             {
               "index": 0,
               "message": {
                 "role": "assistant",
-                "content": "{\n\t\"prerequisite_subjects\": [{\n\t\t\t\"SubjectName\": \"Data Mining\",\n\t\t\t\"DifficultyLevel\": 80\n\t\t},\n\t\t{\n\t\t\t\"SubjectName\": \"Machine Learning\",\n\t\t\t\"DifficultyLevel\": 70\n\t\t},\n\t\t{\n\t\t\t\"SubjectName\": \"Statistics\",\n\t\t\t\"DifficultyLevel\": 60\n\t\t},\n\t\t{\n\t\t\t\"SubjectName\": \"Python Programming\",\n\t\t\t\"DifficultyLevel\": 50\n\t\t},\n\t\t{\n\t\t\t\"SubjectName\": \"Business Analytics\",\n\t\t\t\"DifficultyLevel\": 40\n\t\t}\n\t]\n}",
+                "content": "{\n\t\"prerequisite_keywords\": [\n\t\t{\"SubjectName\": \"Data Mining\", \"DifficultyLevel\": 70},\n\t\t{\"SubjectName\": \"Predictive Analytics\", \"DifficultyLevel\": 65},\n\t\t{\"SubjectName\": \"Statistics\", \"DifficultyLevel\": 60},\n\t\t{\"SubjectName\": \"Python Programming\", \"DifficultyLevel\": 55},\n\t\t{\"SubjectName\": \"Business Intelligence\", \"DifficultyLevel\": 50}\n\t]\n}",
                 "refusal": null
               },
               "logprobs": null,
@@ -360,8 +360,8 @@ http_interactions:
           ],
           "usage": {
             "prompt_tokens": 1207,
-            "completion_tokens": 133,
-            "total_tokens": 1340,
+            "completion_tokens": 96,
+            "total_tokens": 1303,
             "prompt_tokens_details": {
               "cached_tokens": 0,
               "audio_tokens": 0
@@ -375,5 +375,5 @@ http_interactions:
           },
           "system_fingerprint": null
         }
-  recorded_at: Sat, 30 Nov 2024 10:30:22 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:42 GMT
 recorded_with: VCR 6.3.1

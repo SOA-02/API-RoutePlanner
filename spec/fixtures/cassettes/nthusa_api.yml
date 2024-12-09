@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 29 Nov 2024 01:57:51 GMT
+      - Mon, 09 Dec 2024 14:35:33 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -29,21 +29,21 @@ http_interactions:
       Connection:
       - close
       X-Process-Time:
-      - '0.005375862121582031'
+      - '0.007973670959472656'
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=h9pLgvInwpPs9eYvHiWXngobWxE03prNVRd21r2cT4xnutsF%2FH0oWyArlK%2BKi3oKPKb%2BnxMRB831KU5NeKfcU1pDrfJIUaIZ7XG%2BFIjnkbVSHdUlY5lSdJDlUxwuehT%2B"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=y0VbKKnKH7y%2B4OAGbsvVkiucTEVqOFnm9LYVES915z6w1nJYdvgRM62EHTiwLXdpyZWZCwrmFVIHtSOuSc%2B35FUnLLDJN37HlI%2FvOv01LHo%2FWBfsPSZPQyD%2BiaBGlGld"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 8e9efd47ac794a3a-TPE
+      - 8ef5b8f0cb398451-TPE
       Alt-Svc:
       - h3=":443"; ma=86400
       Server-Timing:
-      - cfL4;desc="?proto=TCP&rtt=9606&min_rtt=9511&rtt_var=3758&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2555&recv_bytes=784&delivery_rate=266588&cwnd=237&unsent_bytes=0&cid=b2ea9eaa6152b217&ts=112&x=0"
+      - cfL4;desc="?proto=TCP&rtt=16192&min_rtt=5136&rtt_var=9003&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2296&recv_bytes=784&delivery_rate=563862&cwnd=200&unsent_bytes=0&cid=e0ce5755d38b741b&ts=129&x=0"
     body:
       encoding: UTF-8
       string: '[{"id":"11210AES 520100","chinese_title":"環境分析化學","english_title":"Environmental
@@ -63,7 +63,7 @@ http_interactions:
         Chemistry Laboratory (I)","credit":"2","size_limit":"33","freshman_reservation":"0","object":"
         ","ge_type":"","language":"中","note":"加簽事宜請洽化207廖英孝；召集人陳貴通教授","suspend":"","class_room_and_time":"CHEM化   229\tW5W6W7W8\n","teacher":"廖英孝\tLIAO,
         YING-HSIAO\n","prerequisite":"","limit_note":"限化學系大學部3年級4年級,理學院學士班大學部3年級4年級","expertise":"化學(第二專長)\t化學(第一專長)","program":"","no_extra_selection":"","required_optional_note":"化學系110B  必修\t"}]'
-  recorded_at: Fri, 29 Nov 2024 01:57:51 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:33 GMT
 - request:
     method: get
     uri: https://api.nthusa.tw/courses/searches?field=english_title&limits=5&value=Analytic
@@ -85,7 +85,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 29 Nov 2024 01:57:52 GMT
+      - Mon, 09 Dec 2024 14:35:41 GMT
       Content-Type:
       - application/json
       Content-Length:
@@ -93,21 +93,21 @@ http_interactions:
       Connection:
       - close
       X-Process-Time:
-      - '0.005738973617553711'
+      - '0.005151510238647461'
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=yu0fcdpJaRBn%2FO0yBcmHf6bKTBE%2BRLV0e%2B%2F8iejsYHYQzuII%2BPXuIVwO2bunEI07YYtravKvf6oBqakAdlTqM4SzJ9BR8LaW%2F7TdAWhTI8375GEb75ADnzeWguEQ3J%2Fp"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=drKn0KzX4vZrpbNtJFAzBwTZ3WsHKJqlTTaLNhvxOjnS3P%2FRVXDbmd%2BP%2F%2F4tawcxDnpm1XGQ%2F%2FYEAXRk8DjzdgZefjxrGehD1GGI%2BUMqLOu9zkqUH5ISAfkOoV7%2Bc%2FWt"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 8e9efd48a8988f24-TPE
+      - 8ef5b921aad34a56-TPE
       Alt-Svc:
       - h3=":443"; ma=86400
       Server-Timing:
-      - cfL4;desc="?proto=TCP&rtt=9708&min_rtt=8289&rtt_var=3184&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2556&recv_bytes=784&delivery_rate=269870&cwnd=237&unsent_bytes=0&cid=828624977f04624a&ts=105&x=0"
+      - cfL4;desc="?proto=TCP&rtt=13607&min_rtt=4361&rtt_var=8407&sent=5&recv=7&lost=0&retrans=0&sent_bytes=2296&recv_bytes=784&delivery_rate=662851&cwnd=220&unsent_bytes=0&cid=2695c84d30034acf&ts=105&x=0"
     body:
       encoding: UTF-8
       string: '[{"id":"11210AES 520100","chinese_title":"環境分析化學","english_title":"Environmental
@@ -127,5 +127,5 @@ http_interactions:
         Chemistry Laboratory (I)","credit":"2","size_limit":"33","freshman_reservation":"0","object":"
         ","ge_type":"","language":"中","note":"加簽事宜請洽化207廖英孝；召集人陳貴通教授","suspend":"","class_room_and_time":"CHEM化   229\tW5W6W7W8\n","teacher":"廖英孝\tLIAO,
         YING-HSIAO\n","prerequisite":"","limit_note":"限化學系大學部3年級4年級,理學院學士班大學部3年級4年級","expertise":"化學(第二專長)\t化學(第一專長)","program":"","no_extra_selection":"","required_optional_note":"化學系110B  必修\t"}]'
-  recorded_at: Fri, 29 Nov 2024 01:57:52 GMT
+  recorded_at: Mon, 09 Dec 2024 14:35:41 GMT
 recorded_with: VCR 6.3.1

@@ -33,7 +33,6 @@ module RoutePlanner
             numeric_value = skill_value.to_i
             errors << "#{skill_name}: #{MSG_INVALID_SKILL_VALUE}" unless VALID_SKILL_VALUES.include?(numeric_value)
 
-            # 更新技能值為數字形式
             skills_hash[skill_name] = numeric_value
           end
         end

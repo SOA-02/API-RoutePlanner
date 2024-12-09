@@ -7,7 +7,7 @@ module RoutePlanner
   # Web App
   class App < Roda
     plugin :halt
-    plugin :json # 自動處理 JSON 請求與回應
+    plugin :json 
 
     route do |routing|
       response['Content-Type'] = 'application/json'
@@ -26,42 +26,103 @@ module RoutePlanner
 
       routing.on 'api/v1' do
         routing.on 'maps' do
-          routing.post do
-            params = if request.content_type =~ /json/i
-                       JSON.parse(request.body.read)
-                     else
-                       routing.params
-                     end
-  
-            form_request = RoutePlanner::Request::NewMap.new(params)
-            result = form_request.call
-  
-            if result.failure?
-              failed = Representer::HttpResponse.new(result.failure)
-              routing.halt failed.status, failed.to_json
-            else
-              validated_params = result.value!
-              add_map_service = RoutePlanner::Service::AddMap.new
-              service_result = add_map_service.call(validated_params)
-  
-              if service_result.failure?
-                failed = RoutePlanner::Representer::HttpResponse.new(service_result.failure)
-                routing.halt failed.status, failed.to_json
-              else
-                map_entity = service_result.value![:map]
-                skills_entities = service_result.value![:skills]
-  
-                map = RoutePlanner::Representer::Map.new(map_entity).to_json
-                skills = skills_entities.map { |skill| RoutePlanner::Representer::Skill.new(skill).to_json }
-  
-                response.status = 201
-                { message: 'Syllabus processed successfully', map: map, skills: skills }.to_json
+          routing.is do
+            # POST /api/v1/maps
+            routing.post do
+              raw_body = routing.body.read
+              raw_body.force_encoding("ASCII-8BIT")
+              
+              
+              raw_body = raw_body.encode("UTF-8", invalid: :replace, undef: :replace, replace: "?")
+              
+              puts "Raw Body: #{raw_body}"
+              parsed_params = JSON.parse(raw_body)
+             
+               
+              result = RoutePlanner::Request::NewMap.new(parsed_params).call
+              if result.failure?
+                  failed = Representer::HttpResponse.new(result.failure)
+                  routing.halt failed.status, failed.to_json
               end
+
+  
+
+              validated_params = result.value!
+              service_result = RoutePlanner::Service::AddMapandSkill.new.call(validated_params)
+              binding.irb
+              if service_result.failure?
+                api_result = RoutePlanner::APIResponse::ApiResult.new(
+                  status: :bad_request,
+                  message: service_result.value!
+                 )               
+
+                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+                 response.status = http_response.http_status_code
+              end
+
+
+              api_result = RoutePlanner::APIResponse::ApiResult.new(
+                    status: :created,
+                    message: service_result.value!
+              )               
+
+              http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+              response.status = http_response.http_status_code
+                  
+
+              RoutePlanner::Representer::AddMapandSkill.new(api_result.message).to_json
+
             end
+          end
           rescue JSON::ParserError
             response.status = 400
             { error: 'Invalid JSON' }.to_json
-          end
+        end
+
+        routing.on 'RoutePlanner' do
+          routing.is do
+            # POST /api/v1/RoutePlanner
+            routing.post do
+              raw_body = routing.body.read
+              puts "Raw Body: #{raw_body}"
+
+
+              parsed_params = JSON.parse(raw_body)
+              puts "Parsed Params: #{parsed_params}"
+
+              form_request = RoutePlanner::Request::SkillsForm.new(parsed_params)
+
+              data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(form_request.params)
+      
+              binding.irb
+              if data.failure?
+                api_result = RoutePlanner::APIResponse::ApiResult.new(
+                  status: :bad_request,
+                  message: data.value!
+                 )               
+
+                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+                 response.status = http_response.http_status_code
+              end
+
+
+              api_result = RoutePlanner::APIResponse::ApiResult.new(
+                    status: :created,
+                    message: data.value!
+              )               
+
+              http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+              response.status = http_response.http_status_code
+                  
+
+              RoutePlanner::Representer::StudyStressOutput.new(api_result.message).to_json
+
+              rescue JSON::ParserError => e
+                routing.halt 400, { error: "Invalid JSON: #{e.message}" }.to_json
+              end
+
+           end
+
         end
       end
 
@@ -74,112 +135,43 @@ module RoutePlanner
               raw_body = routing.body.read
               puts "Raw Body: #{raw_body}"
 
-              begin
-                parsed_params = JSON.parse(raw_body)
-                puts "Parsed Params: #{parsed_params}"
 
-                form_request = RoutePlanner::Request::SkillsForm.new(parsed_params)
-                routing.halt 400, { error: form_request.errors.join(', ') }.to_json unless form_request.valid?
-                # 直接使用原始的 @params
-                session[:skills] = form_request.params
-                map = form_request.params.keys.first.split('_skills').first
-                results = []
-                errors = []
-                session[:skills].each_key do |skill|
-                  result = Service::AddResources.new.call(online_skill: skill, physical_skill: skill)
-                  if result.success?
-                    results << result.value!
-                  else
-                    errors << result.failure
-                  end
-                end
+              parsed_params = JSON.parse(raw_body)
+              puts "Parsed Params: #{parsed_params}"
 
-                if results.any?
-                  desired_resource = RoutePlanner::Mixins::Recommendations.desired_resource(session[:skills])
-                  results.clear
+              form_request = RoutePlanner::Request::SkillsForm.new(parsed_params)
 
-                  desired_resource.each_value do |skills|
-                    binding.irb
-                    skills.each_key do |skill|
-                      # viewable_resource = Service::FetchViewedResources.new.call(skill)
+              data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(form_request.params)
+      
+              binding.irb
+              if data.failure?
+                api_result = RoutePlanner::APIResponse::ApiResult.new(
+                  status: :bad_request,
+                  message: data.value!
+                 )               
 
-                      viewable_resource = Service::FetchViewedResources.new.call(skill)
-                      binding.irb
-                      if viewable_resource.success?
-                        results << viewable_resource.value!
-                      else
-                        errors << viewable_resource.failure
-                      end
-                    end
-                  end
+                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+                 response.status = http_response.http_status_code
+              end
 
-                end
 
-                binding.irb
-                if results.any?
-                  time = Value::EvaluateStudyStress.compute_minimum_time(results)
-                  stress_index = Value::EvaluateStudyStress.evaluate_stress_level(desired_resource, time)
+              api_result = RoutePlanner::APIResponse::ApiResult.new(
+                    status: :created,
+                    message: data.value!
+              )               
 
-                  {
-                    online_resources: results.map { |res| res[:online_resources] }.flatten,
-                    physical_resources: results.map { |res| res[:physical_resources] }.flatten,
-                    time:,
-                    stress_index:
-                  }.to_json
-                elsif errors.any?
-                  routing.halt 500, { error: errors }.to_json
-                  routing.halt 500, { error: errors }.to_json
-                elsif results.empty?
-                  routing.halt 404, { message: 'No resources found' }.to_json
-               
-                end
-                # binding.irb
-                # { message: 'Skills processed successfully', redirect_to: "/api/v1/RoutePlanner/#{map}" }.to_json
+              http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+              response.status = http_response.http_status_code
+                  
+
+              RoutePlanner::Representer::StudyStressOutput.new(api_result.message).to_json
+
               rescue JSON::ParserError => e
                 routing.halt 400, { error: "Invalid JSON: #{e.message}" }.to_json
               end
-            end
-          end
 
-          # routing.on String do |map|
-          #   # GET /api/v1/RoutePlanner/:map
-          #   routing.get do
-          #     results = []
-          #     errors = []
+           end
 
-          #     # Fetch resources for each skill
-
-          #     if results.any?
-          #       desired_resource = RoutePlanner::Mixins::Recommendations.desired_resource(session[:skills])
-          #       results.clear
-
-          #       desired_resource.each_key do |skill|
-          #         viewable_resource = Service::FetchViewedResources.new.call(skill)
-          #         if viewable_resource.success?
-          #           results << viewable_resource.value!
-          #         else
-          #           errors << viewable_resource.failure
-          #         end
-          #       end
-          #     end
-
-          #     if errors.any?
-          #       routing.halt 500, { error: errors }.to_json
-          #     elsif results.empty?
-          #       routing.halt 404, { message: 'No resources found' }.to_json
-          #     else
-          #       time = Value::EvaluateStudyStress.compute_minimum_time(results)
-          #       stress_index = Value::EvaluateStudyStress.evaluate_stress_level(desired_resource, time)
-
-          #       {
-          #         online_resources: results.map { |res| res[:online_resources] }.flatten,
-          #         physical_resources: results.map { |res| res[:physical_resources] }.flatten,
-          #         time:,
-          #         stress_index:
-          #       }.to_json
-          #     end
-          #   end
-          # end
         end
       end
     end

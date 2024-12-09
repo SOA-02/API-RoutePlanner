@@ -41,7 +41,7 @@ module RoutePlanner
 
       def self.build_map(entity)
         db_resource = Database::MapOrm.create(entity.to_attr_hash)
-        rebuild_entity(db_resource)
+        { map_id: db_resource.id, map_entity: rebuild_entity(db_resource) }
       end
 
       def self.rebuild_entity(db_resource)

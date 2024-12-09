@@ -3,14 +3,15 @@
 require 'roar/decorator'
 require 'roar/json'
 
+require_relative 'map_representer'
 module RoutePlanner
   module Representer
-    # Represents Map information
-    class Skill < Roar::Decorator
+    # Represents Skill information
+    class AddMapandSkill < Roar::Decorator
       include Roar::JSON
+      property :map, extend: Representer::Map, class: OpenStruct # rubocop:disable Style/OpenStructUse
+      property :skills
 
-      property :skill_name
-      property :challenge_score
     end
   end
 end

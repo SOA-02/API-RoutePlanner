@@ -1,12 +1,12 @@
 # frozen_string_literal: true
-
+require 'ostruct'
 require 'roar/decorator'
 require 'roar/json'
-require 'ostruct'
+
 
 module RoutePlanner
   module Representer
-    # Represents essential Member information for API output
+    # Represents essential Online resource for API output
     # USAGE:
     #  db_online=Repository::Onlines.find_original_id('87SH2Cn0s9A')
     # Representer::Online.new(db_online).to_json
@@ -16,7 +16,7 @@ module RoutePlanner
       property :topic
       property :url
       property :platform
-      property :for_skill
+      property :video_duration
     end
   end
 end
