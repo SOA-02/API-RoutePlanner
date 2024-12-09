@@ -22,11 +22,9 @@ describe 'RoutePlanner Service Integration Test' do
 
     it 'HAPPY: should be able to find and save remote online resource to database' do
       resources_made = RoutePlanner::Service::AddOnlineResource.new.call(KEY_WORD)
-      binding.irb
 
       # THEN: the result should report success..
       _(resources_made.success?).must_equal true
-      binding.irb
       # ..and provide a confirmation message
       rebuilt_message = resources_made.value!
       _(rebuilt_message).must_equal RoutePlanner::Service::AddOnlineResource::MSG_ONLINE_RESOURCE_SAVE_SUCCESS
