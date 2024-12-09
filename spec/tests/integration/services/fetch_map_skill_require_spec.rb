@@ -4,12 +4,14 @@ require_relative '../../../helpers/spec_helper'
 require_relative '../../../helpers/vcr_helper'
 require_relative '../../../helpers/database_helper'
 
+TITLE = 'Business Analytics using Machine Learning'
+
 describe 'RoutePlanner Service Integration Test' do
   VcrHelper.setup_vcr
 
-  # before do
-  #   VcrHelper.configure_vcr_for_youtube
-  # end
+  before do
+    VcrHelper.configure_vcr_for_youtube
+  end
 
   after do
     VcrHelper.eject_vcr
@@ -19,6 +21,10 @@ describe 'RoutePlanner Service Integration Test' do
     before do
       DatabaseHelper.wipe_database
     end
+    # TITLE constant moved outside the block
+
+    TITLE = 'Business Analytics using Machine Learning'
+
     it 'HAPPY: should return success when map and skills are found' do
       result = RoutePlanner::Service::FetchMapSkillRequire.new.call(TITLE)
       # Assert
