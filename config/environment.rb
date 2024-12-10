@@ -7,8 +7,8 @@ require 'sequel'
 require 'yaml'
 
 module RoutePlanner
-  # Configuration for the App
-  class App < Roda
+  # Configuration for the Api
+  class Api < Roda
     plugin :environments
 
     # Environment variables setup

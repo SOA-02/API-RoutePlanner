@@ -2,8 +2,6 @@ _snippets/
 .bundle/
 config/secrets.yml
 coverage/*
-*.db
-repostore/**/
 _cache/
 
 node_modules/

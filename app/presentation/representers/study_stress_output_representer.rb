@@ -4,7 +4,6 @@ require 'roar/decorator'
 require 'roar/json'
 require 'ostruct'
 
-require_relative 'skill_representer'
 require_relative 'online_representer'
 require_relative 'physical_representer'
 

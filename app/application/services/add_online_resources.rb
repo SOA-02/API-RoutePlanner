@@ -45,7 +45,7 @@ module RoutePlanner
       end
 
       def online_resource_from_youtube(skill)
-        Youtube::VideoRecommendMapper.new(App.config.API_KEY).find(skill)
+        Youtube::VideoRecommendMapper.new(Api.config.API_KEY).find(skill)
       rescue StandardError
         Failure(MSG_ONLINE_RESOURCE_NOT_FOUND)
       end

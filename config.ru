@@ -3,4 +3,4 @@
 require_relative 'require_app'
 require_app
 
-run RoutePlanner::App.freeze.app
+run RoutePlanner::Api.freeze.app

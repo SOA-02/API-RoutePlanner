@@ -4,8 +4,8 @@ require 'rack'
 require 'roda'
 
 module RoutePlanner
-  # Web App
-  class App < Roda
+  # Web API
+  class Api < Roda
     plugin :halt
     plugin :json 
 
@@ -14,7 +14,7 @@ module RoutePlanner
 
       # GET /
       routing.root do
-        message = "RoutePlanner API v1 at /api/v1/ in #{App.environment} mode"
+        message = "RoutePlanner API v1 at /api/v1/ in #{Api.environment} mode"
 
         result_response = RoutePlanner::Representer::HttpResponse.new(
           RoutePlanner::APIResponse::ApiResult.new(status: :ok, message:)
@@ -79,55 +79,6 @@ module RoutePlanner
             { error: 'Invalid JSON' }.to_json
         end
 
-        routing.on 'RoutePlanner' do
-          routing.is do
-            # POST /api/v1/RoutePlanner
-            routing.post do
-              raw_body = routing.body.read
-              puts "Raw Body: #{raw_body}"
-
-
-              parsed_params = JSON.parse(raw_body)
-              puts "Parsed Params: #{parsed_params}"
-
-              form_request = RoutePlanner::Request::SkillsForm.new(parsed_params)
-
-              data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(form_request.params)
-      
-              binding.irb
-              if data.failure?
-                api_result = RoutePlanner::APIResponse::ApiResult.new(
-                  status: :bad_request,
-                  message: data.value!
-                 )               
-
-                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
-                 response.status = http_response.http_status_code
-              end
-
-
-              api_result = RoutePlanner::APIResponse::ApiResult.new(
-                    status: :created,
-                    message: data.value!
-              )               
-
-              http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
-              response.status = http_response.http_status_code
-                  
-
-              RoutePlanner::Representer::StudyStressOutput.new(api_result.message).to_json
-
-              rescue JSON::ParserError => e
-                routing.halt 400, { error: "Invalid JSON: #{e.message}" }.to_json
-              end
-
-           end
-
-        end
-      end
-
-      # API Namespace
-      routing.on 'api/v1' do
         routing.on 'RoutePlanner' do
           routing.is do
             # POST /api/v1/RoutePlanner

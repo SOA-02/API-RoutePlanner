@@ -42,7 +42,7 @@ module RoutePlanner
       end
 
       def analyze_map_from_openai(syllabus_text)
-        RoutePlanner::OpenAPI::MapMapper.new(syllabus_text, App.config.OPENAI_KEY).call
+        OpenAPI::MapMapper.new(syllabus_text, Api.config.OPENAI_KEY).call
       rescue StandardError
         Failure(MSG_ONPENAPI_ERROR)
       end
@@ -63,7 +63,7 @@ module RoutePlanner
       end
 
       def fetch_skills(syllabus_text)
-        RoutePlanner::OpenAPI::SkillMapper.new(syllabus_text, App.config.OPENAI_KEY).call
+        OpenAPI::SkillMapper.new(syllabus_text, Api.config.OPENAI_KEY).call
       rescue StandardError
         Failure(MSG_ONPENAPI_ERROR)
       end

@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'dry/monads'
+require 'json'
+
 module RoutePlanner
   module Request
     # Application value for the skills form input

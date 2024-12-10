@@ -80,7 +80,7 @@ module RoutePlanner
         end
 
         def video_duration
-          Youtube::VideoMapper.new(App.config.API_KEY).find(@data['id']['videoId']).video_duration
+          Youtube::VideoMapper.new(Api.config.API_KEY).find(@data['id']['videoId']).video_duration
         end
       end
     end

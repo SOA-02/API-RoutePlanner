@@ -3,7 +3,6 @@ require 'ostruct'
 require 'roar/decorator'
 require 'roar/json'
 
-
 module RoutePlanner
   module Representer
     # Represents essential Online resource for API output
