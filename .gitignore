@@ -4,6 +4,9 @@ config/secrets.yml
 coverage/*
 _cache/
 
+*.db
+repostore/**/
+
 node_modules/
 package-lock.json
 package.json
