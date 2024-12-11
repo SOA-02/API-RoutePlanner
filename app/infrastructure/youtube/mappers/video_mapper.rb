@@ -31,15 +31,6 @@ module RoutePlanner
             video_id:,
             video_duration:
           )
-          # Entity::Online.new(
-          #   id: nil,
-          #   original_id:,
-          #   topic:,
-          #   url:,
-          #   platform:,
-          #   video_duration: nil,
-          #   for_skill: @key_word
-          # )
         end
 
         private

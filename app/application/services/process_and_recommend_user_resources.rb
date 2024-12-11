@@ -28,7 +28,7 @@ module RoutePlanner
         user_ability_value = params.values.first
         Success(map: map, user_ability_value: user_ability_value)
       rescue StandardError
-        Failure("step1#{MSG_NO_RECOMMENDED_RESOURCES}")
+        Failure(MSG_NO_SKILLS_PROVIDED)
       end
 
       # Step 2: Process user skills
@@ -53,7 +53,7 @@ module RoutePlanner
           Success(input)
         end
       rescue StandardError
-        Failure("step2#{MSG_NO_RECOMMENDED_RESOURCES}")
+        Failure(MSG_NO_RECOMMENDED_RESOURCES)
       end
 
       # Step 3: Fetch map skills by map name
@@ -62,12 +62,12 @@ module RoutePlanner
 
         result = Service::FetchMapSkillRequire.new.call(map_name)
 
-        return Failure("step3#{MSG_NO_RECOMMENDED_RESOURCES}") unless result.success?
+        return Failure(MSG_NO_RECOMMENDED_RESOURCES) unless result.success?
 
         # Merge the fetched map skills into the input
         Success(input.merge(map_skills: result.success))
       rescue StandardError
-        Failure("step3#{MSG_PROCESSING_ERROR}")
+        Failure(MSG_PROCESSING_ERROR)
       end
 
       # Step 4: Recommend resources based on user skills
@@ -79,12 +79,12 @@ module RoutePlanner
           recommended_resources << viewable_resource.value! if viewable_resource.success?
         end
         if recommended_resources.empty?
-          Failure("step4#{MSG_NO_RECOMMENDED_RESOURCES}")
+          Failure(MSG_NO_RECOMMENDED_RESOURCES)
         else
           Success(input.merge(recommended_resources:))
         end
       rescue StandardError
-        Failure("step4#{MSG_PROCESSING_ERRORRCES}")
+        Failure(MSG_PROCESSING_ERRORRCES)
       end
 
       # Step 5: Calculate study metrics
@@ -109,7 +109,7 @@ module RoutePlanner
 
         Success(output_data)
       rescue StandardError
-        Failure("step5#{MSG_NO_RECOMMENDED_RESOURCES}")
+        Failure(MSG_NO_RECOMMENDED_RESOURCES)
       end
     end
   end

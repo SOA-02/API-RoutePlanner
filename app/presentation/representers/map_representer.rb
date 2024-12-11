@@ -5,7 +5,6 @@ require 'roar/decorator'
 require 'roar/json'
 
 
-
 module RoutePlanner
   # Represents Map information for API output
   module Representer

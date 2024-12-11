@@ -15,7 +15,6 @@ Sequel.migration do
       String :timeloc
       String :for_skill
 
-
       DateTime :created_at
       DateTime :updated_at
       index :id

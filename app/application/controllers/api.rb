@@ -12,6 +12,7 @@ module RoutePlanner
     route do |routing|
       response['Content-Type'] = 'application/json'
 
+
       # GET /
       routing.root do
         message = "RoutePlanner API v1 at /api/v1/ in #{Api.environment} mode"
@@ -41,8 +42,13 @@ module RoutePlanner
                
               result = RoutePlanner::Request::NewMap.new(parsed_params).call
               if result.failure?
-                  failed = Representer::HttpResponse.new(result.failure)
-                  routing.halt failed.status, failed.to_json
+                message = result.value!.message
+                result_response = RoutePlanner::Representer::HttpResponse.new(
+                  RoutePlanner::APIResponse::ApiResult.new(status: :cannot_process, message:)
+                  )
+        
+                response.status = result_response.http_status_code
+                result_response.to_json
               end
 
   
@@ -75,8 +81,13 @@ module RoutePlanner
             end
           end
           rescue JSON::ParserError
-            response.status = 400
-            { error: 'Invalid JSON' }.to_json
+            message = 'Invalid data format'
+            result_response = RoutePlanner::Representer::HttpResponse.new(
+              RoutePlanner::APIResponse::ApiResult.new(status: :bad_request, message:)
+              )
+    
+            response.status = result_response.http_status_code
+            result_response.to_json
         end
 
         routing.on 'RoutePlanner' do
@@ -91,18 +102,33 @@ module RoutePlanner
               puts "Parsed Params: #{parsed_params}"
 
               form_request = RoutePlanner::Request::SkillsForm.new(parsed_params)
-
-              data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(form_request.params)
-      
-              binding.irb
-              if data.failure?
+              if form_request.errors.any?
+                detailed_errors = form_request.errors.map do |error|
+                  error.split(': ', 2).last.strip
+                end
+                binding.irb
                 api_result = RoutePlanner::APIResponse::ApiResult.new(
                   status: :bad_request,
-                  message: data.value!
+                  message: detailed_errors
                  )               
 
                  http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
                  response.status = http_response.http_status_code
+
+                 routing.halt http_response.to_json
+
+              end
+              data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(form_request.params)
+
+              if data.failure?
+                api_result = RoutePlanner::APIResponse::ApiResult.new(
+                  status: :cannot_process,
+                  message: data.failure
+                 )               
+                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+                 response.status = http_response.http_status_code
+                 routing.halt http_response.to_json
+
               end
 
 
@@ -117,8 +143,14 @@ module RoutePlanner
 
               RoutePlanner::Representer::StudyStressOutput.new(api_result.message).to_json
 
-              rescue JSON::ParserError => e
-                routing.halt 400, { error: "Invalid JSON: #{e.message}" }.to_json
+              rescue JSON::ParserError 
+                api_result = RoutePlanner::APIResponse::ApiResult.new(
+                  status: :bad_request,
+                  message: 'Invalid data format'
+                 )               
+
+                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
+                 response.status = http_response.http_status_code
               end
 
            end
