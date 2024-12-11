@@ -8,7 +8,8 @@ module RoutePlanner
     # Application value for the skills form input
     class SkillsForm
       VALID_SKILL_VALUES = (1..100)
-      MSG_INVALID_SKILL_VALUE = "Skill value must be an integer between #{VALID_SKILL_VALUES.first} and #{VALID_SKILL_VALUES.last}.".freeze
+      MSG_INVALID_SKILL_VALUE = 'Skill value must be an integer between ' \
+                                "#{VALID_SKILL_VALUES.first} and #{VALID_SKILL_VALUES.last}.".freeze
       MSG_EMPTY_SKILLS = 'Skills cannot be empty and must contain at least one valid skill with a value.'
 
       def initialize(params)
