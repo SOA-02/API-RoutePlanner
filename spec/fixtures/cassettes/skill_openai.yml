@@ -653,4 +653,3140 @@ http_interactions:
           "system_fingerprint": null
         }
   recorded_at: Sun, 15 Dec 2024 15:02:09 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&maxResults=5&part=snippet&q=Data%20Mining%20one%20hour%20lectures%20tutorials&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:42 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "UBhbVWnPvjjNGup2Iu7yjgZ3ZIo",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "OlYMez9JXIgxQY4HQvAYiBsfPEA",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "-ETQ97mXXF0"
+              },
+              "snippet": {
+                "publishedAt": "2019-08-18T08:30:02Z",
+                "channelId": "UCkw4JCwteGrDHIsyIIKo4tQ",
+                "title": "Data Science Full Course - Learn Data Science in 10 Hours | Data Science For Beginners | Edureka",
+                "description": "Data Science Course (Use Code \"YOUTUBE20\"): https://www.edureka.co/masters-program/data-scientist-certification This ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/-ETQ97mXXF0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/-ETQ97mXXF0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/-ETQ97mXXF0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "edureka!",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-08-18T08:30:02Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "fZus8SotRiMrMdKpl5bvClD7oTU",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "_V8eKsto3Ug"
+              },
+              "snippet": {
+                "publishedAt": "2019-06-06T14:12:38Z",
+                "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
+                "title": "R Programming Tutorial - Learn the Basics of Statistical Computing",
+                "description": "Learn the R programming language in this tutorial course. This is a hands-on overview of the statistical programming language R, ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/_V8eKsto3Ug/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/_V8eKsto3Ug/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/_V8eKsto3Ug/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "freeCodeCamp.org",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-06-06T14:12:38Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "PO7rZlc5D2YvSP1i7CvhwjMBGCs",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "YBKcnjIVplI"
+              },
+              "snippet": {
+                "publishedAt": "2024-08-28T02:36:24Z",
+                "channelId": "UCnB5WaQp4-nBN8LEEqQRRJg",
+                "title": "Data Mining Lecture 1 | Fall 2024",
+                "description": "27 August 2024.",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/YBKcnjIVplI/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/YBKcnjIVplI/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/YBKcnjIVplI/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Adam Prieto",
+                "liveBroadcastContent": "none",
+                "publishTime": "2024-08-28T02:36:24Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "NKZvMPlCADN7RtMwEC4MXnmvbXM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "i_LwzRVP7bg"
+              },
+              "snippet": {
+                "publishedAt": "2022-09-26T16:00:28Z",
+                "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
+                "title": "Machine Learning for Everybody – Full Course",
+                "description": "Learn Machine Learning in a way that is accessible to absolute beginners. You will learn the basics of Machine Learning and how ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/i_LwzRVP7bg/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/i_LwzRVP7bg/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/i_LwzRVP7bg/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "freeCodeCamp.org",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-09-26T16:00:28Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "4P7qzdjzqX5eSfH3_vtSD-UrC4c",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "GwIo3gDZCVQ"
+              },
+              "snippet": {
+                "publishedAt": "2019-09-22T08:30:00Z",
+                "channelId": "UCkw4JCwteGrDHIsyIIKo4tQ",
+                "title": "Machine Learning Full Course - Learn Machine Learning 10 Hours | Machine Learning Tutorial | Edureka",
+                "description": "Machine Learning Engineer Masters Program (Use Code \"YOUTUBE20\"): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/GwIo3gDZCVQ/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/GwIo3gDZCVQ/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/GwIo3gDZCVQ/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "edureka!",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-09-22T08:30:00Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:42 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=-ETQ97mXXF0&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:42 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "j3e7alIS9m-Z74Gf5e1daC_yaBE",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "oEAVd9Tulk25zpk-JWe9FW962bI",
+              "id": "-ETQ97mXXF0",
+              "contentDetails": {
+                "duration": "PT10H23M57S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:42 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=_V8eKsto3Ug&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:42 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "rI4LYOEGMZOKJCahfxyfkeJWmEo",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "f-FEy5mR_jd0LT4KYv0voxIrOIA",
+              "id": "_V8eKsto3Ug",
+              "contentDetails": {
+                "duration": "PT2H10M39S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:42 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=YBKcnjIVplI&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:42 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "0C1czfqjFNfM_CxePY9J90n_s48",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "FT0CFen-hhyhQ2WBZHKVXSj2jPU",
+              "id": "YBKcnjIVplI",
+              "contentDetails": {
+                "duration": "PT1H1M51S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": false,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:42 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=i_LwzRVP7bg&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:42 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "x1-sp1YmLVcP-N7heQ-ih9x3fyw",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "yyYghvGpKyqg3TLvrsbWmgxiLe4",
+              "id": "i_LwzRVP7bg",
+              "contentDetails": {
+                "duration": "PT3H53M53S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:42 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=GwIo3gDZCVQ&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:42 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "SpesfvMn87jz5bbrnGJ3CUf8xPU",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "3nbcNiqMZPZ7OMwAHA4jdzl03io",
+              "id": "GwIo3gDZCVQ",
+              "contentDetails": {
+                "duration": "PT9H38M32S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:42 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/courses/searches?field=english_title&limits=5&value=Data%20Mining
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 15 Dec 2024 16:49:42 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1495'
+      Connection:
+      - close
+      X-Process-Time:
+      - '0.005148410797119141'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=MIjaRVPXT6B1CGVyaQZtKJOLtYi7xA5LGs%2BFsLXa5rUS6I5hGFFlkwntAoPd%2BaivXLjCTg7ZxkRjSwFwpsa%2BzFB3hLjqPqLsxOlww8XK0J8GsHrARmsJeGc2PsL9V%2B4J"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f27edb36a0c8454-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=14306&min_rtt=4898&rtt_var=7917&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2297&recv_bytes=789&delivery_rate=591261&cwnd=176&unsent_bytes=0&cid=495a7f2a9e60f5ad&ts=107&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"11210ISA 581000","chinese_title":"資料探勘與應用","english_title":"Data
+        Mining : Concepts, Techniques, and Applications","credit":"3","size_limit":"120","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"英","note":"面授+同步遠距教學, 本課程為16週課程。教室:台達館104、106。","suspend":"","class_room_and_time":"DELTA台達104\tM2M3M4\n","teacher":"陳宜欣\tCHEN,
+        YI-SHIN\n","prerequisite":"","limit_note":"","expertise":"數據科學(第二專長)","program":"(跨領域)數據科學學分學程/(跨領域)金融科技與區塊鏈學分學程/(跨領域)人工智慧與應用進階學分學程/(跨領域)人工智慧與應用基礎學分學程","no_extra_selection":"","required_optional_note":"資工系112M  選修\t資應所112D  選修\t資應所112M  選修\t"},{"id":"11210KHCT101700","chinese_title":"資料探勘在教育的實作","english_title":"Practical
+        Approaches to Educational Data Mining","credit":"3","size_limit":"16","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"中","note":"彈性學期週數16週,修畢相應學分可申請取得教育大數據微學程證書","suspend":"","class_room_and_time":"GEN
+        II綜二420\tR5R6R7\n","teacher":"郭孟倫\tKUO, MENG-LUN\n","prerequisite":"","limit_note":"教育學院優先，第3次選課起開放全校修習","expertise":"數據科學(第二專長)","program":"(跨領域)數據科學學分學程","no_extra_selection":"","required_optional_note":""}]'
+  recorded_at: Sun, 15 Dec 2024 16:49:42 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&maxResults=5&part=snippet&q=Statistics%20one%20hour%20lectures%20tutorials&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:43 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "lL_Olk_bmjbXCAAsKLxgFmY-gOc",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "G6Vt5WQ94rf1uKY5AjpQrJCN24w",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "kyjlxsLW1Is"
+              },
+              "snippet": {
+                "publishedAt": "2018-12-01T23:47:22Z",
+                "channelId": "UC6AVa0vSrCpuskzGDDKz_EQ",
+                "title": "Teach me STATISTICS in half an hour! Seriously.",
+                "description": "THE CHALLENGE: \"teach me statistics in half an hour with no mathematical formula\" The RESULT: an intuitive overview of ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/kyjlxsLW1Is/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/kyjlxsLW1Is/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/kyjlxsLW1Is/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "zedstatistics",
+                "liveBroadcastContent": "none",
+                "publishTime": "2018-12-01T23:47:22Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "PU_0B1-d_rpFBYxVcn4TC8bloI0",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "eR-XRSKsuR4"
+              },
+              "snippet": {
+                "publishedAt": "2022-04-27T13:00:32Z",
+                "channelId": "UCfJyQ3P2k_SuqfxVdqIEQNw",
+                "title": "R programming in one hour - a crash course for beginners",
+                "description": "R programming is easy. In this video, I'll walk you though how to clean your data; how to manipulate (or wrangle) your data; how ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/eR-XRSKsuR4/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/eR-XRSKsuR4/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/eR-XRSKsuR4/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "R Programming 101",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-04-27T13:00:32Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "fZus8SotRiMrMdKpl5bvClD7oTU",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "_V8eKsto3Ug"
+              },
+              "snippet": {
+                "publishedAt": "2019-06-06T14:12:38Z",
+                "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
+                "title": "R Programming Tutorial - Learn the Basics of Statistical Computing",
+                "description": "Learn the R programming language in this tutorial course. This is a hands-on overview of the statistical programming language R, ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/_V8eKsto3Ug/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/_V8eKsto3Ug/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/_V8eKsto3Ug/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "freeCodeCamp.org",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-06-06T14:12:38Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "k5o7i501AQ6ymjiLRKTVUu-apm4",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "Vfo5le26IhY"
+              },
+              "snippet": {
+                "publishedAt": "2019-12-20T07:17:27Z",
+                "channelId": "UCObs0kLIrDjX2LLSybqNaEA",
+                "title": "Statistics for Data Science | Probability and Statistics | Statistics Tutorial | Ph.D. (Stanford)",
+                "description": "1000+ Free Courses With Free Certificates: ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/Vfo5le26IhY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/Vfo5le26IhY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/Vfo5le26IhY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Great Learning",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-12-20T07:17:27Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "lbEupzOEHxD_twETa0NCJxfbgUw",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "yZ0bV2Afkjc"
+              },
+              "snippet": {
+                "publishedAt": "2023-02-01T13:00:31Z",
+                "channelId": "UCMGDKvc8-06jmxRrhYLr1_g",
+                "title": "Learn R in 39 minutes",
+                "description": "Got 40 minutes? You can learn R and still have time for high fives afterwards. If this vid helps you, please help me a tiny bit by ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/yZ0bV2Afkjc/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/yZ0bV2Afkjc/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/yZ0bV2Afkjc/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Equitable Equations",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-02-01T13:00:31Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:43 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=kyjlxsLW1Is&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:43 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "Fi4pvsWF9npsx2Jmclvh0TQtu3s",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "5E7TZ5OgTzXHbPs1EBYEc_oxNUY",
+              "id": "kyjlxsLW1Is",
+              "contentDetails": {
+                "duration": "PT42M9S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:43 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=eR-XRSKsuR4&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:43 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "XpQwTqVDuoCIyGF4KVWkoUobfps",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "mmsf_6Na3IEYVOuHIQNARy4gJMs",
+              "id": "eR-XRSKsuR4",
+              "contentDetails": {
+                "duration": "PT59M48S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:43 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=_V8eKsto3Ug&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:43 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "rI4LYOEGMZOKJCahfxyfkeJWmEo",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "f-FEy5mR_jd0LT4KYv0voxIrOIA",
+              "id": "_V8eKsto3Ug",
+              "contentDetails": {
+                "duration": "PT2H10M39S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:43 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=Vfo5le26IhY&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:43 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "8rYnw5FXRqb-16CnJfpChMh9nH4",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "bpQTL7CTkVKNqknvQjy8uJNKsfo",
+              "id": "Vfo5le26IhY",
+              "contentDetails": {
+                "duration": "PT7H12M51S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": false,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:43 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=yZ0bV2Afkjc&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:43 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "rJivMUGhohc5mDY2dzJ8h9zmuKI",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "afSOuTl5v7D51Rc4vcRcOvGWkU8",
+              "id": "yZ0bV2Afkjc",
+              "contentDetails": {
+                "duration": "PT38M56S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:43 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/courses/searches?field=english_title&limits=5&value=Statistics
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 15 Dec 2024 16:49:44 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4556'
+      Connection:
+      - close
+      X-Process-Time:
+      - '0.005124092102050781'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=lavi13r5e%2FQyJLhSdl5pA9Wn8tddwSukcdfXU4Sc4fg2g%2BsNmQn19%2Fhf3IwCgkZKlBe3RbF9MS2NXseM5nx1n7aJ6PTqR4WWYwbcM6L0qt53JwYS0Lo0y41dNyXChAvp"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f27edba39350748-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=21130&min_rtt=4774&rtt_var=11951&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2296&recv_bytes=786&delivery_rate=606619&cwnd=178&unsent_bytes=0&cid=63376c55e69ff7ff&ts=94&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"11210BAI 700100","chinese_title":"統計與機器學習概論一","english_title":"Introduction
+        of Statistics and Machine Learning (I)","credit":"3","size_limit":"30","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"英","note":"本課程為 16 週課程。限大三以上修習。","suspend":"","class_room_and_time":"LS
+        II生二 113\tT2T3T4\n","teacher":"楊立威\tYANG, LEE-WEI\n羅中泉\tLO, CHUNG-CHUAN\n張筱涵\tCHANG,
+        HSIAO-HAN\n","prerequisite":"","limit_note":"電資院,工學院,生醫學院,原科院,智慧生醫博士學程優先，第3次選課起開放全校修習","expertise":"數據科學(第二專長)","program":"(跨領域)生物資訊學分學程/(跨領域)數據科學學分學程/(跨領域)人工智慧與應用進階學分學程/(跨領域)人工智慧與應用基礎學分學程/(跨領域)神經科學學分學程","no_extra_selection":"","required_optional_note":"智慧生醫博士學程112D  必修\t"},{"id":"11210BMES212100","chinese_title":"機率與統計","english_title":"Probability
+        and Statistics","credit":"3","size_limit":"60","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"中","note":"","suspend":"","class_room_and_time":"BMES醫環110\tM3M4W2\n","teacher":"陳之碩\tCHEN,
+        CHI-SHUO\n","prerequisite":"<div>\n  擋修對象 : 醫環系 <br>\n  先修科目 : <BR><BR>微積分一-成績需D以上<BR>微積分Ａ一-成績需D以上<BR>微積分Ｂ一-成績需D以上<BR>微積分一(數學系)-成績需D以上<BR>曾修微積分一(數學系)(基本科目免修測試)<BR>曾修微積分Ａ一(基本科目免修測試)<BR>曾修微積分Ｂ一(基本科目免修測試)<BR><br>上述條件任選一科，則不擋修。</div>","limit_note":"","expertise":"生醫工程(第二專長)\t生醫工程與環境科學(第一專長)\t數據科學(第二專長)\t醫學物理(第二專長)","program":"(跨領域)生物資訊學分學程/(跨領域)數據科學學分學程/(跨領域)人工智慧與應用基礎學分學程/(跨領域)音樂科技與健康學分學程/(跨領域)神經科學學分學程","no_extra_selection":"","required_optional_note":"醫環系111B  必修\t"},{"id":"11210ECON216101","chinese_title":"統計學一","english_title":"Statistics
+        (I)","credit":"3","size_limit":"80","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"中","note":" ","suspend":"","class_room_and_time":"TSMC台積120\tR7R8R9\n","teacher":"余朝恩\tYU,
+        CHAO-EN\n","prerequisite":"","limit_note":"經濟系大學部2年級優先，第3次選課起開放全校修習","expertise":"數據科學(第二專長)\t經濟(第一專長)\t計量財務金融(第二專長)","program":"(跨領域)生物資訊學分學程/(跨領域)數據科學學分學程/(跨領域)人工智慧與應用基礎學分學程/(跨領域)音樂科技與健康學分學程/(跨領域)神經科學學分學程","no_extra_selection":"","required_optional_note":"經濟系111BA
+        必修\t經濟系111BB 必修\t科管院學士班111B  必修\t"},{"id":"11210ECON216102","chinese_title":"統計學一","english_title":"Statistics
+        (I)","credit":"3","size_limit":"150","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"英","note":"本課程為16周課程，下學期由冼芻蕘老師授課","suspend":"","class_room_and_time":"GEN
+        IV綜四224\tM3M4Mn\n","teacher":"馮炳萱\tFUNG, PING-HSUAN\n","prerequisite":"","limit_note":"經濟系大學部2年級優先，第3次選課起開放全校修習","expertise":"數據科學(第二專長)\t經濟(第一專長)\t計量財務金融(第二專長)","program":"(跨領域)生物資訊學分學程/(跨領域)數據科學學分學程/(跨領域)人工智慧與應用基礎學分學程/(跨領域)音樂科技與健康學分學程/(跨領域)神經科學學分學程","no_extra_selection":"","required_optional_note":"經濟系111BA
+        必修\t經濟系111BB 必修\t科管院學士班111B  必修\t科管院學士班111BA 必修\t"},{"id":"11210ECON516600","chinese_title":"統計學","english_title":"Statistics","credit":"3","size_limit":"40","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"英","note":" ","suspend":"","class_room_and_time":"TSMC台積430\tM5M6M7\n","teacher":"冼芻蕘\tSIN
+        CHOR YIU\n","prerequisite":"","limit_note":"限IMBA碩士班","expertise":"數據科學(第二專長)","program":"(跨領域)生物資訊學分學程/(跨領域)數據科學學分學程/(跨領域)人工智慧與應用基礎學分學程","no_extra_selection":"","required_optional_note":"IMBA碩士班112M  選修\t"}]'
+  recorded_at: Sun, 15 Dec 2024 16:49:44 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&maxResults=5&part=snippet&q=Machine%20Learning%20one%20hour%20lectures%20tutorials&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:44 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "b5bqVkFob2pnlWfAx2PtE7XYfLc",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "4P7qzdjzqX5eSfH3_vtSD-UrC4c",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "GwIo3gDZCVQ"
+              },
+              "snippet": {
+                "publishedAt": "2019-09-22T08:30:00Z",
+                "channelId": "UCkw4JCwteGrDHIsyIIKo4tQ",
+                "title": "Machine Learning Full Course - Learn Machine Learning 10 Hours | Machine Learning Tutorial | Edureka",
+                "description": "Machine Learning Engineer Masters Program (Use Code \"YOUTUBE20\"): ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/GwIo3gDZCVQ/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/GwIo3gDZCVQ/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/GwIo3gDZCVQ/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "edureka!",
+                "liveBroadcastContent": "none",
+                "publishTime": "2019-09-22T08:30:00Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "NKZvMPlCADN7RtMwEC4MXnmvbXM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "i_LwzRVP7bg"
+              },
+              "snippet": {
+                "publishedAt": "2022-09-26T16:00:28Z",
+                "channelId": "UC8butISFwT-Wl7EV0hUK0BQ",
+                "title": "Machine Learning for Everybody – Full Course",
+                "description": "Learn Machine Learning in a way that is accessible to absolute beginners. You will learn the basics of Machine Learning and how ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/i_LwzRVP7bg/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/i_LwzRVP7bg/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/i_LwzRVP7bg/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "freeCodeCamp.org",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-09-26T16:00:28Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "Wf8O-Hm2wTDvX6llnxJdC46K2EQ",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "JxgmHe2NyeY"
+              },
+              "snippet": {
+                "publishedAt": "2022-05-28T04:37:31Z",
+                "channelId": "UCNU_lfiiWBdtULKOw6X0Dig",
+                "title": "Complete Machine Learning In 6 Hours| Krish Naik",
+                "description": "All the materials are available in the below link ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/JxgmHe2NyeY/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/JxgmHe2NyeY/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/JxgmHe2NyeY/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Krish Naik",
+                "liveBroadcastContent": "none",
+                "publishTime": "2022-05-28T04:37:31Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "SVIWGSulUyUdHo-1jKVIlDP3i4g",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "7eh4d6sabA0"
+              },
+              "snippet": {
+                "publishedAt": "2020-09-17T13:00:03Z",
+                "channelId": "UCWv7vMbMWH4-V0ZXdmDpPBA",
+                "title": "Python Machine Learning Tutorial (Data Science)",
+                "description": "Build your first AI project with Python! This beginner-friendly machine learning tutorial uses real-world data. Subscribe for ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/7eh4d6sabA0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/7eh4d6sabA0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/7eh4d6sabA0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Programming with Mosh",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-09-17T13:00:03Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "lmMIqaadl88RvZDUZ4WJD3yADl4",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "kqtD5dpn9C8"
+              },
+              "snippet": {
+                "publishedAt": "2020-09-16T13:00:20Z",
+                "channelId": "UCWv7vMbMWH4-V0ZXdmDpPBA",
+                "title": "Python for Beginners - Learn Coding with Python in 1 Hour",
+                "description": "Learn Python basics in just 1 hour! Perfect for beginners interested in AI and coding. ⚡ Plus, get 6 months of PyCharm FREE with ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/kqtD5dpn9C8/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/kqtD5dpn9C8/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/kqtD5dpn9C8/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Programming with Mosh",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-09-16T13:00:20Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:44 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=GwIo3gDZCVQ&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:44 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "SpesfvMn87jz5bbrnGJ3CUf8xPU",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "3nbcNiqMZPZ7OMwAHA4jdzl03io",
+              "id": "GwIo3gDZCVQ",
+              "contentDetails": {
+                "duration": "PT9H38M32S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:44 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=i_LwzRVP7bg&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:44 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "x1-sp1YmLVcP-N7heQ-ih9x3fyw",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "yyYghvGpKyqg3TLvrsbWmgxiLe4",
+              "id": "i_LwzRVP7bg",
+              "contentDetails": {
+                "duration": "PT3H53M53S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:44 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=JxgmHe2NyeY&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:44 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "omlEKdtUWiHFe1GYu3nR3n1RTqw",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "54TXrSRs0S7w4VqeSaCj-na6B3M",
+              "id": "JxgmHe2NyeY",
+              "contentDetails": {
+                "duration": "PT6H37M52S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:44 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=7eh4d6sabA0&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:44 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "Ral5c__hkxzHQtCWkLpVr9pMzIo",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "on_k3pBmJiPhG6hede55wcQ9DM8",
+              "id": "7eh4d6sabA0",
+              "contentDetails": {
+                "duration": "PT49M43S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:44 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=kqtD5dpn9C8&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:45 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "qNgHzJRUpiENioA6wnNFDeVhWhE",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "ow18wRRg4sPykm0AuijakgW8xzY",
+              "id": "kqtD5dpn9C8",
+              "contentDetails": {
+                "duration": "PT1H6S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:44 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/courses/searches?field=english_title&limits=5&value=Machine%20Learning
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 15 Dec 2024 16:49:45 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '4587'
+      Connection:
+      - close
+      X-Process-Time:
+      - '0.005006313323974609'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=XswIdPtT%2BJYf0KwZg%2F6YxKuVG1wgelZ6c8%2Fq52%2FczyN3E%2BCpTrPGuiPmhPbNCdr3PVNRnW32RZ6c9H7fRvbnr48bskpVooRJQlaa3wp0hfZI91bGQObMpEkYJQpM1mPA"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f27edc15a9c4a62-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=14642&min_rtt=5481&rtt_var=8053&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2296&recv_bytes=794&delivery_rate=528370&cwnd=220&unsent_bytes=0&cid=1a08619c14b964f7&ts=96&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"11210BAI 700100","chinese_title":"統計與機器學習概論一","english_title":"Introduction
+        of Statistics and Machine Learning (I)","credit":"3","size_limit":"30","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"英","note":"本課程為 16 週課程。限大三以上修習。","suspend":"","class_room_and_time":"LS
+        II生二 113\tT2T3T4\n","teacher":"楊立威\tYANG, LEE-WEI\n羅中泉\tLO, CHUNG-CHUAN\n張筱涵\tCHANG,
+        HSIAO-HAN\n","prerequisite":"","limit_note":"電資院,工學院,生醫學院,原科院,智慧生醫博士學程優先，第3次選課起開放全校修習","expertise":"數據科學(第二專長)","program":"(跨領域)生物資訊學分學程/(跨領域)數據科學學分學程/(跨領域)人工智慧與應用進階學分學程/(跨領域)人工智慧與應用基礎學分學程/(跨領域)神經科學學分學程","no_extra_selection":"","required_optional_note":"智慧生醫博士學程112D  必修\t"},{"id":"11210CS  460200","chinese_title":"機器學習概論","english_title":"Introduction
+        to Machine Learning","credit":"3","size_limit":"90","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"英","note":"16週課程,11/16當天採線上遠距上課","suspend":"","class_room_and_time":"DELTA台達璟德\tT3T4R3\n","teacher":"郭柏志\tKUO,
+        PO-CHIH\n","prerequisite":"","limit_note":"資工系大學部優先，第3次選課起開放全校修習","expertise":"資訊工程(第一專長)\t數據科學(第二專長)","program":"(跨領域)數據科學學分學程/(跨領域)金融科技與區塊鏈學分學程/(跨領域)人工智慧與應用進階學分學程/(跨領域)人工智慧與應用基礎學分學程/(跨領域)神經科學學分學程","no_extra_selection":"","required_optional_note":"資工系109BA
+        選修\t資工系109BB 選修\t資工系109BC 選修\t資工系110BA 選修\t資工系110BB 選修\t資工系110BC 選修\t電資院學士班109B  選修\t電資院學士班109BA
+        選修\t電資院學士班110B  選修\t電資院學士班110BA 選修\t"},{"id":"11210ECON504200","chinese_title":"機器學習與經濟計量","english_title":"Machine
+        Learning and Econometrics","credit":"3","size_limit":"30","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"英","note":" ","suspend":"","class_room_and_time":"TSMC台積205\tT7T8T9\n","teacher":"冼芻蕘\tSIN
+        CHOR YIU\n","prerequisite":"","limit_note":"限碩士班博士班","expertise":"","program":"","no_extra_selection":"","required_optional_note":"經濟系112D  選修\t經濟系112M  選修\tIMBA碩士班112M  選修\t"},{"id":"11210EE  370000","chinese_title":"機器學習導論","english_title":"Introduction
+        to Machine Learning","credit":"3","size_limit":"100","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"英","note":"非常態開設課程。","suspend":"","class_room_and_time":"EECS資電
+        206\tM3M4W2\n","teacher":"李祈均\tLEE, CHI-CHUN\n","prerequisite":"<div>\n  擋修對象
+        : 全校 <br>\n  先修科目 : <BR><BR>未修過數位訊號處理學程特論：機器學習導論<BR><br>上述條件一定要有，則不擋修。</div>","limit_note":"電機系大學部3年級4年級,電資院學士班大學部3年級4年級優先，第3次選課起開放全校修習","expertise":"數據科學(第二專長)\t電機工程(第二專長)\t電機工程(第一專長)","program":"(跨領域)數據科學學分學程/(跨領域)人工智慧與應用進階學分學程/(跨領域)人工智慧與應用基礎學分學程/(跨領域)神經科學學分學程","no_extra_selection":"","required_optional_note":"電機系110BA
+        選修\t電機系110BB 選修\t電資院學士班110B  選修\t電資院學士班110BA 選修\t"},{"id":"11210IEEM318100","chinese_title":"機器學習概論","english_title":"Introduction
+        to Machine Learning","credit":"3","size_limit":"50","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"中","note":"本課程為16週課程","suspend":"","class_room_and_time":"ENG
+        I工一 102\tR6R7R8\n","teacher":"林裕訓\tLIN, YU-HSUN\n","prerequisite":"","limit_note":"工工系大學部3年級4年級優先，第3次選課起開放全校修習","expertise":"數據科學(第二專長)","program":"(跨領域)數據科學學分學程/(跨領域)金融科技與區塊鏈學分學程/(跨領域)人工智慧與應用進階學分學程/(跨領域)人工智慧與應用基礎學分學程/(跨領域)神經科學學分學程","no_extra_selection":"《不接受加簽
+        No extra selection》","required_optional_note":"工工系109B  選修\t工工系110B  選修\t"}]'
+  recorded_at: Sun, 15 Dec 2024 16:49:45 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&maxResults=5&part=snippet&q=Python%20Programming%20one%20hour%20lectures%20tutorials&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:45 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "{\n  \"kind\": \"youtube#searchListResponse\",\n  \"etag\": \"VdVT8KAUqGrhAi6KvUkjFoQ72qk\",\n
+        \ \"nextPageToken\": \"CAUQAA\",\n  \"regionCode\": \"TW\",\n  \"pageInfo\":
+        {\n    \"totalResults\": 1000000,\n    \"resultsPerPage\": 5\n  },\n  \"items\":
+        [\n    {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"lmMIqaadl88RvZDUZ4WJD3yADl4\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"kqtD5dpn9C8\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2020-09-16T13:00:20Z\",\n        \"channelId\": \"UCWv7vMbMWH4-V0ZXdmDpPBA\",\n
+        \       \"title\": \"Python for Beginners - Learn Coding with Python in 1
+        Hour\",\n        \"description\": \"Learn Python basics in just 1 hour! Perfect
+        for beginners interested in AI and coding. ⚡ Plus, get 6 months of PyCharm
+        FREE with ...\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/kqtD5dpn9C8/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/kqtD5dpn9C8/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/kqtD5dpn9C8/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"Programming with Mosh\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2020-09-16T13:00:20Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"h-LfQ9Y1gA20FVSasQDobdO9--s\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"_uQrJ0TkZlc\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2019-02-18T15:00:08Z\",\n        \"channelId\": \"UCWv7vMbMWH4-V0ZXdmDpPBA\",\n
+        \       \"title\": \"Python Full Course for Beginners\",\n        \"description\":
+        \"Learn Python for AI, machine learning, and web development with this beginner-friendly
+        course! Get 6 months of PyCharm ...\",\n        \"thumbnails\": {\n          \"default\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/_uQrJ0TkZlc/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/_uQrJ0TkZlc/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/_uQrJ0TkZlc/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"Programming with Mosh\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2019-02-18T15:00:08Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"mi13ejXUsx6-nJh8mEPYLcWk_JU\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"8KCuHHeC_M0\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2024-08-18T14:00:05Z\",\n        \"channelId\": \"UC4SVo0Ue36XCfOyb5Lh1viQ\",\n
+        \       \"title\": \"Learn Python in 1 hour! \U0001F40D (2024)\",\n        \"description\":
+        \"python #pythontutorial #pythoncourse This is a quick introduction to the
+        Python programming language. If you would like to learn ...\",\n        \"thumbnails\":
+        {\n          \"default\": {\n            \"url\": \"https://i.ytimg.com/vi/8KCuHHeC_M0/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/8KCuHHeC_M0/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/8KCuHHeC_M0/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"Bro Code\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2024-08-18T14:00:05Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"u3-N2z9f78BsLpRSrBmUquWRrpw\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"ix9cRaBkVe0\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2024-08-20T13:00:54Z\",\n        \"channelId\": \"UC4SVo0Ue36XCfOyb5Lh1viQ\",\n
+        \       \"title\": \"Python Full Course for free \U0001F40D (2024)\",\n        \"description\":
+        \"python #tutorial #beginners Python tutorial for beginners' full course 2024
+        *Learn Python in 1 HOUR* ...\",\n        \"thumbnails\": {\n          \"default\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/ix9cRaBkVe0/default.jpg\",\n
+        \           \"width\": 120,\n            \"height\": 90\n          },\n          \"medium\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/ix9cRaBkVe0/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/ix9cRaBkVe0/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"Bro Code\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2024-08-20T13:00:54Z\"\n      }\n    },\n
+        \   {\n      \"kind\": \"youtube#searchResult\",\n      \"etag\": \"ZP6Z6zqB9Zx4CPneBFkZCmZ8XsI\",\n
+        \     \"id\": {\n        \"kind\": \"youtube#video\",\n        \"videoId\":
+        \"rfscVS0vtbw\"\n      },\n      \"snippet\": {\n        \"publishedAt\":
+        \"2018-07-11T18:00:42Z\",\n        \"channelId\": \"UC8butISFwT-Wl7EV0hUK0BQ\",\n
+        \       \"title\": \"Learn Python - Full Course for Beginners [Tutorial]\",\n
+        \       \"description\": \"This course will give you a full introduction into
+        all of the core concepts in python. Follow along with the videos and you'll
+        be a ...\",\n        \"thumbnails\": {\n          \"default\": {\n            \"url\":
+        \"https://i.ytimg.com/vi/rfscVS0vtbw/default.jpg\",\n            \"width\":
+        120,\n            \"height\": 90\n          },\n          \"medium\": {\n
+        \           \"url\": \"https://i.ytimg.com/vi/rfscVS0vtbw/mqdefault.jpg\",\n
+        \           \"width\": 320,\n            \"height\": 180\n          },\n          \"high\":
+        {\n            \"url\": \"https://i.ytimg.com/vi/rfscVS0vtbw/hqdefault.jpg\",\n
+        \           \"width\": 480,\n            \"height\": 360\n          }\n        },\n
+        \       \"channelTitle\": \"freeCodeCamp.org\",\n        \"liveBroadcastContent\":
+        \"none\",\n        \"publishTime\": \"2018-07-11T18:00:42Z\"\n      }\n    }\n
+        \ ]\n}\n"
+  recorded_at: Sun, 15 Dec 2024 16:49:45 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=kqtD5dpn9C8&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:45 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "qNgHzJRUpiENioA6wnNFDeVhWhE",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "ow18wRRg4sPykm0AuijakgW8xzY",
+              "id": "kqtD5dpn9C8",
+              "contentDetails": {
+                "duration": "PT1H6S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:45 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=_uQrJ0TkZlc&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:45 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "FbhBG7Ias73nRzrMO6QM9EPr-X0",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "b17mbnzDZVMCpaV9KR-KgNYpk-0",
+              "id": "_uQrJ0TkZlc",
+              "contentDetails": {
+                "duration": "PT6H14M7S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:45 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=8KCuHHeC_M0&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:45 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "gCrGrQXNLv1sbKQ16jOIKYGVU6U",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "vTtQtJdqQAcszmUWehinFYuTaqg",
+              "id": "8KCuHHeC_M0",
+              "contentDetails": {
+                "duration": "PT1H",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:45 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=ix9cRaBkVe0&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:45 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "7kH3lpEBIbI3EinJuxMVZldeBoQ",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "sDYZhcY2witkE8rpDPS4FJkVAAw",
+              "id": "ix9cRaBkVe0",
+              "contentDetails": {
+                "duration": "PT12H",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:45 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=rfscVS0vtbw&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:46 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "117l1NhjP9oCeLQm_wMzmD0gpWk",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "SpBmbzqRjAJToCJ8PcxUePDeadE",
+              "id": "rfscVS0vtbw",
+              "contentDetails": {
+                "duration": "PT4H26M52S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "true",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:45 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/courses/searches?field=english_title&limits=5&value=Python%20Programming
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 15 Dec 2024 16:49:46 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      Connection:
+      - close
+      X-Process-Time:
+      - '0.004874706268310547'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=wOwYOxvnMOhtztiuRLDE2ti%2BEBmMWXUYZh08N46LVeoU7SH90Pz7DbVB6s0npqGy2qlmw5avMmJYazLaiXqpRqtZMG6K%2Fbzo7I6xcfJfvFO4%2FZcRF%2B%2BDhsNeliBCDlFX"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f27edc78de85706-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=19037&min_rtt=4726&rtt_var=10722&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2295&recv_bytes=796&delivery_rate=612780&cwnd=187&unsent_bytes=0&cid=ae353dd97fecb926&ts=96&x=0"
+    body:
+      encoding: UTF-8
+      string: "[]"
+  recorded_at: Sun, 15 Dec 2024 16:49:46 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&maxResults=5&part=snippet&q=Business%20Analytics%20one%20hour%20lectures%20tutorials&type=video
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:46 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "XszqQsJ79MdUO1_bTLbPHxbfmDc",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "TW",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "GqZsCAHpb77ck5OTFYDXclH4i2U",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "f9DzS6NdgwU"
+              },
+              "snippet": {
+                "publishedAt": "2020-12-23T06:30:01Z",
+                "channelId": "UCsvqVGtbbyHaMoevxPAq9Fg",
+                "title": "Business Analyst Full Course In 2 Hours | Business Analyst Training For Beginners | Simplilearn",
+                "description": "Business Analyst Masters Program (Discount Code - YTBE15) ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/f9DzS6NdgwU/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/f9DzS6NdgwU/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/f9DzS6NdgwU/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Simplilearn",
+                "liveBroadcastContent": "none",
+                "publishTime": "2020-12-23T06:30:01Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "4grwY5JuGRau3IqwhjlSIvNjzAc",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "UBVzucVpG7k"
+              },
+              "snippet": {
+                "publishedAt": "2021-02-21T13:30:05Z",
+                "channelId": "UCsvqVGtbbyHaMoevxPAq9Fg",
+                "title": "Business Analyst Full Course In 2 Hours | Business Analyst Training For Beginners | Simplilearn",
+                "description": "Business Analyst Masters Program (Discount Code - YTBE15) ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/UBVzucVpG7k/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/UBVzucVpG7k/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/UBVzucVpG7k/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Simplilearn",
+                "liveBroadcastContent": "none",
+                "publishTime": "2021-02-21T13:30:05Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "5PKw4UflJKtIRWLpJQzLMwzPCRM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "LktbfHdEm-U"
+              },
+              "snippet": {
+                "publishedAt": "2024-05-28T16:08:50Z",
+                "channelId": "UC2EuGf__CSbWq4uYLO8iv2w",
+                "title": "Business Analyst Training Full course  (Step by Step Guide ) ( 100 % free course )in 10 hours",
+                "description": "Learn Business Analysis in 10 hours . Free Business Analysis Online Course . Step by Step guide for business analyst .",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/LktbfHdEm-U/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/LktbfHdEm-U/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/LktbfHdEm-U/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Pradeepa -Career Coach",
+                "liveBroadcastContent": "none",
+                "publishTime": "2024-05-28T16:08:50Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "lzZsdyb1o2nU-rN1009QenAF0M0",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "OnwhPsfbMmU"
+              },
+              "snippet": {
+                "publishedAt": "2023-05-23T12:31:53Z",
+                "channelId": "UCzFLRKMUtfIG8EW7dSAeMLw",
+                "title": "Business Analyst Course in 6 Hours | Business Analyst Training For Beginners |",
+                "description": "New Way to Build Excel Dashboard in 10 minutes, Check out the video https://youtu.be/bDcM0a-83XY Over the last 4 years we ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/OnwhPsfbMmU/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/OnwhPsfbMmU/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/OnwhPsfbMmU/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "ThePrefectBA",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-05-23T12:31:53Z"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "hhRcFwCRJtVMcNVOpem9gTrYNec",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "_rr9JGJRkI0"
+              },
+              "snippet": {
+                "publishedAt": "2023-05-13T21:39:54Z",
+                "channelId": "UCCktnahuRFYIBtNnKT5IYyg",
+                "title": "Business Analyst Full Course | Business Analyst Training For Beginners |  Intellipaat",
+                "description": "Intellipaat's Business Analyst Course: https://intellipaat.com/business-analyst-training/ Welcome to our comprehensive ...",
+                "thumbnails": {
+                  "default": {
+                    "url": "https://i.ytimg.com/vi/_rr9JGJRkI0/default.jpg",
+                    "width": 120,
+                    "height": 90
+                  },
+                  "medium": {
+                    "url": "https://i.ytimg.com/vi/_rr9JGJRkI0/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                  },
+                  "high": {
+                    "url": "https://i.ytimg.com/vi/_rr9JGJRkI0/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                  }
+                },
+                "channelTitle": "Intellipaat",
+                "liveBroadcastContent": "none",
+                "publishTime": "2023-05-13T21:39:54Z"
+              }
+            }
+          ]
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:46 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=f9DzS6NdgwU&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:46 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "Ofd2ZZ5A5IkTtHZGUkdajklDy8s",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "WiGc1oIBy9gFpCpyKY-b_PLdVbE",
+              "id": "f9DzS6NdgwU",
+              "contentDetails": {
+                "duration": "PT1H19M39S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": false,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:46 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=UBVzucVpG7k&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:46 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "j5beEsJfHQXJEpYOZRj-t--zqok",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "Tl4dNfUHEcZ8xp3-gKzu5DG5wmA",
+              "id": "UBVzucVpG7k",
+              "contentDetails": {
+                "duration": "PT1H52M16S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": false,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:46 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=LktbfHdEm-U&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:46 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "QYkhQZzlohyc2w0bcOVgh_cSD5o",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "t6D179nJSHY-wr0cq3JMIbVV_ok",
+              "id": "LktbfHdEm-U",
+              "contentDetails": {
+                "duration": "PT9H14M35S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:46 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=OnwhPsfbMmU&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:46 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "CMMZkM4PFGQagdY0FQKGNunccDg",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "qf78lsTDTPvvs6tB0VogHPfECHA",
+              "id": "OnwhPsfbMmU",
+              "contentDetails": {
+                "duration": "PT6H14M32S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": true,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:46 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/videos?id=_rr9JGJRkI0&key=AIzaSyBL3bwQt85Lezs2F7twz7WPyjJwG-etWAo&part=contentDetails
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - www.googleapis.com
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin,Accept-Encoding
+      - Referer
+      - X-Origin
+      Date:
+      - Sun, 15 Dec 2024 16:49:46 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Accept-Ranges:
+      - none
+      Transfer-Encoding:
+      - chunked
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+          "kind": "youtube#videoListResponse",
+          "etag": "9cz8sb4PvxwUaE0odd8pCdmJZ18",
+          "items": [
+            {
+              "kind": "youtube#video",
+              "etag": "CNi0nxBz3cqFZRKWsmTJPnQp7hw",
+              "id": "_rr9JGJRkI0",
+              "contentDetails": {
+                "duration": "PT10H10M10S",
+                "dimension": "2d",
+                "definition": "hd",
+                "caption": "false",
+                "licensedContent": false,
+                "contentRating": {},
+                "projection": "rectangular"
+              }
+            }
+          ],
+          "pageInfo": {
+            "totalResults": 1,
+            "resultsPerPage": 1
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 16:49:46 GMT
+- request:
+    method: get
+    uri: https://api.nthusa.tw/courses/searches?field=english_title&limits=5&value=Business%20Analytics
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - api.nthusa.tw
+      User-Agent:
+      - http.rb/5.2.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 15 Dec 2024 16:49:47 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '804'
+      Connection:
+      - close
+      X-Process-Time:
+      - '0.005080223083496094'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=0DYMH1BRupqpR7WNRGVccBIRcf2BWbFwLwsaytYKzBOT0x9RODg%2FJaEfq56DdcgkbSZcZG8i0olyue01RApJH73B77QFQFBUU5YgXzGQuEUGk6I8sbkskQC2L8O7s%2FdL"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f27edcdcdc44a12-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Server-Timing:
+      - cfL4;desc="?proto=TCP&rtt=18717&min_rtt=10458&rtt_var=9821&sent=5&recv=6&lost=0&retrans=0&sent_bytes=2296&recv_bytes=796&delivery_rate=276917&cwnd=187&unsent_bytes=0&cid=b080a56f003418dc&ts=99&x=0"
+    body:
+      encoding: UTF-8
+      string: '[{"id":"11210ISS 406600","chinese_title":"程式設計與商業分析","english_title":"Programming
+        for Business Analytics","credit":"3","size_limit":"40","freshman_reservation":"0","object":"
+        ","ge_type":"","language":"英","note":"16 weeks class","suspend":"","class_room_and_time":"TSMC台積421\tR6R7R8\n","teacher":"&#20842;在元\tJAEWON
+        YOO\n","prerequisite":"","limit_note":"科管院學士班,國際學士班優先，第3次選課起開放全校修習","expertise":"數據科學(第二專長)\t管理(第一專長)","program":"(跨領域)數據科學學分學程","no_extra_selection":"","required_optional_note":"IMBA碩士班112M  選修\t科管院學士班109B  選修\t科管院學士班109BA
+        選修\t科管院學士班110B  選修\t科管院學士班110BA 選修\t服科所112M  選修\t"}]'
+  recorded_at: Sun, 15 Dec 2024 16:49:47 GMT
 recorded_with: VCR 6.3.1
