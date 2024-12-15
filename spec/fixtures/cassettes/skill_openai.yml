@@ -188,4 +188,469 @@ http_interactions:
           "system_fingerprint": null
         }
   recorded_at: Mon, 09 Dec 2024 14:35:11 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","response_format":{"type":"json_object"},"messages":[{"role":"system","content":"Provide
+        valid JSON Output"},{"role":"system","content":"Provide a summary of the course
+        syllabi."},{"role":"system","content":"Extract the following information:"},{"role":"system","content":"Provide
+        a column for each information in this format:"},{"role":"system","content":"\"CourseName:\",
+        \"CourseDescription:\", \"CourseEvaluationMethods:\", \"AIUsePolicy:\""},{"role":"system","content":"Keep
+        the summary concise and informative"},{"role":"system","content":"AI use policy
+        is defined as whether LLM like ChatGPT, Copilot, etc. is allowed to be used"},{"role":"system","content":"Course
+        evaluation methods should be in datatype String"},{"role":"user","content":null}],"temperature":0.7}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 15 Dec 2024 14:45:29 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '187'
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - user-puxbhrdszzsz9p2xhyhw7spz
+      Openai-Processing-Ms:
+      - '18'
+      Openai-Version:
+      - '2020-10-01'
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '9999'
+      X-Ratelimit-Remaining-Tokens:
+      - '199871'
+      X-Ratelimit-Reset-Requests:
+      - 8.64s
+      X-Ratelimit-Reset-Tokens:
+      - 38ms
+      X-Request-Id:
+      - req_a4af16f04a7f15672df346134f94f52a
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=wfbqNTXv_Wdd2QzQXncfAqimzw8O9xd2DkkwTiX25wM-1734273929-1.0.1.1-A1yh7s31h3rJDvg8Foz7DKZuciJ5P9PELGm6TA_PVe2jHzGGhrBxbGtQUaPzHA07hcCeRz6c2llHZJmMx2WECQ;
+        path=/; expires=Sun, 15-Dec-24 15:15:29 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=NVSRfPirA5633FutTXOwxBrr5YEGTbGr1bFN4iRfEko-1734273929596-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f2737ba9d6f4a7f-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": {
+            "message": "Invalid value for 'content': expected a string, got null.",
+            "type": "invalid_request_error",
+            "param": "messages.[8].content",
+            "code": null
+          }
+        }
+  recorded_at: Sun, 15 Dec 2024 14:45:29 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","response_format":{"type":"json_object"},"messages":[{"role":"system","content":"Provide
+        valid JSON Output"},{"role":"system","content":"Provide a summary of the course
+        syllabi."},{"role":"system","content":"Extract the following information:"},{"role":"system","content":"Provide
+        a column for each information in this format:"},{"role":"system","content":"\"CourseName:\",
+        \"CourseDescription:\", \"CourseEvaluationMethods:\", \"AIUsePolicy:\""},{"role":"system","content":"Keep
+        the summary concise and informative"},{"role":"system","content":"AI use policy
+        is defined as whether LLM like ChatGPT, Copilot, etc. is allowed to be used"},{"role":"system","content":"Course
+        evaluation methods should be in datatype String"},{"role":"user","content":"Business
+        Analytics using Machine Learning\nInstructor: Galit Shmueli (galit.shmueli@iss.nthu.edu.tw)
+        TA: Cindy (Yu-Hsuan) Liu\nWebsite: canvas.instructure.com/courses/9474145\nCourse
+        Description\nTerm: Fall 2024\nClass Time: Tuesdays, 14:20-17:20\nClass Location:
+        Room 406, TSMC Building\n  Business analytics is the use of data-driven decision
+        making. Companies, governments and other organizations now collect and have
+        access to large amounts of data about suppliers, clients, employees, citizens,
+        transactions, etc. Data mining (now better known as machine learning) and
+        predictive analytics provide a powerful toolkit for detecting actionable patterns
+        in data and generating predictions. These methods are used in many industries:
+        Mobile companies use their customer database to predict customer churn or
+        to personalize messages for improving customer service; Financial institutions
+        use past loan data to predict defaulting chance for loan applicants; Charities
+        use data from a campaign in one location to target the right people in another
+        location; Politicians use databases of supporters to segment and best target
+        each audience; Movie, music, and eCommerce websites provide recommendations
+        based on users’ online behavior.\nMost business analytics applications are
+        geared towards benefitting the company, often at the expense of the individual,
+        community, and society. The focus of this course is on humane and socially-responsible
+        business analytics.\nIn the course we’ll work with real business problems
+        and real data. We will examine types of questions that machine learning (data
+        mining) can answer and the appropriate machine learning tools for answering
+        different questions. The emphasis is on understanding the concepts and logic
+        behind a wide set of machine learning techniques and their relation to specific
+        business analytics situations. The course is not about mastering the theoretical
+        underpinnings of the techniques. The course is focused on a business analytics
+        team project that will encapsulate the learnings.\nOnline Component\nThe course
+        is offered in a flipped classroom model. Students are expected to watch videos,
+        read the textbook and post in an online forum prior to each on-ground session.
+        Face-to-face class time will be devoted to discussions, developing the team
+        projects, gaining hands-on experience, invited lectures, and other forms of
+        interactive learning.\nCourse Objectives\nUpon successful completion of the
+        course, you should possess valuable practical analytical skills that will
+        equip you with a competitive skill in almost any contemporary workplace. In
+        particular, the knowledge acquired in this course will benefit those who plan
+        careers in business and strategic consulting.\nThe course will provide participants
+        with the following skills and knowledge:\n● Become familiar with the potential
+        and dangers of machine learning in today’s data rich-environment\n● Gain experience
+        using key machine learning methods: classification, prediction, data reduction
+        and exploration\n● Know how to decide when to use which technique\n● Be able
+        to implement major machine learning techniques using software\n● Become a
+        smart and critical use and consumer of machine learning techniques\n● Gain
+        the intellectual capital required to provide responsible business analytics
+        services\n● Be conscious of humanistic and societal implications of deploying
+        machine learning in organizations\n2\nLearning Goals\nIn addition to the course
+        objectives, students should expect to develop the following by the end of
+        the course:\n1. Effective Oral Communication - Each student shall be able
+        to communicate verbally in an organized, clear, and persuasive manner, and
+        be a responsive listener. (Assessment: Project presentations)\n2. Critical
+        and Integrative Thinking - Each student shall be able to identify key issues
+        in a business setting, develop a perspective that is supported with relevant
+        information and integrative thinking, to draw and assess conclusions. (Assessment:
+        Individual Assignments, online discussions, ideation proposal, team presentations)\n3.
+        Interpersonal Awareness and Working in Teams - Each student shall demonstrate
+        an ability to work effectively in a team, exhibiting behavior that reflects
+        an understanding of the importance of individual roles and tasks, and the
+        ability to manage conflict and compromise, so that team goals are achieved.
+        (Assessment: Team project report and team presentations, team meetings with
+        instructor)\nGrading\nRequired Textbook\nMachine Learning for Business Analytics:
+        Concepts, Techniques, and Applications in RapidMiner by Shmueli, Bruce, Deokar
+        & Patel, Wiley, 2023.\nFor Python experts:\nData Mining for Business Analytics:
+        Concepts, Techniques, and Applications in Python, by Shmueli, Bruce, Gedeck
+        & Patel, Wiley & Sons 2019.\nBook website: dataminingbook.com (for downloading
+        data and other resources)\n  \nSoftware\nAn important feature of this course
+        is hands-on learning using machine learning and data visualization software.
+        For machine learning, we’ll use the free RapidMiner.\nFor data visualization
+        we will use Tableau.\n  \nDeliverable\nWeight\nIndividual assignments (7)\n35%\nTeam
+        proposal\n15%\nMachine learning contest submission\n5%\nFinal team project
+        report\n15%\nFinal team presentation\n10%\nPre-class posts on online forum
+        (10)\n10%\n30-second online quizzes (10)\n10%\nFinal letter grades are determined
+        based on curving the numerical grades (not based on fixed grade intervals).
+        Each student is required to fill a peer evaluation report. If multiple team
+        members indicate insufficient contribution of a member, a deduction of 30%
+        of the presentation/report grade will be applied to that member."}],"temperature":0.7}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 15 Dec 2024 15:02:06 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - user-puxbhrdszzsz9p2xhyhw7spz
+      Openai-Processing-Ms:
+      - '1112'
+      Openai-Version:
+      - '2020-10-01'
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '9999'
+      X-Ratelimit-Remaining-Tokens:
+      - '198453'
+      X-Ratelimit-Reset-Requests:
+      - 8.64s
+      X-Ratelimit-Reset-Tokens:
+      - 464ms
+      X-Request-Id:
+      - req_49408b1a27fb26400303e3f55f5f4c0e
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=79ZnYpcAaazef.KliD9EFzqpNk1pluLrW8EQhAmB1wc-1734274926-1.0.1.1-vgiXkaAZ78btArC12oM4KcPmH9dMjP7A2cwhkUeLzNZmtRkl.9XwUPmxvv4kszKOlAf9xiCmuAbNtYSrAU_8ww;
+        path=/; expires=Sun, 15-Dec-24 15:32:06 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=UtDS1mkJUBfAJrvyoiVj.J9asBDo0.Yh_OuAyV8cVig-1734274926787-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f27500c29e74a2e-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-AekQ9tLv4uLm9TGcaYb7kbdQZz0lN",
+          "object": "chat.completion",
+          "created": 1734274925,
+          "model": "gpt-3.5-turbo-0125",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"CourseName\": \"Business Analytics using Machine Learning\",\n  \"CourseDescription\": \"Business analytics is the use of data-driven decision making in various industries to detect patterns and generate predictions. This course focuses on humane and socially-responsible business analytics, working with real business problems and data, and understanding machine learning techniques for specific analytics situations.\",\n  \"CourseEvaluationMethods\": \"Individual assignments, team proposal, machine learning contest submission, final team project report, final team presentation, pre-class posts on online forum, 30-second online quizzes\",\n  \"AIUsePolicy\": \"Not specified\"\n}",
+                "refusal": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 1202,
+            "completion_tokens": 120,
+            "total_tokens": 1322,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": null
+        }
+  recorded_at: Sun, 15 Dec 2024 15:02:06 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","response_format":{"type":"json_object"},"messages":[{"role":"system","content":"Provide
+        valid JSON Output"},{"role":"system","content":"Provide the top 5 prerequisite
+        keywords for the course suitable for the syllabus"},{"role":"system","content":"Provide
+        only the keyword and not \"Introduction to...\" or \"Advanced...\" or etc"},{"role":"system","content":"Provide
+        in this format: \"SubjectName:\", \"DifficultyLevel:\""},{"role":"system","content":"Example
+        format: {\"prerequisite_subjects\"=>[{\"SubjectName\"=>\"Statistics\", \"DifficultyLevel\"=>50},..."},{"role":"system","content":"Rank
+        the difficulty from hardest to easiest for an average person"},{"role":"system","content":"Please
+        do not recommend none even if the class is easy"},{"role":"user","content":"Business
+        Analytics using Machine Learning\nInstructor: Galit Shmueli (galit.shmueli@iss.nthu.edu.tw)
+        TA: Cindy (Yu-Hsuan) Liu\nWebsite: canvas.instructure.com/courses/9474145\nCourse
+        Description\nTerm: Fall 2024\nClass Time: Tuesdays, 14:20-17:20\nClass Location:
+        Room 406, TSMC Building\n  Business analytics is the use of data-driven decision
+        making. Companies, governments and other organizations now collect and have
+        access to large amounts of data about suppliers, clients, employees, citizens,
+        transactions, etc. Data mining (now better known as machine learning) and
+        predictive analytics provide a powerful toolkit for detecting actionable patterns
+        in data and generating predictions. These methods are used in many industries:
+        Mobile companies use their customer database to predict customer churn or
+        to personalize messages for improving customer service; Financial institutions
+        use past loan data to predict defaulting chance for loan applicants; Charities
+        use data from a campaign in one location to target the right people in another
+        location; Politicians use databases of supporters to segment and best target
+        each audience; Movie, music, and eCommerce websites provide recommendations
+        based on users’ online behavior.\nMost business analytics applications are
+        geared towards benefitting the company, often at the expense of the individual,
+        community, and society. The focus of this course is on humane and socially-responsible
+        business analytics.\nIn the course we’ll work with real business problems
+        and real data. We will examine types of questions that machine learning (data
+        mining) can answer and the appropriate machine learning tools for answering
+        different questions. The emphasis is on understanding the concepts and logic
+        behind a wide set of machine learning techniques and their relation to specific
+        business analytics situations. The course is not about mastering the theoretical
+        underpinnings of the techniques. The course is focused on a business analytics
+        team project that will encapsulate the learnings.\nOnline Component\nThe course
+        is offered in a flipped classroom model. Students are expected to watch videos,
+        read the textbook and post in an online forum prior to each on-ground session.
+        Face-to-face class time will be devoted to discussions, developing the team
+        projects, gaining hands-on experience, invited lectures, and other forms of
+        interactive learning.\nCourse Objectives\nUpon successful completion of the
+        course, you should possess valuable practical analytical skills that will
+        equip you with a competitive skill in almost any contemporary workplace. In
+        particular, the knowledge acquired in this course will benefit those who plan
+        careers in business and strategic consulting.\nThe course will provide participants
+        with the following skills and knowledge:\n● Become familiar with the potential
+        and dangers of machine learning in today’s data rich-environment\n● Gain experience
+        using key machine learning methods: classification, prediction, data reduction
+        and exploration\n● Know how to decide when to use which technique\n● Be able
+        to implement major machine learning techniques using software\n● Become a
+        smart and critical use and consumer of machine learning techniques\n● Gain
+        the intellectual capital required to provide responsible business analytics
+        services\n● Be conscious of humanistic and societal implications of deploying
+        machine learning in organizations\n2\nLearning Goals\nIn addition to the course
+        objectives, students should expect to develop the following by the end of
+        the course:\n1. Effective Oral Communication - Each student shall be able
+        to communicate verbally in an organized, clear, and persuasive manner, and
+        be a responsive listener. (Assessment: Project presentations)\n2. Critical
+        and Integrative Thinking - Each student shall be able to identify key issues
+        in a business setting, develop a perspective that is supported with relevant
+        information and integrative thinking, to draw and assess conclusions. (Assessment:
+        Individual Assignments, online discussions, ideation proposal, team presentations)\n3.
+        Interpersonal Awareness and Working in Teams - Each student shall demonstrate
+        an ability to work effectively in a team, exhibiting behavior that reflects
+        an understanding of the importance of individual roles and tasks, and the
+        ability to manage conflict and compromise, so that team goals are achieved.
+        (Assessment: Team project report and team presentations, team meetings with
+        instructor)\nGrading\nRequired Textbook\nMachine Learning for Business Analytics:
+        Concepts, Techniques, and Applications in RapidMiner by Shmueli, Bruce, Deokar
+        & Patel, Wiley, 2023.\nFor Python experts:\nData Mining for Business Analytics:
+        Concepts, Techniques, and Applications in Python, by Shmueli, Bruce, Gedeck
+        & Patel, Wiley & Sons 2019.\nBook website: dataminingbook.com (for downloading
+        data and other resources)\n  \nSoftware\nAn important feature of this course
+        is hands-on learning using machine learning and data visualization software.
+        For machine learning, we’ll use the free RapidMiner.\nFor data visualization
+        we will use Tableau.\n  \nDeliverable\nWeight\nIndividual assignments (7)\n35%\nTeam
+        proposal\n15%\nMachine learning contest submission\n5%\nFinal team project
+        report\n15%\nFinal team presentation\n10%\nPre-class posts on online forum
+        (10)\n10%\n30-second online quizzes (10)\n10%\nFinal letter grades are determined
+        based on curving the numerical grades (not based on fixed grade intervals).
+        Each student is required to fill a peer evaluation report. If multiple team
+        members indicate insufficient contribution of a member, a deduction of 30%
+        of the presentation/report grade will be applied to that member."}],"temperature":0.7}'
+    headers:
+      Content-Type:
+      - application/json
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 15 Dec 2024 15:02:09 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Expose-Headers:
+      - X-Request-ID
+      Openai-Organization:
+      - user-puxbhrdszzsz9p2xhyhw7spz
+      Openai-Processing-Ms:
+      - '1298'
+      Openai-Version:
+      - '2020-10-01'
+      X-Ratelimit-Limit-Requests:
+      - '10000'
+      X-Ratelimit-Limit-Tokens:
+      - '200000'
+      X-Ratelimit-Remaining-Requests:
+      - '9998'
+      X-Ratelimit-Remaining-Tokens:
+      - '198442'
+      X-Ratelimit-Reset-Requests:
+      - 14.692s
+      X-Ratelimit-Reset-Tokens:
+      - 467ms
+      X-Request-Id:
+      - req_b86ec7b03ff0c14cc443b1690638c8c9
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=UnDfy2WYwCVCGjwnXhGyd4RLp2N9CewNqr7bBwAby8g-1734274929-1.0.1.1-TUo4QDTrrxnnbrlFDAbcF_.0fhhaeplm_.992Zffk4AmSbUId4LcUyYhdrjGaa9kwU9dZLLxjajFFOfmGamgMg;
+        path=/; expires=Sun, 15-Dec-24 15:32:09 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None
+      - _cfuvid=6947pdkIAb_6iZP1RzDWmh7OIDFYao44TGfFi3OLrLM-1734274929542-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8f27501c5e868f00-TPE
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-AekQCQWt3fHSiYDk0JHpEJAetAhAH",
+          "object": "chat.completion",
+          "created": 1734274928,
+          "model": "gpt-3.5-turbo-0125",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n\t\"prerequisite_subjects\": [{\n\t\t\t\"SubjectName\": \"Data Mining\",\n\t\t\t\"DifficultyLevel\": 70\n\t\t},\n\t\t{\n\t\t\t\"SubjectName\": \"Statistics\",\n\t\t\t\"DifficultyLevel\": 60\n\t\t},\n\t\t{\n\t\t\t\"SubjectName\": \"Machine Learning\",\n\t\t\t\"DifficultyLevel\": 50\n\t\t},\n\t\t{\n\t\t\t\"SubjectName\": \"Python Programming\",\n\t\t\t\"DifficultyLevel\": 40\n\t\t},\n\t\t{\n\t\t\t\"SubjectName\": \"Business Analytics\",\n\t\t\t\"DifficultyLevel\": 30\n\t\t}\n\t]\n}",
+                "refusal": null
+              },
+              "logprobs": null,
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 1207,
+            "completion_tokens": 133,
+            "total_tokens": 1340,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "audio_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0,
+              "audio_tokens": 0,
+              "accepted_prediction_tokens": 0,
+              "rejected_prediction_tokens": 0
+            }
+          },
+          "system_fingerprint": null
+        }
+  recorded_at: Sun, 15 Dec 2024 15:02:09 GMT
 recorded_with: VCR 6.3.1
