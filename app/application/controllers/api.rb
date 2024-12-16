@@ -50,11 +50,7 @@ module RoutePlanner
 
               validated_params = result.value!
               service_result = RoutePlanner::Service::AddMapandSkill.new.call(validated_params)
-<<<<<<< HEAD
               
-=======
-
->>>>>>> a4ba54b (shoryuken setup)
               if service_result.failure?
                 api_result = RoutePlanner::APIResponse::ApiResult.new(
                   status: :bad_request,
@@ -96,7 +92,6 @@ module RoutePlanner
               parsed_params = JSON.parse(raw_body)
               puts "Parsed Params: #{parsed_params}"
 
-<<<<<<< HEAD
               form_request = RoutePlanner::Request::SkillsForm.new(parsed_params).call
               
               if form_request.failure?
@@ -104,34 +99,15 @@ module RoutePlanner
                   status: :bad_request,
                   message: form_request.value!
                  )               
-=======
-              form_request = RoutePlanner::Request::SkillsForm.new(parsed_params)
-              if form_request.errors.any?
-                detailed_errors = form_request.errors.map do |error|
-                  error.split(': ', 2).last.strip
-                end
-
-                api_result = RoutePlanner::APIResponse::ApiResult.new(
-                  status: :bad_request,
-                  message: detailed_errors
-                )
->>>>>>> a4ba54b (shoryuken setup)
 
                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
                 response.status = http_response.http_status_code
 
-<<<<<<< HEAD
               end
 
               validated_params = form_request.value!
 
               data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(validated_params)
-=======
-                routing.halt http_response.to_json
-
-              end
-              data = RoutePlanner::Service::ProcessUserAbilityValue.new.call(form_request.params)
->>>>>>> a4ba54b (shoryuken setup)
 
               if data.failure?
                 api_result = RoutePlanner::APIResponse::ApiResult.new(
