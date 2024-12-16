@@ -13,7 +13,7 @@ module RoutePlanner
       MSG_INVALID_TEXT = 'Course Syllabus must be filled!'
 
       def initialize(params)
-        @params = params
+        @params = params.transform_keys(&:to_s)
       end
 
       def call

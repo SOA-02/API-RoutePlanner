@@ -7,6 +7,8 @@ module RoutePlanner
   module Request
     # Application value for the skills form input
     class SkillsForm
+      include Dry::Monads[:result]
+
       VALID_SKILL_VALUES = (1..100)
       MSG_INVALID_SKILL_VALUE = 'Skill value must be an integer between ' \
                                 "#{VALID_SKILL_VALUES.first} and #{VALID_SKILL_VALUES.last}.".freeze
@@ -17,6 +19,19 @@ module RoutePlanner
       end
 
       attr_reader :params
+
+      def call
+        validate_inputs
+      end
+
+      # Main validation method to return Success or Failure
+      def validate_inputs
+        if valid?
+          Success(params)
+        else
+          Failure(errors)
+        end
+      end
 
       def valid?
         errors.empty?
@@ -52,8 +67,11 @@ module RoutePlanner
 
       def validate_skills_in_group(skills_hash)
         skills_hash.each_with_object([]) do |(skill_name, skill_value), errors|
-          errors << "#{skill_name}: #{MSG_INVALID_SKILL_VALUE}" unless valid_skill_value?(skill_value)
+          unless valid_skill_value?(skill_value)
+            errors << "#{skill_name}: #{MSG_INVALID_SKILL_VALUE}"
+          end
 
+          # Normalize skill value to integer
           skills_hash[skill_name] = skill_value.to_i
         end
       end

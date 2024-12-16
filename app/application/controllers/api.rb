@@ -55,7 +55,7 @@ module RoutePlanner
 
               validated_params = result.value!
               service_result = RoutePlanner::Service::AddMapandSkill.new.call(validated_params)
-              binding.irb
+              
               if service_result.failure?
                 api_result = RoutePlanner::APIResponse::ApiResult.new(
                   status: :bad_request,
@@ -101,24 +101,22 @@ module RoutePlanner
               parsed_params = JSON.parse(raw_body)
               puts "Parsed Params: #{parsed_params}"
 
-              form_request = RoutePlanner::Request::SkillsForm.new(parsed_params)
-              if form_request.errors.any?
-                detailed_errors = form_request.errors.map do |error|
-                  error.split(': ', 2).last.strip
-                end
-                binding.irb
+              form_request = RoutePlanner::Request::SkillsForm.new(parsed_params).call
+              
+              if form_request.failure?
                 api_result = RoutePlanner::APIResponse::ApiResult.new(
                   status: :bad_request,
-                  message: detailed_errors
+                  message: form_request.value!
                  )               
 
                  http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
                  response.status = http_response.http_status_code
 
-                 routing.halt http_response.to_json
-
               end
-              data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(form_request.params)
+
+              validated_params = form_request.value!
+
+              data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(validated_params)
 
               if data.failure?
                 api_result = RoutePlanner::APIResponse::ApiResult.new(
