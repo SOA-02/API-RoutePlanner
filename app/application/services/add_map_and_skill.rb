@@ -11,8 +11,11 @@ module RoutePlanner
       MSG_ONPENAPI_ERROR = 'Could not analyze the syllabus text. Please try again later.'
       MSG_MAP_SAVE_FAIL = 'Map could not be saved.'
       MSG_SKILL_SAVE_FAIL = 'Skills could not be saved.'
+      PROCESSING_MSG = 'Map is being processed. Please try again later.'
+      CLONE_ERR = 'Could not clone this project'
 
       step :find_existing_map
+      step :enqueue_analysis_worker
       step :store_mapinfo_and_skills
 
       def find_existing_map(input)

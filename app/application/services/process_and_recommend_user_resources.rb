@@ -88,8 +88,7 @@ module RoutePlanner
       end
 
       # Step 5: Calculate study metrics
-      def calculate_study_metrics(input) # rubocop:disable Metrics/MethodLength
-
+      def calculate_study_metrics(input) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
         recommended_resources = input[:recommended_resources]
         desired_resource = input[:user_ability_value]
 
