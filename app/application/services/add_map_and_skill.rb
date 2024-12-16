@@ -15,7 +15,6 @@ module RoutePlanner
       CLONE_ERR = 'Could not clone this project'
 
       step :find_existing_map
-      step :enqueue_analysis_worker
       step :store_mapinfo_and_skills
 
       def find_existing_map(input)
@@ -23,7 +22,8 @@ module RoutePlanner
           map = existing_map
           skills = skills_in_database(existing_map.id)
         else
-          map = analyze_map_from_openai(input[:syllabus_text])
+          map = enqueue_analysis_worker(input)
+          puts "next into store map: #{map}"
           skills = []
         end
         Success(input.merge(map: map, skills: skills))
@@ -44,10 +44,8 @@ module RoutePlanner
         Repository::For.klass(Entity::Map).find_map_name(map_name)
       end
 
-      def analyze_map_from_openai(syllabus_text)
-        OpenAPI::MapMapper.new(syllabus_text, Api.config.OPENAI_KEY).call
-      rescue StandardError
-        Failure(MSG_ONPENAPI_ERROR)
+      def skills_in_database(map_id)
+        Repository::For.klass(Entity::Skill).find_all_skills(map_id)
       end
 
       def store_map(map)
@@ -77,8 +75,31 @@ module RoutePlanner
         Failure(MSG_SKILL_SAVE_FAIL)
       end
 
-      def skills_in_database(map_id)
-        Repository::For.klass(Entity::Skill).find_all_skills(map_id)
+      def enqueue_analysis_worker(input)
+        # Queue map analysis first
+        # map_message = {
+        #   # type: 'map',
+        #   syllabus_title: input[:syllabus_title],
+        #   syllabus_text: input[:syllabus_text]
+        # }.to_json
+
+        # puts "map_message: #{map_message}"
+        Messaging::Queue.new(Api.config.CLONE_QUEUE_URL, Api.config).send(input[:syllabus_text])
+        Failure(APIResponse::ApiResult.new(status: :processing, message: PROCESSING_MSG))
+      rescue StandardError => e
+        log_error(e)
+        Failure(Response::ApiResult.new(status: :internal_error, message: CLONE_ERR))
+
+        # # Queue skills analysis if needed
+        # return unless input[:skills].empty?
+
+        # skills_message = {
+        #   type: 'skills',
+        #   map_id: input[:map_id],
+        #   syllabus_text: input[:syllabus_text]
+        # }.to_json
+
+        # Messaging::Queue.new(Api.config.CLONE_QUEUE_URL, Api.config).send(skills_message)
       end
     end
   end

@@ -9,6 +9,7 @@ end
 namespace :spec do
   desc 'Run unit and integration tests'
   Rake::TestTask.new(:default) do |t|
+    puts 'Make sure worker is running in separate process'
     t.pattern = 'spec/tests/{integration,unit}/**/*_spec.rb'
     t.warning = false
   end
@@ -37,7 +38,7 @@ task run: ['run:default']
 
 namespace :run do
   desc 'Run web app in development or production'
-  task :default do
+  task :dev do
     sh 'bundle exec puma -p 9090'
   end
 
@@ -181,17 +182,17 @@ namespace :workers do
   namespace :run do
     desc 'Run the background cloning worker in development mode'
     task :dev => :config do
-      sh 'RACK_ENV=development bundle exec shoryuken -r ./workers/clone_worker.rb -C ./workers/shoryuken_dev.yml'
+      sh 'RACK_ENV=development bundle exec shoryuken -r ./workers/analysis_worker.rb -C ./workers/shoryuken_dev.yml'
     end
 
     desc 'Run the background cloning worker in test mode'
     task :test => :config do
-      sh 'RACK_ENV=test bundle exec shoryuken -r ./workers/clone_worker.rb -C ./workers/shoryuken_test.yml'
+      sh 'RACK_ENV=test bundle exec shoryuken -r ./workers/analysis_worker.rb -C ./workers/shoryuken_test.yml'
     end
 
     desc 'Run the background cloning worker in production mode'
     task :production => :config do
-      'RACK_ENV=production bundle exec shoryuken -r ./workers/clone_worker.rb -C ./workers/shoryuken.yml'
+      'RACK_ENV=production bundle exec shoryuken -r ./workers/analysis_worker.rb -C ./workers/shoryuken.yml'
     end
   end
 end
