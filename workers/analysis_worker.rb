@@ -8,35 +8,9 @@ require 'figaro'
 require 'shoryuken'
 
 module RoutePlanner
+  # Shoryuken worker class to clone repos in parallel
   module Workers
-    # Process openai analysis requests
-    # class AnalysisProcessor
-    #   def initialize(api_key = Api.config.OPENAI_KEY)
-    #     @openai_key = api_key
-    #   end
-
-    #   def process_request(request)
-    #     data = JSON.parse(request).transform_keys(&:to_sym)
-    #     case data[:type]
-    #     when 'map'
-    #       process_map(data)
-    #     when 'skills'
-    #       process_skills(data)
-    #     end
-    #   end
-
-    #   private
-
-    #   def process_map(data)
-    #     OpenAPI::MapMapper.new(data[:syllabus_text], @openai_key).call
-    #   end
-
-    #   def process_skills(data)
-    #     OpenAPI::SkillMapper.new(data[:syllabus_text], @openai_key).call
-    #   end
-    # end
-
-    # Shoryuken worker class to clone repos in parallel
+    # Worker to analyze the map
     class AnalysisWorker
       Figaro.application = Figaro::Application.new(
         environment: ENV['RACK_ENV'] || 'development',
@@ -58,7 +32,6 @@ module RoutePlanner
         puts 'MAP WORKER: Processing request'
         map = OpenAPI::MapMapper.new(request, Api.config.OPENAI_KEY).call
         puts "MAP WORKER: Analysis completed: #{map.inspect}"
-        map
       end
     end
   end

@@ -12,7 +12,7 @@ module RoutePlanner
       MSG_MAP_SAVE_FAIL = 'Map could not be saved.'
       MSG_SKILL_SAVE_FAIL = 'Skills could not be saved.'
       PROCESSING_MSG = 'Map is being processed. Please try again later.'
-      CLONE_ERR = 'Could not clone this project'
+      ANALYSIS_ERR = 'Could not analyze this project'
 
       step :find_existing_map
       step :store_mapinfo_and_skills
@@ -22,7 +22,10 @@ module RoutePlanner
           map = existing_map
           skills = skills_in_database(existing_map.id)
         else
+          binding.irb
           map = enqueue_analysis_worker(input)
+          binding.irb
+          
           puts "next into store map: #{map}"
           skills = []
         end
@@ -76,31 +79,28 @@ module RoutePlanner
       end
 
       def enqueue_analysis_worker(input)
-        # Queue map analysis first
-        # map_message = {
-        #   # type: 'map',
-        #   syllabus_title: input[:syllabus_title],
-        #   syllabus_text: input[:syllabus_text]
-        # }.to_json
+        message = {
+          syllabus_text: input[:syllabus_text]
+        }.to_json
+        Messaging::Queue.new(Api.config.CLONE_QUEUE_URL, Api.config).send(message)
 
-        # puts "map_message: #{map_message}"
-        Messaging::Queue.new(Api.config.CLONE_QUEUE_URL, Api.config).send(input[:syllabus_text])
-        Failure(APIResponse::ApiResult.new(status: :processing, message: PROCESSING_MSG))
-      rescue StandardError => e
-        log_error(e)
-        Failure(Response::ApiResult.new(status: :internal_error, message: CLONE_ERR))
-
-        # # Queue skills analysis if needed
-        # return unless input[:skills].empty?
-
-        # skills_message = {
-        #   type: 'skills',
-        #   map_id: input[:map_id],
-        #   syllabus_text: input[:syllabus_text]
-        # }.to_json
-
-        # Messaging::Queue.new(Api.config.CLONE_QUEUE_URL, Api.config).send(skills_message)
+        Success(APIResponse::ApiResult.new(status: :processing, message: PROCESSING_MSG))
+      # rescue StandardError => e
+        # log_error(e)
+        # Failure(Response::ApiResult.new(status: :internal_error, message: ANALYSIS_ERR))
       end
+
+      # def check_analysis_status(map_id)
+      #   map = Repository::For.klass(Entity::Map).find_id(map_id)
+
+      #   return map if map.status == 'completed'
+
+      #   # If still processing, return failure
+      #   Failure(APIResponse::ApiResult.new(
+      #     status: :processing,
+      #     message: PROCESSING_MSG
+      #   ))
+      # end
     end
   end
 end

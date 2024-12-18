@@ -50,7 +50,7 @@ module RoutePlanner
 
               validated_params = result.value!
               service_result = RoutePlanner::Service::AddMapandSkill.new.call(validated_params)
-              
+              # binding.irb
               if service_result.failure?
                 api_result = RoutePlanner::APIResponse::ApiResult.new(
                   status: :bad_request,
@@ -72,6 +72,7 @@ module RoutePlanner
               RoutePlanner::Representer::AddMapandSkill.new(api_result.message).to_json
             end
           end
+
         rescue JSON::ParserError
           message = 'Invalid data format'
           result_response = RoutePlanner::Representer::HttpResponse.new(
@@ -93,12 +94,12 @@ module RoutePlanner
               puts "Parsed Params: #{parsed_params}"
 
               form_request = RoutePlanner::Request::SkillsForm.new(parsed_params).call
-              
+
               if form_request.failure?
                 api_result = RoutePlanner::APIResponse::ApiResult.new(
                   status: :bad_request,
                   message: form_request.value!
-                 )               
+                 )
 
                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
                 response.status = http_response.http_status_code
