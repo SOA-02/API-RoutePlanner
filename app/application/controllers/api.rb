@@ -9,7 +9,7 @@ module RoutePlanner
     plugin :halt
     plugin :json
 
-    route do |routing|
+    route do |routing| # rubocop:disable Metrics/BlockLength
       response['Content-Type'] = 'application/json'
 
       # GET /
@@ -34,7 +34,7 @@ module RoutePlanner
 
               raw_body = raw_body.encode('UTF-8', invalid: :replace, undef: :replace, replace: '?')
 
-              # puts "Raw Body: #{raw_body}"
+              puts "Raw Body: #{raw_body}"
               parsed_params = JSON.parse(raw_body)
 
               result = RoutePlanner::Request::NewMap.new(parsed_params).call
@@ -49,30 +49,20 @@ module RoutePlanner
               end
 
               validated_params = result.value!
-              service_result = RoutePlanner::Service::AddMapandSkill.new.call(validated_params)
-              # binding.irb
-              if service_result.failure?
-                api_result = RoutePlanner::APIResponse::ApiResult.new(
-                  status: :bad_request,
-                  message: service_result.value!
-                )
 
-                http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
-                response.status = http_response.http_status_code
+              check_map = RoutePlanner::Service::CheckExistingMap.new.call(validated_params)
+              if check_map.failure?
+                create_map_result = RoutePlanner::Service::CreateMap.new.call(validated_params)
+                if create_map_result.failure?
+                  failed = RoutePlanner::Representer::HttpResponse.new(create_map_result.failure)
+                  routing.halt failed.http_status_code, failed.to_json
+                end
               end
 
-              api_result = RoutePlanner::APIResponse::ApiResult.new(
-                status: :created,
-                message: service_result.value!
-              )
-
-              http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
-              response.status = http_response.http_status_code
-
-              RoutePlanner::Representer::AddMapandSkill.new(api_result.message).to_json
+              http_response = RoutePlanner::Representer::HttpResponse.new(check_map.value!)
+              RoutePlanner::Representer::AddMapandSkill.new(http_response.represented.message).to_json
             end
           end
-
         rescue JSON::ParserError
           message = 'Invalid data format'
           result_response = RoutePlanner::Representer::HttpResponse.new(
@@ -99,7 +89,7 @@ module RoutePlanner
                 api_result = RoutePlanner::APIResponse::ApiResult.new(
                   status: :bad_request,
                   message: form_request.value!
-                 )
+                )
 
                 http_response = RoutePlanner::Representer::HttpResponse.new(api_result)
                 response.status = http_response.http_status_code
@@ -108,7 +98,7 @@ module RoutePlanner
 
               validated_params = form_request.value!
 
-              data=RoutePlanner::Service::ProcessUserAbilityValue.new.call(validated_params)
+              data = RoutePlanner::Service::ProcessUserAbilityValue.new.call(validated_params)
 
               if data.failure?
                 api_result = RoutePlanner::APIResponse::ApiResult.new(

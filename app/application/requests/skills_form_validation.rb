@@ -67,9 +67,7 @@ module RoutePlanner
 
       def validate_skills_in_group(skills_hash)
         skills_hash.each_with_object([]) do |(skill_name, skill_value), errors|
-          unless valid_skill_value?(skill_value)
-            errors << "#{skill_name}: #{MSG_INVALID_SKILL_VALUE}"
-          end
+          errors << "#{skill_name}: #{MSG_INVALID_SKILL_VALUE}" unless valid_skill_value?(skill_value)
 
           # Normalize skill value to integer
           skills_hash[skill_name] = skill_value.to_i

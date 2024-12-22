@@ -31,7 +31,7 @@ describe 'RoutePlanner Service Integration Test' do
     #     puts "Failure reason: #{result.failure}" # 調試輸出
     #   end
     #   _(result.success?).must_equal true, "Expected success but got failure: #{result.failure}"
-      
+
     #   data = result.value!
     #   _(data).must_be_instance_of Hash
     #   _(data).wont_be_empty

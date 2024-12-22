@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Monitor analysis progress
 module RoutePlanner
   # Infrastructure to analyze while yielding progress
   module AnalysisMonitor

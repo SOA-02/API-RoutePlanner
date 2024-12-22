@@ -96,7 +96,7 @@ module RoutePlanner
 
         stress_index = Entity::Map.evaluate_stress_level(desired_resource, time)
 
-        output_data = OpenStruct.new(
+        output_data = OpenStruct.new( # rubocop:disable Style/OpenStructUse
           map: input[:map],
           require_ability_value: input[:map_skills],
           user_ability_value: input[:user_ability_value],

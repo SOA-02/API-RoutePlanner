@@ -1,9 +1,8 @@
-# rubocop:disable Style/OpenStructUse
+# frozen_string_literal: true
 
 require 'ostruct'
 require 'roar/decorator'
 require 'roar/json'
-
 
 module RoutePlanner
   # Represents Map information for API output

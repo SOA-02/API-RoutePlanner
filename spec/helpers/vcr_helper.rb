@@ -22,7 +22,7 @@ module VcrHelper
   end
 
   # Unavoidable :reek:TooManyStatements for VCR configuration
-  def self.configure_vcr_for_youtube
+  def self.configure_vcr_for_youtube # rubocop:disable Metrics/MethodLength
     VCR.configure do |c|
       c.filter_sensitive_data('<API_KEY>') { API_KEY }
       c.filter_sensitive_data('<API_KEY_ESC>') { CGI.escape(API_KEY) }

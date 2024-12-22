@@ -6,7 +6,7 @@ module RoutePlanner
   # Report job progress to client
   class JobReporter
     attr_accessor :map
-    
+
     def initialize(request_json, config)
       map_request = OpenAPI::MapMapper.new(request_json, config.OPENAI_KEY)
 

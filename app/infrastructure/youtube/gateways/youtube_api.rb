@@ -30,7 +30,7 @@ module RoutePlanner
 
         def yt_search_relevant_path(keyword)
           modified_keyword = RoutePlanner::Value::YoutubeSearch.modified_keyword(keyword)
-          get(YT_API_ROOT + "/search?part=snippet&maxResults=#{MAX_RESULTS}&type=video&q=#{modified_keyword}&key=#{@api_key}")
+          get(YT_API_ROOT + "/search?part=snippet&maxResults=#{MAX_RESULTS}&type=video&q=#{modified_keyword}&key=#{@api_key}") # rubocop:disable Layout/LineLength
         end
 
         def yt_video_path(video_id)

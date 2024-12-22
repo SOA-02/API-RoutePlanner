@@ -45,9 +45,9 @@ module RoutePlanner
         rebuild_entity(db_resource)
       end
 
-      def self.add_to_routeplanner(online_entity, routeplanner_entity)
+      def self.add_to_routeplanner(online_entity, _routeplanner_entity)
         # 找到或創建 Online 資源
-        online = Database::OnlineOrm.find_or_create(
+        Database::OnlineOrm.find_or_create(
           original_id: online_entity.original_id,
           topic: online_entity.topic,
           url: online_entity.url,
