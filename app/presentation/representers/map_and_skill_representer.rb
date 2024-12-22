@@ -11,7 +11,6 @@ module RoutePlanner
       include Roar::JSON
       property :map, extend: Representer::Map, class: OpenStruct # rubocop:disable Style/OpenStructUse
       property :skills
-
     end
   end
 end

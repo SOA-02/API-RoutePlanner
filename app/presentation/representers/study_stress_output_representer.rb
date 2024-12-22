@@ -18,8 +18,8 @@ module RoutePlanner
       property :require_ability_value
       property :time
       property :stress_index
-      collection :online_resources, extend: Representer::Online, class: OpenStruct
-      collection :physical_resources, extend: Representer::Physical, class: OpenStruct
+      collection :online_resources, extend: Representer::Online, class: OpenStruct # rubocop:disable Style/OpenStructUse
+      collection :physical_resources, extend: Representer::Physical, class: OpenStruct # rubocop:disable Style/OpenStructUse
     end
   end
 end

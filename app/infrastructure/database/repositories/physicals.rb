@@ -35,7 +35,7 @@ module RoutePlanner
         rebuild_entity(db_resource)
       end
 
-      def self.rebuild_entity(db_resource)
+      def self.rebuild_entity(db_resource) # rubocop:disable Metrics/MethodLength
         return nil unless db_resource
 
         Entity::Physical.new(

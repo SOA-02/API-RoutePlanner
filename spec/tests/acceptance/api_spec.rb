@@ -89,7 +89,6 @@ describe 'Test API routes' do
       _(skills).wont_be_empty
       _(skills).must_be_kind_of Array
     end
-
   end
 
   describe 'Add maps route' do

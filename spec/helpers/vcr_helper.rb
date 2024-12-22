@@ -15,10 +15,14 @@ module VcrHelper
     VCR.configure do |c|
       c.cassette_library_dir = CASSETTES_FOLDER
       c.hook_into :webmock
+      c.ignore_localhost = true # for acceptance tests
+      c.ignore_hosts 'sqs.us-east-1.amazonaws.com'
+      c.ignore_hosts 'sqs.ap-northeast-1.amazonaws.com'
     end
   end
 
-  def self.configure_vcr_for_youtube
+  # Unavoidable :reek:TooManyStatements for VCR configuration
+  def self.configure_vcr_for_youtube # rubocop:disable Metrics/MethodLength
     VCR.configure do |c|
       c.filter_sensitive_data('<API_KEY>') { API_KEY }
       c.filter_sensitive_data('<API_KEY_ESC>') { CGI.escape(API_KEY) }
@@ -57,11 +61,9 @@ module VcrHelper
       record: :new_episodes,
       match_requests_on: %i[method uri headers]
     )
-
   end
 
   def self.configure_vcr_for_nthusa
-
     VCR.configure do |c|
       c.filter_sensitive_data('<OPENAI_KEY>') { OPENAI_KEY }
       c.filter_sensitive_data('<OPENAI_KEY_ESC>') { CGI.escape(OPENAI_KEY) }

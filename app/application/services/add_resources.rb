@@ -59,7 +59,7 @@ module RoutePlanner
       end
 
       # Extracted as a class-level method
-      def self.extract_value_if_success(result)
+      def self.extract_value_if_success(result) # rubocop:disable Lint/IneffectiveAccessModifier
         result.success? ? result.value! : nil
       end
     end

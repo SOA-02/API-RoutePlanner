@@ -1,3 +1,4 @@
+# rubocop:disable Naming/FileName
 # frozen_string_literal: true
 
 require 'sequel'
@@ -20,3 +21,5 @@ Sequel.migration do
     end
   end
 end
+
+# rubocop:enable Naming/FileName

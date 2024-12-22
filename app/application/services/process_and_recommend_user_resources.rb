@@ -88,8 +88,7 @@ module RoutePlanner
       end
 
       # Step 5: Calculate study metrics
-      def calculate_study_metrics(input) # rubocop:disable Metrics/MethodLength
-
+      def calculate_study_metrics(input) # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
         recommended_resources = input[:recommended_resources]
         desired_resource = input[:user_ability_value]
 
@@ -97,7 +96,7 @@ module RoutePlanner
 
         stress_index = Entity::Map.evaluate_stress_level(desired_resource, time)
 
-        output_data = OpenStruct.new(
+        output_data = OpenStruct.new( # rubocop:disable Style/OpenStructUse
           map: input[:map],
           require_ability_value: input[:map_skills],
           user_ability_value: input[:user_ability_value],

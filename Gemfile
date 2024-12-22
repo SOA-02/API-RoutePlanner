@@ -35,6 +35,12 @@ gem 'http', '~> 5.2'
 gem 'hirb'
 gem 'sequel', '~> 5.60'
 
+# Asynchronicity
+gem 'aws-sdk-sqs', '~> 1.0'
+gem 'concurrent-ruby', '~> 1.1'
+gem 'faye', '~> 1.4'
+gem 'shoryuken', '~> 5.0'
+
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
 end
