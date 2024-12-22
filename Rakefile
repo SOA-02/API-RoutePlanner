@@ -180,17 +180,17 @@ end
 
 namespace :workers do
   namespace :run do
-    desc 'Run the background cloning worker in development mode'
+    desc 'Run the background analysis worker in development mode'
     task :dev => :config do
       sh 'RACK_ENV=development bundle exec shoryuken -r ./workers/analysis_worker.rb -C ./workers/shoryuken_dev.yml'
     end
 
-    desc 'Run the background cloning worker in test mode'
+    desc 'Run the background analysis worker in test mode'
     task :test => :config do
       sh 'RACK_ENV=test bundle exec shoryuken -r ./workers/analysis_worker.rb -C ./workers/shoryuken_test.yml'
     end
 
-    desc 'Run the background cloning worker in production mode'
+    desc 'Run the background analysis worker in production mode'
     task :production => :config do
       'RACK_ENV=production bundle exec shoryuken -r ./workers/analysis_worker.rb -C ./workers/shoryuken.yml'
     end
